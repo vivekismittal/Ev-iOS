@@ -1,0 +1,2265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "766A0B58-CEC9-4879-860F-51CB16B371B6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39DD809F-03D0-4014-B873-2E2729C84290"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/IntroViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "39DD809F-03D0-4014-B873-2E2729C84290 - 54a56210605683bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.IntroViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/IntroViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "39DD809F-03D0-4014-B873-2E2729C84290 - 54a56210605683bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.IntroViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/IntroViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "923">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B8C8B1C-312E-431C-9190-BA095FEB5C1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/SlideViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F63BC3F5-54D8-4A4E-8A37-992AB4782C53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "getStationID(coordinate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FD880B5-7693-4B37-A20F-6531727F4A1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F739D985-B84E-4D5C-875E-24A6291CFE14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "getUserApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F739D985-B84E-4D5C-875E-24A6291CFE14 - 69365d4ce7b443f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.getUserApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "1182">
+               </Location>
+               <Location
+                  uuid = "F739D985-B84E-4D5C-875E-24A6291CFE14 - 711a8864bd32f7c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.DashboardVC.getUserApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "215">
+               </Location>
+               <Location
+                  uuid = "F739D985-B84E-4D5C-875E-24A6291CFE14 - 69365d4ce7b443f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.getUserApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "437D917B-E4B8-41B4-8665-D6F7C0AC8855"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
+            landmarkName = "DashboardVC"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CBB160F-BC66-4F76-A074-B58952B72B4C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
+            landmarkName = "DashboardVC"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "807B74A3-97C8-41F4-BE6B-6CA7F59E0184"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
+            landmarkName = "DashboardVC"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E23FBDD-E7DB-4EFC-85FB-21A77D752CA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "mapView(_:didTap:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E23FBDD-E7DB-4EFC-85FB-21A77D752CA5 - cd0196f8502b9771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.mapView(_: __C.GMSMapView, didTap: __C.GMSMarker) -&gt; Swift.Bool"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "625">
+               </Location>
+               <Location
+                  uuid = "6E23FBDD-E7DB-4EFC-85FB-21A77D752CA5 - cd0196f8502b9771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.mapView(_: __C.GMSMapView, didTap: __C.GMSMarker) -&gt; Swift.Bool"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "399">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A630F67-D3F3-4D11-A017-79295B3652B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A630F67-D3F3-4D11-A017-79295B3652B6 - 5c021a12980d6da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.DashboardVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "353"
+                  endingLineNumber = "353"
+                  offsetFromSymbolStart = "3297">
+               </Location>
+               <Location
+                  uuid = "7A630F67-D3F3-4D11-A017-79295B3652B6 - 5c021a12980d6da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.DashboardVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "353"
+                  endingLineNumber = "353"
+                  offsetFromSymbolStart = "3776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B24437E0-28CB-4101-A293-B0042D5CB997"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B24437E0-28CB-4101-A293-B0042D5CB997 - ff75ac68e691f928"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "B24437E0-28CB-4101-A293-B0042D5CB997 - ff75ac68e691f928"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "811">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52533C25-DA56-4DF1-8230-3836577F3BCC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52533C25-DA56-4DF1-8230-3836577F3BCC - ff75ac68e691f7c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "16948">
+               </Location>
+               <Location
+                  uuid = "52533C25-DA56-4DF1-8230-3836577F3BCC - ff75ac68e691f7c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "16993">
+               </Location>
+               <Location
+                  uuid = "52533C25-DA56-4DF1-8230-3836577F3BCC - ff75ac68e691f75a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "16941">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64F6256A-3F91-407B-920F-627DC4A4D7FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64F6256A-3F91-407B-920F-627DC4A4D7FB - 28d2352acc72831b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "18723">
+               </Location>
+               <Location
+                  uuid = "64F6256A-3F91-407B-920F-627DC4A4D7FB - 28d2352acc72831b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "26390">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23E2DE69-C17E-432A-B36D-6E78FB74305B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23E2DE69-C17E-432A-B36D-6E78FB74305B - 1d91ec2e3c1cf290"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, heightForRowAt: Foundation.IndexPath) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "23E2DE69-C17E-432A-B36D-6E78FB74305B - 28d2352acc72fde8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "250">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA4B3D1B-1F9F-4F07-AF3F-14B4622D91CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "getStationID(coordinate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BA4B3D1B-1F9F-4F07-AF3F-14B4622D91CB - 44bd1a494f519cbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.getStationID(coordinate: __C.CLLocationCoordinate2D) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "1857">
+               </Location>
+               <Location
+                  uuid = "BA4B3D1B-1F9F-4F07-AF3F-14B4622D91CB - 44bd1a494f519c92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.getStationID(coordinate: __C.CLLocationCoordinate2D) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "215"
+                  endingLineNumber = "215"
+                  offsetFromSymbolStart = "1047">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5DE2310-19EF-4255-9C32-C287BFCD07C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/Model/LoginManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "chargerStationsRequest(request:success:fail:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C5DE2310-19EF-4255-9C32-C287BFCD07C5 - 5dbac1d43c34fb5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableChargerManager.chargerStationsRequest(request: Swift.String, success: (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; (), fail: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/Model/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "351">
+               </Location>
+               <Location
+                  uuid = "C5DE2310-19EF-4255-9C32-C287BFCD07C5 - f3984b50adb817fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableChargerManager.chargerStationsRequest(request: Swift.String, success: (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; (), fail: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/Model/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F54B9D93-DA53-45C9-B74B-A85C844DCA7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F54B9D93-DA53-45C9-B74B-A85C844DCA7F - 9eccad7c6321db78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1153">
+               </Location>
+               <Location
+                  uuid = "F54B9D93-DA53-45C9-B74B-A85C844DCA7F - 8705af99ff172ac9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; () in Yahhvi___EV_Charging.PanelViewVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "259">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A74CD752-D885-4CDE-B039-A42BD8C71FBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
+            landmarkName = "PanelViewVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEBB371D-F070-4602-A758-4D80D4A6DA05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingStationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A8E884A-1024-4168-BE23-895B3338636F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A8E884A-1024-4168-BE23-895B3338636F - a34cb3459765ce12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "308"
+                  endingLineNumber = "308"
+                  offsetFromSymbolStart = "19611">
+               </Location>
+               <Location
+                  uuid = "9A8E884A-1024-4168-BE23-895B3338636F - a34cb3459765ce12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "308"
+                  endingLineNumber = "308"
+                  offsetFromSymbolStart = "21718">
+               </Location>
+               <Location
+                  uuid = "9A8E884A-1024-4168-BE23-895B3338636F - a34cb3459765ce12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.PanelViewVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/PanelViewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "308"
+                  endingLineNumber = "308"
+                  offsetFromSymbolStart = "20814">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF2C0189-640C-47E7-BDAA-FA32B54932EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingStationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "next(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84350206-AF1D-4884-AF01-5C16F38AE283"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6912F2F-68B7-434A-A642-67E438EF8A9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getSortedByDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38BADDC6-B4B3-4E63-BBAB-E1AF5B23DB07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38BADDC6-B4B3-4E63-BBAB-E1AF5B23DB07 - f0e6de9747db4fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "282"
+                  endingLineNumber = "282"
+                  offsetFromSymbolStart = "26676">
+               </Location>
+               <Location
+                  uuid = "38BADDC6-B4B3-4E63-BBAB-E1AF5B23DB07 - f0e6de9747db4fe6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "26622">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "959D8CD0-F3BD-4A3D-BE60-E959B67D8575"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "959D8CD0-F3BD-4A3D-BE60-E959B67D8575 - 330e7d6735dc6087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "267">
+               </Location>
+               <Location
+                  uuid = "959D8CD0-F3BD-4A3D-BE60-E959B67D8575 - 330e7d6735dc6087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "109">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58B33E33-2A2D-417F-9653-5B0FCD80E3EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58B33E33-2A2D-417F-9653-5B0FCD80E3EE - 90a5452aa412a72f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  uuid = "58B33E33-2A2D-417F-9653-5B0FCD80E3EE - 4547b57e33e7ed6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE92773D-7666-46D8-A001-DAB05C336835"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE92773D-7666-46D8-A001-DAB05C336835 - 9ade704192a6d698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "6743">
+               </Location>
+               <Location
+                  uuid = "BE92773D-7666-46D8-A001-DAB05C336835 - 9ade704192a6d698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Yahhvi___EV_Charging.AvailableChargers&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "6855">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1DE220E-E5FC-4AFB-9FD3-FC9A71F81D98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "759FF6BA-AA77-4C59-B7E9-68BE01D59DF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getSortedByDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CFDCF40-4F4F-4A5C-8495-6BA4EE414859"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "callChargerApis()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A4113CC-31C6-4897-BC0B-B27B9A2E7F76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "callChargerApis()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "callChargerApis()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5 - 2646131062c76b30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApis() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "3449">
+               </Location>
+               <Location
+                  uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5 - 2646131062c76a97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApis() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "3319">
+               </Location>
+               <Location
+                  uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5 - 827897b8365bdeee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #11 (SwiftyJSON.JSON) -&gt; Swift.Array&lt;SwiftyJSON.JSON&gt; in closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApis() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "99">
+               </Location>
+               <Location
+                  uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5 - 2646131062c76ad1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApis() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "3319">
+               </Location>
+               <Location
+                  uuid = "4E9CF5A6-5FE2-477A-A6A1-85D528E0A8A5 - 827897b8365bdea8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #11 (SwiftyJSON.JSON) -&gt; Swift.Array&lt;SwiftyJSON.JSON&gt; in closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.AvailableConnectorsVC.callChargerApis() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "99">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE7FD4E4-FA2F-4C3C-A70A-662F4FDDF775"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
+            landmarkName = "printSortedDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D2EE246-FE32-40A8-9FFC-DA0393844EE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "452"
+            endingLineNumber = "452"
+            landmarkName = "printSortedDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB07BD9-2395-4364-BCB6-A19FE713648E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "571"
+            endingLineNumber = "571"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65E96E83-2C82-446A-81E4-677A07A6B9F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69B5EEBE-CBDC-4F0D-84BF-C14853D834E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "586"
+            endingLineNumber = "586"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7018D48A-D698-49B0-A0D2-1F9BF92BB8F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "openScreen(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7018D48A-D698-49B0-A0D2-1F9BF92BB8F6 - 83bf7504707acb7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.openScreen(Any) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "7018D48A-D698-49B0-A0D2-1F9BF92BB8F6 - 83bf7504707acb5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.openScreen(Any) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "7018D48A-D698-49B0-A0D2-1F9BF92BB8F6 - 83bf7504707acb5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.openScreen(Any) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "557">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D140202-1532-4C2A-9232-3BE6C6CFFB80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "menuClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E214C8E-309B-4491-8BB1-5F6FB96094E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "showscreen(stationid:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9989EA7C-D65B-4294-8133-7E47B2DEB3E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08C23CF6-4B1E-4E06-8BFB-14084286002D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA89C3F8-90F9-436C-86FB-DDE6FFA6DCD2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingSessionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "trxMeterValuesApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA89C3F8-90F9-436C-86FB-DDE6FFA6DCD2 - f879349146d84c69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "582">
+               </Location>
+               <Location
+                  uuid = "DA89C3F8-90F9-436C-86FB-DDE6FFA6DCD2 - f879349146d84c69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "341">
+               </Location>
+               <Location
+                  uuid = "DA89C3F8-90F9-436C-86FB-DDE6FFA6DCD2 - f879349146d84c69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "362">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C17FA9C-C2E0-48EB-914A-FD0E11D5B842"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingSessionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "trxMeterValuesApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2C17FA9C-C2E0-48EB-914A-FD0E11D5B842 - f879349146d84fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "1117">
+               </Location>
+               <Location
+                  uuid = "2C17FA9C-C2E0-48EB-914A-FD0E11D5B842 - f879349146d84fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "582">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE05DD61-5BFF-4EA6-BD59-A7987BE302A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingSessionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "trxMeterValuesApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE05DD61-5BFF-4EA6-BD59-A7987BE302A4 - f879349146d84e3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "5988">
+               </Location>
+               <Location
+                  uuid = "FE05DD61-5BFF-4EA6-BD59-A7987BE302A4 - f879349146d84e3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "5818">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF1370E2-37A7-4C25-B76A-3DC366D75EDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingSessionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "trxMeterValuesApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF1370E2-37A7-4C25-B76A-3DC366D75EDB - f879349146d84901"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "5255">
+               </Location>
+               <Location
+                  uuid = "DF1370E2-37A7-4C25-B76A-3DC366D75EDB - f879349146d84966"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.ChargingSessionVC.trxMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingSessionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "4874">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B43EF44-0B1B-4F0C-B3B7-3CFDCA305E34"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "599"
+            endingLineNumber = "599"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94875100-986B-4A7C-8E45-DF73048B7315"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "94875100-986B-4A7C-8E45-DF73048B7315 - c8a8512a66fa2e28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "2704">
+               </Location>
+               <Location
+                  uuid = "94875100-986B-4A7C-8E45-DF73048B7315 - c8a8512a66fa2e28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "2714">
+               </Location>
+               <Location
+                  uuid = "94875100-986B-4A7C-8E45-DF73048B7315 - c8a8512a66fa2fb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2714">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83B02680-9D22-4CCB-B747-F77CB57C4408"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83B02680-9D22-4CCB-B747-F77CB57C4408 - c8a8512a66fa2f57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "4311">
+               </Location>
+               <Location
+                  uuid = "83B02680-9D22-4CCB-B747-F77CB57C4408 - c8a8512a66fa2f57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "4321">
+               </Location>
+               <Location
+                  uuid = "83B02680-9D22-4CCB-B747-F77CB57C4408 - c8a8512a66fa30d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "4321">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7 - b5b86c79fb8db8fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7 - c8a8512a66fa35f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "9616">
+               </Location>
+               <Location
+                  uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7 - b5b86c79fb8dbb49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7 - b5b86c79fb8dbaea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "383">
+               </Location>
+               <Location
+                  uuid = "AE884A21-20DC-4DA2-B8EA-04FF011C79C7 - b5b86c79fb8dba56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingDetailVC.connected(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "383">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C88F10A-EC38-4E9F-A2E0-6A4ED2F66403"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingStationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62BD68C5-231B-4051-86DA-9F4F1BA4A71D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingStationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D51CC06C-C503-4433-84C5-385520CCA159"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingUnitVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "callpowerUnitApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D51CC06C-C503-4433-84C5-385520CCA159 - 86e76f06d57f10b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingUnitVC.callUnitAmountApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingUnitVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "1037">
+               </Location>
+               <Location
+                  uuid = "D51CC06C-C503-4433-84C5-385520CCA159 - 1dcd860322695b7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingUnitVC.callpowerUnitApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingUnitVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "1037">
+               </Location>
+               <Location
+                  uuid = "D51CC06C-C503-4433-84C5-385520CCA159 - 1dcd8603226955b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingUnitVC.callpowerUnitApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/ChargingUnitVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "1037">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD6E8C86-A444-46C8-A2E4-DB824AFD3101"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingUnitVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "callamountUnitApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0352682-351D-4486-BFDF-D0D485ED2C1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "557"
+            endingLineNumber = "557"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2665784-FEE1-4F8E-A3AD-5E2BFE152CF2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2665784-FEE1-4F8E-A3AD-5E2BFE152CF2 - b70478b309e18809"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "530"
+                  endingLineNumber = "530"
+                  offsetFromSymbolStart = "20378">
+               </Location>
+               <Location
+                  uuid = "F2665784-FEE1-4F8E-A3AD-5E2BFE152CF2 - b70478b309e18809"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "530"
+                  endingLineNumber = "530"
+                  offsetFromSymbolStart = "20406">
+               </Location>
+               <Location
+                  uuid = "F2665784-FEE1-4F8E-A3AD-5E2BFE152CF2 - b70478b309e18809"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AvailableConnectorsVC.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/AvailableConnectorsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "530"
+                  endingLineNumber = "530"
+                  offsetFromSymbolStart = "20294">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49165A15-368F-4E26-9FAB-B9A0A99E8B91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A93C06AA-DE81-417D-9E24-1E779BD6E78D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/Common/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "startLocationUpdater(completed:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A93C06AA-DE81-417D-9E24-1E779BD6E78D - 789078e8ab180fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.LocationManager.startLocationUpdater(completed: Swift.Optional&lt;() -&gt; Swift.Optional&lt;()&gt;&gt;) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/Common/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "158">
+               </Location>
+               <Location
+                  uuid = "A93C06AA-DE81-417D-9E24-1E779BD6E78D - 789078e8ab180fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.LocationManager.startLocationUpdater(completed: Swift.Optional&lt;() -&gt; Swift.Optional&lt;()&gt;&gt;) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/Common/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "110">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FAB61F0-5430-49A2-8064-8515BCCD8A8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FAB61F0-5430-49A2-8064-8515BCCD8A8A - 680a2fa8a6d6183f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1419">
+               </Location>
+               <Location
+                  uuid = "0FAB61F0-5430-49A2-8064-8515BCCD8A8A - 680a2fa8a6d619fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1286">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02C0501D-52DF-4E3B-A29A-48FC3DFCEF1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02C0501D-52DF-4E3B-A29A-48FC3DFCEF1D - 680a2fa8a6d61858"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1638">
+               </Location>
+               <Location
+                  uuid = "02C0501D-52DF-4E3B-A29A-48FC3DFCEF1D - 680a2fa8a6d6181e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.DashboardVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamsingh/Desktop/EVApp/EVApp/View/Controller/DashboardVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1691">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBFB6420-E622-4725-B609-4BA75BE69426"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "DashboardVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAA5E26A-149D-4D08-AD6A-F9820ADE796E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/DashboardVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
+            landmarkName = "callChargerApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CFFEC30-65A2-4959-9D3B-C811C8B8CE8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
+            landmarkName = "openAction(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A97B84A8-9F0F-46D5-90D5-89A5C63C6504"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9DFE3E1-2247-4322-B999-2C4DF668BE97"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD2C655F-E57E-4156-8E07-BA263AF21711"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93CEFA58-E1C8-4C2F-AAAA-110EE28A81DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/AvailableConnectorsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
+            landmarkName = "AvailableConnectorsVC"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

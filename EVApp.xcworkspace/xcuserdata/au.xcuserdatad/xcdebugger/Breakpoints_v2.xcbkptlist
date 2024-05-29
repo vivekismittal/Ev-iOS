@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6FF79609-8F49-4A7D-8BDC-08C3D36EF4E5"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23D708D1-A72C-4A58-B834-E8BA5FF3E8FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0C89EC3-00DA-4884-AD88-26C3D03134A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0C89EC3-00DA-4884-AD88-26C3D03134A3 - 478651661da07d80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingVC.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/ChargingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1912">
+               </Location>
+               <Location
+                  uuid = "E0C89EC3-00DA-4884-AD88-26C3D03134A3 - 478651661da07d80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingVC.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/ChargingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1660">
+               </Location>
+               <Location
+                  uuid = "E0C89EC3-00DA-4884-AD88-26C3D03134A3 - 478651661da07de1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.ChargingVC.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/ChargingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1912">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7021D252-1E2C-47E3-91D2-D1A6D10E8AB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaitingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "callTrxStartApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7021D252-1E2C-47E3-91D2-D1A6D10E8AB2 - 5a31b0df7f71771f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaitingVC.callTrxStartApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaitingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "7021D252-1E2C-47E3-91D2-D1A6D10E8AB2 - 5a31b0df7f71771f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaitingVC.callTrxStartApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaitingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "707E2DFE-5D53-4C5E-89C6-05BD63D5DE16"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaletVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "waletTransactionApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "707E2DFE-5D53-4C5E-89C6-05BD63D5DE16 - 9cc56c35c9453043"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaletVC.waletTransactionApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "242">
+               </Location>
+               <Location
+                  uuid = "707E2DFE-5D53-4C5E-89C6-05BD63D5DE16 - 9cc56c35c9453043"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaletVC.waletTransactionApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA59F582-A268-4EB4-B31D-E2F3BA4F5136"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaletVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "getWaletAmtApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA59F582-A268-4EB4-B31D-E2F3BA4F5136 - f3ead43036ad8c07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  uuid = "EA59F582-A268-4EB4-B31D-E2F3BA4F5136 - f3ead43036ad8c07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  uuid = "EA59F582-A268-4EB4-B31D-E2F3BA4F5136 - f3ead43036ad8c07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4A43961-C1EA-4984-8855-4B15268DCCD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaletVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "getWaletAmtApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4A43961-C1EA-4984-8855-4B15268DCCD3 - 2168cdd14ac0e608"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "493">
+               </Location>
+               <Location
+                  uuid = "F4A43961-C1EA-4984-8855-4B15268DCCD3 - 2168cdd14ac0e629"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "486">
+               </Location>
+               <Location
+                  uuid = "F4A43961-C1EA-4984-8855-4B15268DCCD3 - 2168cdd14ac0e629"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaletVC.getWaletAmtApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "451FCD9F-195C-4B07-8EE7-AF37388C7DDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaletVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "waletTransactionApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "451FCD9F-195C-4B07-8EE7-AF37388C7DDB - 5c868edd2e1e8566"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaletVC.waletTransactionApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "322">
+               </Location>
+               <Location
+                  uuid = "451FCD9F-195C-4B07-8EE7-AF37388C7DDB - 5c868edd2e1e8566"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.WaletVC.waletTransactionApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaletVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3824DB45-660A-41AC-9603-EE2B6768D4CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3824DB45-660A-41AC-9603-EE2B6768D4CB - d439a1bcb6885d98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Yahhvi___EV_Charging.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "1137">
+               </Location>
+               <Location
+                  uuid = "3824DB45-660A-41AC-9603-EE2B6768D4CB - b007cf75572dd38f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "1219">
+               </Location>
+               <Location
+                  uuid = "3824DB45-660A-41AC-9603-EE2B6768D4CB - b007cf75572dd3ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1219">
+               </Location>
+               <Location
+                  uuid = "3824DB45-660A-41AC-9603-EE2B6768D4CB - b007cf75572dd3ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "988">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9BAAB4D-B46C-46F5-A016-A96EFD35F9DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "application(_:didReceiveRemoteNotification:fetchCompletionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A9BAAB4D-B46C-46F5-A016-A96EFD35F9DE - a500c380bfd250d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "557">
+               </Location>
+               <Location
+                  uuid = "A9BAAB4D-B46C-46F5-A016-A96EFD35F9DE - a500c380bfd25ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "A9BAAB4D-B46C-46F5-A016-A96EFD35F9DE - a500c380bfd25cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "A9BAAB4D-B46C-46F5-A016-A96EFD35F9DE - a500c380bfd25cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;, fetchCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73E0C23F-F53A-47E7-B7E9-3AD080677B99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "73E0C23F-F53A-47E7-B7E9-3AD080677B99 - b007cf75572dd0b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "2702">
+               </Location>
+               <Location
+                  uuid = "73E0C23F-F53A-47E7-B7E9-3AD080677B99 - b007cf75572dd0b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  uuid = "73E0C23F-F53A-47E7-B7E9-3AD080677B99 - b007cf75572dd350"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  uuid = "73E0C23F-F53A-47E7-B7E9-3AD080677B99 - b007cf75572dd350"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62ECE08F-26A3-443E-8C61-3573C4D06307"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "checkUpdateVersion(viewController:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62ECE08F-26A3-443E-8C61-3573C4D06307 - 3fea13640e2fed06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "62ECE08F-26A3-443E-8C61-3573C4D06307 - 3fea13640e2feb55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "62ECE08F-26A3-443E-8C61-3573C4D06307 - 3fea13640e2feb55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  uuid = "62ECE08F-26A3-443E-8C61-3573C4D06307 - 3fea13640e2feb55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9C0BCE9-DFB9-4525-B3F9-21EDA91870E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "checkUpdateVersion(viewController:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A9C0BCE9-DFB9-4525-B3F9-21EDA91870E6 - 45b90a641c6cb7ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "A9C0BCE9-DFB9-4525-B3F9-21EDA91870E6 - 45b90a641c6cb709"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "A9C0BCE9-DFB9-4525-B3F9-21EDA91870E6 - 45b90a641c6cb709"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Yahhvi___EV_Charging.AppDelegate.checkUpdateVersion(viewController: __C.UIViewController) -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C37A8C9-EFEA-4D70-982B-0D13E7C47B77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/StartChargingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "startCharging(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB777FE0-F2AC-4161-90CB-98DA04610E8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/WaitingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "callMeterValuesApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB777FE0-F2AC-4161-90CB-98DA04610E8F - 804e6fedc494a64f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaitingVC.callMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaitingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "BB777FE0-F2AC-4161-90CB-98DA04610E8F - 804e6fedc494a64f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Yahhvi___EV_Charging.WaitingVC.callMeterValuesApi() -&gt; ()"
+                  moduleName = "Yahhvi - EV Charging"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/au/Documents/Ajitabh%20Project/EVApp/EVApp/View/Controller/WaitingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "403">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D53ADEF8-93A2-4464-AEE8-2A91EB64DA23"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "printSortedDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C143C3A-1243-4533-8C52-9A2EECF1B11E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/PanelViewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "printSortedDistance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8C13637-6967-4DE3-AA50-C68C97ED36A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingStationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "next(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "213A0B65-14DC-49B9-9335-4684E69D0990"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EVApp/View/Controller/ChargingDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "connected(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
