@@ -1,5 +1,5 @@
 {
-  "originHash" : "c93ffa7cf87e68ff0ba0a0a9f71e71714d18b367c161a14b2470b74aad4ab80d",
+  "originHash" : "fd8239207687511e7d82ac07d26acdcdeb4da009575f126c7d9d79f359a0e0a7",
   "pins" : [
     {
       "identity" : "cosmos",
@@ -179,15 +179,6 @@
       "state" : {
         "revision" : "59b54bbf0329389f418af2ead07f424d131d1a20",
         "version" : "2.1.0"
-      }
-    },
-    {
-      "identity" : "sidemenu",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jonkykong/SideMenu.git",
-      "state" : {
-        "revision" : "8bd4fd128923cf5494fa726839af8afe12908ad9",
-        "version" : "6.5.0"
       }
     },
     {

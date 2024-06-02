@@ -14,7 +14,6 @@
 		82B3C3202AC83AA300669388 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82B3C31F2AC83AA300669388 /* NotificationBannerSwift */; };
 		940236032C075A9E00F03C04 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 940236022C075A9E00F03C04 /* GoogleMaps */; };
 		94BDC65B2C073E5C00B06B4F /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */; };
-		94BDC65E2C073EB300B06B4F /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC65D2C073EB300B06B4F /* SideMenu */; };
 		94BDC6612C073EE100B06B4F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6602C073EE100B06B4F /* FloatingPanel */; };
 		94BDC6642C073F1200B06B4F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6632C073F1200B06B4F /* IQKeyboardManagerSwift */; };
 		94BDC66C2C07445000B06B4F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC66B2C07445000B06B4F /* Kingfisher */; };
@@ -231,7 +230,6 @@
 				94BDC6612C073EE100B06B4F /* FloatingPanel in Frameworks */,
 				94BDC6772C0747F500B06B4F /* PayUIndia-CheckoutProBase in Frameworks */,
 				94BDC6752C0747F500B06B4F /* PayUIndia-CheckoutPro in Frameworks */,
-				94BDC65E2C073EB300B06B4F /* SideMenu in Frameworks */,
 				94BDC6722C07469000B06B4F /* GooglePlaces in Frameworks */,
 				BC7ECC06388D7A722CD509EB /* Pods_EVApp.framework in Frameworks */,
 			);
@@ -458,7 +456,6 @@
 				CB2A64E32A5AA143005EF112 /* Cosmos */,
 				82B3C31F2AC83AA300669388 /* NotificationBannerSwift */,
 				94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */,
-				94BDC65D2C073EB300B06B4F /* SideMenu */,
 				94BDC6602C073EE100B06B4F /* FloatingPanel */,
 				94BDC6632C073F1200B06B4F /* IQKeyboardManagerSwift */,
 				94BDC66B2C07445000B06B4F /* Kingfisher */,
@@ -501,7 +498,6 @@
 				CB2A64E22A5AA143005EF112 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				82B3C31E2AC83AA300669388 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
 				94BDC6592C073E5C00B06B4F /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */,
-				94BDC65C2C073EB300B06B4F /* XCRemoteSwiftPackageReference "SideMenu" */,
 				94BDC65F2C073EE100B06B4F /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				94BDC6622C073F1200B06B4F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				94BDC66A2C07445000B06B4F /* XCRemoteSwiftPackageReference "Kingfisher" */,
@@ -970,14 +966,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		94BDC65C2C073EB300B06B4F /* XCRemoteSwiftPackageReference "SideMenu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.0;
-			};
-		};
 		94BDC65F2C073EE100B06B4F /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SCENEE/FloatingPanel.git";
@@ -1051,11 +1039,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94BDC6592C073E5C00B06B4F /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */;
 			productName = SkyFloatingLabelTextField;
-		};
-		94BDC65D2C073EB300B06B4F /* SideMenu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 94BDC65C2C073EB300B06B4F /* XCRemoteSwiftPackageReference "SideMenu" */;
-			productName = SideMenu;
 		};
 		94BDC6602C073EE100B06B4F /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;

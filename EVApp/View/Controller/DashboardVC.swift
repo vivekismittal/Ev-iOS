@@ -14,9 +14,9 @@ import Alamofire
 import SwiftyJSON
 
 
-class DashboardVC: UIViewController,FloatingPanelControllerDelegate ,GMSMapViewDelegate{
+class DashboardVC: UIViewController, FloatingPanelControllerDelegate, GMSMapViewDelegate{
     
-    @IBOutlet weak var btnSignup: UIButton!
+//    @IBOutlet weak var btnSignup: UIButton!
     // @IBOutlet weak var guestView: UIView!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var btnStation: UIButton!
@@ -48,11 +48,14 @@ class DashboardVC: UIViewController,FloatingPanelControllerDelegate ,GMSMapViewD
         super.viewDidLoad()
         
             NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
-            self.btnSignup.layer.cornerRadius  = 12
+//            self.btnSignup.layer.cornerRadius  = 12
             callChargerApi()
             getUserApi()
             self.mapView.delegate = self
-            
+            self.mapView.translatesAutoresizingMaskIntoConstraints = false
+            self.mapView.setNeedsLayout()
+            self.mapView.layoutIfNeeded()
+        
             if let currentLocation = LocationManager.shared.curentLocation{
                 let coordinate = currentLocation.location.coordinate
                 print(coordinate.latitude)
@@ -117,11 +120,11 @@ class DashboardVC: UIViewController,FloatingPanelControllerDelegate ,GMSMapViewD
             self.navigationController?.present (vc, animated: true)
         }
     }
-    @IBAction func signup(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
-        self.present(nextViewController, animated:true, completion:nil)
-    }
+//    @IBAction func signup(_ sender: Any) {
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+//        self.present(nextViewController, animated:true, completion:nil)
+//    }
     
     
     func showLocation(){
@@ -278,17 +281,17 @@ extension DashboardVC{
                 let jsonData = JSON(value)
                 print(jsonData)
                 
-                let status = jsonData["status"].string
-                let message = jsonData["message"].string
+//                let status = jsonData["status"].string
+//                let message = jsonData["message"].string
                 let firstName = jsonData["firstName"].string
                 let eMail = jsonData["eMail"].string
-                let sex = jsonData["sex"].string
-                let vehicleModel = jsonData["vehicleModel"].string
-                let phone = jsonData["phone"].string
-                let password = jsonData["password"].string
+//                let sex = jsonData["sex"].string
+//                let vehicleModel = jsonData["vehicleModel"].string
+//                let phone = jsonData["phone"].string
+//                let password = jsonData["password"].string
                 let lastName = jsonData["lastName"].string
                 let userPk = jsonData["userPk"].intValue
-                let vehicleRegistrationNumber = jsonData["vehicleRegistrationNumber"].string
+//                let vehicleRegistrationNumber = jsonData["vehicleRegistrationNumber"].string
                 
                 let fullName = (firstName ?? "")  + (lastName ?? "")
                 //  self.showToast(title: "", message: message ?? "")
