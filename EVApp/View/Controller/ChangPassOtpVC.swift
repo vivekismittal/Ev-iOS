@@ -55,7 +55,7 @@ class ChangPassOtpVC: UIViewController {
         }
     }
     func sendotpApi(){
-        let sendOtpURL  = EndPoints().baseUrl + EndPoints().sendOtp
+        let sendOtpURL  = EndPoints.shared.baseUrlDev + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": mobileNo
@@ -93,7 +93,7 @@ class ChangPassOtpVC: UIViewController {
                     }
     }
     func verifyotpApi(){
-        let verifyOtp  = EndPoints().baseUrl + EndPoints().verifyOtp
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.verifyOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": mobileNo,

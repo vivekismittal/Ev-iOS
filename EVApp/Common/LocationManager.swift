@@ -43,6 +43,19 @@ class LocationManager:NSObject{
         locationManager.startUpdatingLocation()
     }
     
+    func getDistance(from location: StationChargerAddress) -> String{
+        let coordinate = curentLocation?.location.coordinate
+        
+        let curLocation = CLLocation(latitude: coordinate?.latitude ?? 00.00, longitude: coordinate?.longitude ?? 00.00)
+        
+        let latitude = Double(location.latitude ?? "") ?? 0
+        let longitude = Double(location.longitude ?? "") ?? 0
+        let charLocation = CLLocation(latitude: latitude, longitude: longitude)
+        let totDistance = curLocation.distance(from: charLocation)
+        let distance  = String(format: "%.01f", Float(totDistance)/1000)
+        return distance
+    }
+    
 }
 
 extension LocationManager:CLLocationManagerDelegate{

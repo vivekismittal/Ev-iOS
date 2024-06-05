@@ -27,7 +27,7 @@ class ActivityIndicator: NSObject {
             let y = parentSize.height/2 - 25
 
             spinner = UIActivityIndicatorView(frame: CGRect(x: x, y: y, width: 50, height: 50) )
-            spinner.style = .gray
+            spinner.style = .medium
             spinner.color = .blue
             view.addSubview(spinner)
             view.bringSubviewToFront(grayView)

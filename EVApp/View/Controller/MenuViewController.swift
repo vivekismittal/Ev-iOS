@@ -50,65 +50,52 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
         return 60
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == 0{
-            
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+      if indexPath.row == 0{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-            self.present(nextViewController, animated:true, completion:nil)
-        }else if indexPath.row == 1{
+            self.present(nextViewController, animated:true, completion: nil)
+          
+        } else if indexPath.row == 1{
+            let nextViewController = ViewControllerFactory.instantiateAvailableChargersViewController()
+            self.present(nextViewController, animated: true, completion: nil)
             
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AvailableConnectorsVC") as! AvailableConnectorsVC
-            //self.navigationController?.pushViewController(nextViewController, animated: false)
-            self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 2{
-            
+        } else if indexPath.row == 2{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
-            self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 3{
+            self.present(nextViewController, animated: true, completion: nil)
             
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        } else if indexPath.row == 3{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MyBookingsVC") as! MyBookingsVC
             self.present(nextViewController, animated:true, completion:nil)
             //let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DashboardVC") as? DashboardVC
             //self.navigationController?.pushViewController(nextViewController, animated: true)
-        }
-        else if indexPath.row == 4{
-            
+        } else if indexPath.row == 4{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WaletVC") as! WaletVC
             self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 5{
             
+        } else if indexPath.row == 5{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingVC
             self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 6{
             
+        } else if indexPath.row == 6{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TemsConditionVC") as! TemsConditionVC
             self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 7{
             
+        } else if indexPath.row == 7{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
             self.present(nextViewController, animated:true, completion:nil)
-        }
-        else if indexPath.row == 8{
             
+        } else if indexPath.row == 8{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HelpCenterVC") as! HelpCenterVC
             self.present(nextViewController, animated:true, completion:nil)
-        }
-        
-        else if indexPath.row == 9{
+            
+        } else if indexPath.row == 9{
             //  showAlertController(titleOfAlert: "Alert", messageOfAlert: "Do you want to Logout?", doAction: gotoWelcome())
             let refreshAlert = UIAlertController(title: "Alert", message: "Do you want to Logout", preferredStyle: UIAlertController.Style.alert)
             
@@ -129,8 +116,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
             
             present(refreshAlert, animated: true, completion: nil)
             
-        }
-        else if indexPath.row == 10{
+        } else if indexPath.row == 10{
             //  showAlertController(titleOfAlert: "Alert", messageOfAlert: "Do you want to Logout?", doAction: gotoWelcome())
             let refreshAlert = UIAlertController(title: "Alert", message: "Do you want to Delete your account", preferredStyle: UIAlertController.Style.alert)
             

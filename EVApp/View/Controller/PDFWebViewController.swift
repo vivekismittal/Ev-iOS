@@ -27,7 +27,7 @@ class PDFWebViewController: UIViewController {
         self.present(nextViewController, animated:true, completion:nil)
     }
     func viewInvoice(){
-        let invoiceUrl  = EndPoints().baseUrlDev + EndPoints().paymentInvoice + userTrxId
+        let invoiceUrl  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentInvoice + userTrxId
         var pdfURL = URL(string: invoiceUrl)!
         self.webView.loadRequest(URLRequest(url: pdfURL))
     }

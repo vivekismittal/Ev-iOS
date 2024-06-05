@@ -369,7 +369,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Tx-zN-AJm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q5M-6J-6oC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3552,7 +3552,7 @@
                                 <rect key="frame" x="0.0" y="100" width="320" height="468"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="AvailableConnectorCell" rowHeight="433" id="KXf-kZ-o3y" customClass="AvailableConnectorCell" customModule="Yahhvi___EV_Charging" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="AvailableConnectorTableViewCell" rowHeight="433" id="KXf-kZ-o3y" customClass="AvailableConnectorTableViewCell" customModule="Yahhvi___EV_Charging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="320" height="433"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXf-kZ-o3y" id="fvQ-VF-ucz">
@@ -3662,7 +3662,7 @@
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
                                                             <cells>
-                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionConCell" id="h1r-BF-XWN" customClass="CollectionConCell" customModule="Yahhvi___EV_Charging" customModuleProvider="target">
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ConnectorCollectionViewCell" id="h1r-BF-XWN" customClass="ConnectorCollectionViewCell" customModule="Yahhvi___EV_Charging" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="1.5" width="200" height="182"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eW6-X0-8ut">
@@ -3681,16 +3681,6 @@
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connector A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-ye-VWL">
                                                                                         <rect key="frame" x="5" y="85" width="190" height="17"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                                                        <nil key="textColor"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw4-Bm-Ky3">
-                                                                                        <rect key="frame" x="5" y="24" width="190" height="1"/>
-                                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="height" constant="1" id="e62-Dx-k5f"/>
-                                                                                        </constraints>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
@@ -3733,19 +3723,16 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="Xw4-Bm-Ky3" firstAttribute="top" secondItem="FGL-03-YRk" secondAttribute="bottom" constant="2" id="6oP-bi-K2F"/>
                                                                                     <constraint firstAttribute="width" constant="160" id="C4b-Tz-M4z"/>
                                                                                     <constraint firstItem="FGL-03-YRk" firstAttribute="top" secondItem="sab-et-MFi" secondAttribute="top" constant="5" id="E9l-YJ-2ql"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="LV8-ye-VWL" secondAttribute="trailing" constant="5" id="EFV-Hm-HpB"/>
                                                                                     <constraint firstItem="h1J-H4-gf8" firstAttribute="leading" secondItem="sab-et-MFi" secondAttribute="leading" constant="5" id="IeG-nN-YNY"/>
                                                                                     <constraint firstItem="mbP-bL-wng" firstAttribute="centerX" secondItem="sab-et-MFi" secondAttribute="centerX" id="KYb-t6-Ctc"/>
-                                                                                    <constraint firstItem="Xw4-Bm-Ky3" firstAttribute="leading" secondItem="sab-et-MFi" secondAttribute="leading" constant="5" id="Mak-WZ-zH5"/>
                                                                                     <constraint firstItem="LV8-ye-VWL" firstAttribute="leading" secondItem="sab-et-MFi" secondAttribute="leading" constant="5" id="RJz-mh-7OC"/>
-                                                                                    <constraint firstItem="9Eh-0G-hx4" firstAttribute="top" secondItem="Xw4-Bm-Ky3" secondAttribute="bottom" constant="5" id="X9k-DG-5bH"/>
                                                                                     <constraint firstItem="LV8-ye-VWL" firstAttribute="top" secondItem="9Eh-0G-hx4" secondAttribute="bottom" constant="5" id="ZK8-5i-i0u"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="FGL-03-YRk" secondAttribute="trailing" constant="5" id="agp-31-2bz"/>
                                                                                     <constraint firstItem="9Eh-0G-hx4" firstAttribute="centerX" secondItem="sab-et-MFi" secondAttribute="centerX" id="bHq-Yz-G8d"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="Xw4-Bm-Ky3" secondAttribute="trailing" constant="5" id="bx9-We-Ilk"/>
+                                                                                    <constraint firstItem="9Eh-0G-hx4" firstAttribute="top" secondItem="FGL-03-YRk" secondAttribute="bottom" constant="8" id="bbM-ZH-dGa"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="mbP-bL-wng" secondAttribute="bottom" constant="5" id="nq5-9a-HcA"/>
                                                                                     <constraint firstAttribute="height" constant="175" id="o71-wP-6dA"/>
                                                                                     <constraint firstItem="h1J-H4-gf8" firstAttribute="top" secondItem="LV8-ye-VWL" secondAttribute="bottom" constant="5" id="tcb-24-TC4"/>

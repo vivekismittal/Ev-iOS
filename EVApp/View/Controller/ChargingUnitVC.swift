@@ -129,7 +129,7 @@ class ChargingUnitVC: UIViewController {
 }
 extension ChargingUnitVC{
     func callamountUnitApi(){
-        let amountUnit = EndPoints().baseUrlDev + EndPoints().amountUnit
+        let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.amountUnit
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
         LoadingOverlay.shared.showOverlay(view: view)
@@ -185,7 +185,7 @@ extension ChargingUnitVC{
         }
     }
     func callpowerUnitApi(){
-        let amountUnit = EndPoints().baseUrlDev + EndPoints().wattAmount
+        let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.wattAmount
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
         UserDefaults.standard.setValue(self.orderAmount, forKey: "requestedUnit")
@@ -244,7 +244,7 @@ extension ChargingUnitVC{
     }
     // Time base API
     func callUnitTimeAPI(){
-        let amountUnit = EndPoints().baseUrlDev + EndPoints().timeAmount
+        let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.timeAmount
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
         UserDefaults.standard.setValue(self.orderAmount, forKey: "requestedUnit")
@@ -303,7 +303,7 @@ extension ChargingUnitVC{
         }
     }
     func callApplyCouponApi(){
-        let amountUnit = EndPoints().baseUrlDev + EndPoints().discountCoupon
+        let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.discountCoupon
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
@@ -338,7 +338,7 @@ extension ChargingUnitVC{
         }
     }
         func getWaletAmtApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().getWaletAmt
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [

@@ -82,7 +82,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
     
     
     func callLoginApi(){
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().login
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.login
        // LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
             let parameters = [
@@ -143,7 +143,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
     }
     
     func sendotpApi(){
-        let guestURL  = EndPoints().sendOtp
+        let guestURL  = EndPoints.shared.sendOtp
        // LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
        

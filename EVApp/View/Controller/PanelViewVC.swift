@@ -59,25 +59,28 @@ class PanelViewVC: UIViewController ,UITableViewDelegate,UITableViewDataSource{
         }
         //callChargerApi()
         self.showSpinner(onView: view)
-        AvailableChargerManager.shared.chargerStationsRequest(request: "", success: { (response) in
-            print(response)
-            self.removeSpinner()
-            self.availableChargers = response
-            let stationIndex = self.getStationIDIndex()
-            let availableConnectors = self.availableChargers?[stationIndex]
-            let stationName = availableConnectors?.chargerInfos?[0]
-            if self.isShowStations{
-                self.getSortedByDistance()
+        
+        AvailableChargersRepo().getAvailableChargingStations{ res in
+            switch res{
+            case .success(let chargers):
+                self.removeSpinner()
+                self.availableChargers = chargers
+                let stationIndex = self.getStationIDIndex()
+                let availableConnectors = self.availableChargers?[stationIndex]
+                let stationName = availableConnectors?.chargerInfos?[0]
+                if self.isShowStations{
+                    self.getSortedByDistance()
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                    self.lbStationName.text = stationName?.name ?? ""
+                    self.lblCount.text = "\(availableConnectors?.availableConnectors ?? 0)/\(availableConnectors?.totalConnectors ?? 0)"
+                }
+            case .failure(let error):
+                print(error)
             }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                
-                self.lbStationName.text = stationName?.name ?? ""
-                self.lblCount.text = "\(availableConnectors?.availableConnectors ?? 0)/\(availableConnectors?.totalConnectors ?? 0)"
-            }
-        }, fail: {
-            print("Failed to fetch response")
-        })
+        }
     }
     
     func getSortedByDistance(){

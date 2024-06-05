@@ -257,7 +257,7 @@ extension DashboardVC{
     // MARK: - API Call
     
     func getUserApi(){
-        let loginUrl  = EndPoints().baseUrlDev +  EndPoints().getUserByPhone
+        let loginUrl  = EndPoints.shared.baseUrlDev +  EndPoints.shared.getUserByPhone
         
         // self.showSpinner(onView: view)
         
@@ -309,7 +309,7 @@ extension DashboardVC{
         }
     }
     func callChargerApi(){
-        let stateUrl = EndPoints().baseUrlDev + EndPoints().chargersStations
+        let stateUrl = EndPoints.shared.baseUrlDev + EndPoints.shared.chargersStations
         let headers:HTTPHeaders = [
             
         ]

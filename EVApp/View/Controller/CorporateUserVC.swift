@@ -147,7 +147,7 @@ class CorporateUserVC: UIViewController {
     }
     
     func callStateApi(){
-        let stateUrl = EndPoints().baseUrl +  EndPoints().state
+        let stateUrl = EndPoints.shared.baseUrl +  EndPoints.shared.state
         let headers:HTTPHeaders = [
           
         ]
@@ -185,7 +185,7 @@ class CorporateUserVC: UIViewController {
                 }
     }
     func callCountryApi(){
-        let stateUrl = EndPoints().baseUrl + EndPoints().country
+        let stateUrl = EndPoints.shared.baseUrl + EndPoints.shared.country
         let headers:HTTPHeaders = [
           
         ]
@@ -227,7 +227,7 @@ class CorporateUserVC: UIViewController {
 extension CorporateUserVC{
     
     func callRegisterApi(){
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().registerUser
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.registerUser
      //   LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
        
@@ -285,7 +285,7 @@ extension CorporateUserVC{
     }
     
     func sendotpApi(){
-        let guestURL  = EndPoints().baseUrl + EndPoints().sendOtp
+        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": txtMobile.text!

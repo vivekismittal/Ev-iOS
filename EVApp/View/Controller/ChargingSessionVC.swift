@@ -84,7 +84,7 @@ class ChargingSessionVC: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     // MARK: - API Call
     func trxMeterValuesApi(){
-        let url  = EndPoints().baseUrlDev + EndPoints().paymentUsertrxsession
+        let url  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentUsertrxsession
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
       //  LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)

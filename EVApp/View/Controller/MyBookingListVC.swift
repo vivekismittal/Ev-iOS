@@ -59,7 +59,7 @@ class MyBookingListVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
 extension MyBookingListVC{
     func callBookingListApi(){
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().advbookingUserBookings
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.advbookingUserBookings
         self.showSpinner(onView: view)
     let parameters = [
         "userId":userPk
@@ -114,7 +114,7 @@ extension MyBookingListVC{
     }
     func cancelBookingListApi(id:String){
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().adbookingCancelBooking
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.adbookingCancelBooking
         self.showSpinner(onView: view)
     let parameters = [
         "id":id

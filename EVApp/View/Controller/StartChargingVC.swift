@@ -35,7 +35,7 @@ class StartChargingVC: UIViewController {
     }
     
 func callTrxStartApi(){
-    let verifyOtp  = EndPoints().baseUrlDev + EndPoints().trxStart
+    let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStart
     let userPk = UserDefaults.standard.integer(forKey: "userPk")
    var chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
     let orderAmt =  UserDefaults.standard.string(forKey: "AMOUNT")

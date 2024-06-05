@@ -44,7 +44,7 @@ class ChangePasswwordVC: UIViewController {
     }
     
     func changePassApi(){
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().usersChangePassword
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.usersChangePassword
       //  let userMobile = UserDefaults.standard.string(forKey: "userMobile")
         LoadingOverlay.shared.showOverlay(view: view)
     let parameters = [

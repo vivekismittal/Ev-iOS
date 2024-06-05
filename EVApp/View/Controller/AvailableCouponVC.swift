@@ -60,7 +60,7 @@ class AvailableCouponVC: UIViewController,UITableViewDelegate,UITableViewDataSou
         
     }
     func callCouponApi(){
-        let stateUrl = EndPoints().baseUrlDev + EndPoints().couponDetail
+        let stateUrl = EndPoints.shared.baseUrlDev + EndPoints.shared.couponDetail
         let headers:HTTPHeaders = [
           
         ]

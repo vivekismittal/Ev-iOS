@@ -75,8 +75,8 @@ var vSpinner : UIView?
 
 extension UIViewController {
     
-    func showSpinner(onView : UIView) {
-        let spinnerView = UIView.init(frame: onView.bounds)
+    func showSpinner(onView view : UIView) {
+        let spinnerView = UIView.init(frame: view.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         let ai = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.large)
         ai.startAnimating()
@@ -84,7 +84,7 @@ extension UIViewController {
         
         DispatchQueue.main.async {
             spinnerView.addSubview(ai)
-            onView.addSubview(spinnerView)
+            view.addSubview(spinnerView)
         }
         
         vSpinner = spinnerView

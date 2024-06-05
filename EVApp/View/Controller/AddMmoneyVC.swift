@@ -111,7 +111,7 @@ class AddMmoneyVC: UIViewController {
 }
 extension AddMmoneyVC{
     func addWaletAmtApi(amt:String,mode:String,AddOn:String,id:String){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().addWaletAmt
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.addWaletAmt
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         self.showSpinner(onView: view)
        
@@ -163,7 +163,7 @@ extension AddMmoneyVC{
         }
     }
     func getWaletAmtApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().getWaletAmt
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         self.showSpinner(onView: view)
        
@@ -327,7 +327,7 @@ extension AddMmoneyVC: PayUCheckoutProDelegate{
         //        debugPrint("hashValue.......\(hashValue)")
         var payment_hash = ""
         let hashStringWithoutSalt = (param[HashConstant.hashString] ?? "")
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().paymentHash
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentHash
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [

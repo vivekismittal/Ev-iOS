@@ -100,7 +100,7 @@ class WaitingVC: UIViewController {
 }
 extension WaitingVC{
     func callTrxStartApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().trxStart
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStart
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
        var chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
         let orderAmt =  UserDefaults.standard.string(forKey: "AMOUNT")
@@ -154,7 +154,7 @@ extension WaitingVC{
                     }
     }
     @objc func callMeterValuesApi(){
-        let metervalues  = EndPoints().baseUrlDev + EndPoints().trxMeterValues
+        let metervalues  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxMeterValues
         //let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
      //   LoadingOverlay.shared.showOverlay(view: view)

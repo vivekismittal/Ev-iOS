@@ -76,7 +76,7 @@ class WaletVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 }
 extension WaletVC{
     func waletTransactionApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().waletTransaction
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.waletTransaction
       //  LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
       
@@ -127,7 +127,7 @@ extension WaletVC{
                     }
     }
     func getWaletAmtApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().getWaletAmt
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
       //  LoadingOverlay.shared.showOverlay(view: view)
      //   self.showSpinner(onView: view)

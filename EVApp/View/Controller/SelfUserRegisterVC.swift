@@ -154,7 +154,7 @@ class SelfUserRegisterVC: UIViewController {
 
     }
     func callStateApi(){
-        let stateUrl = EndPoints().baseUrl + EndPoints().state
+        let stateUrl = EndPoints.shared.baseUrl + EndPoints.shared.state
         let headers:HTTPHeaders = [
           
         ]
@@ -191,7 +191,7 @@ class SelfUserRegisterVC: UIViewController {
                 }
     }
     func callCountryApi(){
-        let stateUrl = EndPoints().baseUrl + EndPoints().country
+        let stateUrl = EndPoints.shared.baseUrl + EndPoints.shared.country
         let headers:HTTPHeaders = [
           
         ]
@@ -228,7 +228,7 @@ class SelfUserRegisterVC: UIViewController {
                 }
     }
     func callRegisterApi(){
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().registerUser
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.registerUser
        // LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
        
@@ -291,7 +291,7 @@ class SelfUserRegisterVC: UIViewController {
     }
     
     func sendotpApi(){
-        let guestURL  = EndPoints().baseUrl + EndPoints().sendOtp
+        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": txtMobile.text!

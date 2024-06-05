@@ -49,7 +49,7 @@ class OTPVerifyVC: UIViewController {
         }
     }
     func verifyotpApi(){
-        let verifyOtp  = EndPoints().baseUrl + EndPoints().verifyOtp
+        let verifyOtp  = EndPoints.shared.baseUrl + EndPoints.shared.verifyOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": mobile,
@@ -96,7 +96,7 @@ class OTPVerifyVC: UIViewController {
                     }
     }
     func sendotpApi(){
-        let sendOtpURL  = EndPoints().baseUrl + EndPoints().sendOtp
+        let sendOtpURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "mobileNumber": mobile

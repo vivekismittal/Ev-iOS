@@ -115,7 +115,7 @@ class ChargingVC: UIViewController {
 //    }
  
     func callTrxStopApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().trxStop
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStop
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
       //  LoadingOverlay.shared.showOverlay(view: view)
@@ -166,7 +166,7 @@ class ChargingVC: UIViewController {
     }
     
     func callMeterValuesApi(){
-        let metervalues  = EndPoints().baseUrlDev + EndPoints().trxMeterValues
+        let metervalues  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxMeterValues
         //let userPk = UserDefaults.standard.integer(forKey: "userPk")
         let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
      //   LoadingOverlay.shared.showOverlay(view: view)

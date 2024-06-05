@@ -40,7 +40,7 @@ class ProfileVC: UIViewController {
         updateUserApi()
     }
     func getUserApi(){
-        let loginUrl  = EndPoints().baseUrlDev +  EndPoints().getUserByPhone
+        let loginUrl  = EndPoints.shared.baseUrlDev +  EndPoints.shared.getUserByPhone
         LoadingOverlay.shared.showOverlay(view: view)
         let userMobile = UserDefaults.standard.string(forKey: "userMobile")
         let parameters = [
@@ -94,7 +94,7 @@ class ProfileVC: UIViewController {
         }
     }
     func updateUserApi(){
-        let loginUrl  = EndPoints().baseUrlDev +  EndPoints().usersUpdate
+        let loginUrl  = EndPoints.shared.baseUrlDev +  EndPoints.shared.usersUpdate
         LoadingOverlay.shared.showOverlay(view: view)
         let userMobile = UserDefaults.standard.string(forKey: "userMobile")
         let parameters = [

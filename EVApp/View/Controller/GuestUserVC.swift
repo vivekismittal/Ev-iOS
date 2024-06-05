@@ -45,7 +45,7 @@ class GuestUserVC: UIViewController {
                 }
     }
     func callGuestApi(){
-        let guestURL  = EndPoints().baseUrl +  EndPoints().guestUser
+        let guestURL  = EndPoints.shared.baseUrl +  EndPoints.shared.guestUser
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "firstName": txtName.text!,
@@ -96,7 +96,7 @@ class GuestUserVC: UIViewController {
     }
     
     func sendotpApi(){
-        let guestURL  = EndPoints().baseUrl + EndPoints().sendOtp
+        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "mobileNumber": txtMobile.text!

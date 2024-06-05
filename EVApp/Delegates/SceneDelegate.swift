@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let landingScreen = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
             self.window?.rootViewController = landingScreen
-        }else{
+        } else {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let landingScreen = storyBoard.instantiateViewController(withIdentifier: "IntroViewController") as! IntroViewController
             self.window?.rootViewController = landingScreen

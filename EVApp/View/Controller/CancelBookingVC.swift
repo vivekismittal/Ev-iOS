@@ -46,7 +46,7 @@ class CancelBookingVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
 extension CancelBookingVC{
     func callBookingCancelApi(){
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let loginUrl  = EndPoints().baseUrl +  EndPoints().advbookingUserCancelled
+        let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.advbookingUserCancelled
        // self.showSpinner(onView: view)
     let parameters = [
         "userId":userPk

@@ -55,7 +55,7 @@ class TransactionDetailsVC: UIViewController {
     
     @IBAction func getInvoice(_ sender: Any) {
         // saveInvoice(invoiceName: "Invoice", invoiceData: "Invoice")
-        let invoiceUrl  = EndPoints().baseUrlDev + EndPoints().paymentInvoice + userTransactionId
+        let invoiceUrl  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentInvoice + userTransactionId
         let fileName = "EVCharging-Invoice"
         self.savePdf(stringUrl: invoiceUrl, fileName: fileName)
     }
@@ -68,7 +68,7 @@ class TransactionDetailsVC: UIViewController {
         self.present(nextVC, animated:true, completion:nil)
     }
     func getTransactionApi(){
-        let verifyOtp  = EndPoints().baseUrlDev + EndPoints().chargersTrxSummary
+        let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.chargersTrxSummary
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
@@ -131,7 +131,7 @@ class TransactionDetailsVC: UIViewController {
     }
     func viewInvoiceApi(){
         let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let invoiceUrl = EndPoints().baseUrlDev + EndPoints().paymentInvoice +  String(userPk)
+        let invoiceUrl = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentInvoice +  String(userPk)
         let headers:HTTPHeaders = [
             
         ]

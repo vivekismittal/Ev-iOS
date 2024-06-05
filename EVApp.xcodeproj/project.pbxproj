@@ -9,10 +9,22 @@
 /* Begin PBXBuildFile section */
 		8281179E2AB48FF8001D56CF /* AvailableChargers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8281179D2AB48FF8001D56CF /* AvailableChargers.swift */; };
 		828117A02AB4A221001D56CF /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8281179F2AB4A221001D56CF /* ServiceManager.swift */; };
-		828117A22AB4A23B001D56CF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828117A12AB4A23B001D56CF /* LoginManager.swift */; };
 		82848FA42AB6535E006AC042 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82848FA32AB6535E006AC042 /* StationCell.swift */; };
 		82B3C3202AC83AA300669388 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82B3C31F2AC83AA300669388 /* NotificationBannerSwift */; };
 		940236032C075A9E00F03C04 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 940236022C075A9E00F03C04 /* GoogleMaps */; };
+		945914F82C0C775700584627 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914F72C0C775700584627 /* Errors.swift */; };
+		945914FA2C0C78E900584627 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914F92C0C78E900584627 /* HttpMethod.swift */; };
+		945914FC2C0C866100584627 /* AvailableChargersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */; };
+		945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */; };
+		945915032C0CB6A600584627 /* StoryboardRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915022C0CB6A600584627 /* StoryboardRepresentation.swift */; };
+		945915052C0CB6CA00584627 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915042C0CB6CA00584627 /* ViewControllerType.swift */; };
+		945915072C0CB75100584627 /* StoryBoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915062C0CB75100584627 /* StoryBoardData.swift */; };
+		945915092C0CB89400584627 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915082C0CB89400584627 /* ViewControllerFactory.swift */; };
+		945915112C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */; };
+		9459151B2C0D60CB00584627 /* AvailableChargersMockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */; };
+		9459151E2C0D66C900584627 /* AvailableChargerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */; };
+		948EABD52C1073200029C007 /* OnAppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD42C1073200029C007 /* OnAppStartViewModel.swift */; };
+		948EABD72C10750E0029C007 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD62C10750E0029C007 /* VersionModel.swift */; };
 		94BDC65B2C073E5C00B06B4F /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */; };
 		94BDC6612C073EE100B06B4F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6602C073EE100B06B4F /* FloatingPanel */; };
 		94BDC6642C073F1200B06B4F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6632C073F1200B06B4F /* IQKeyboardManagerSwift */; };
@@ -62,7 +74,7 @@
 		CB8C65432A18D42900EDC2D8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65422A18D42900EDC2D8 /* ProfileVC.swift */; };
 		CB8C65452A18D6EC00EDC2D8 /* PanelViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65442A18D6EC00EDC2D8 /* PanelViewVC.swift */; };
 		CB8C65472A18DAFA00EDC2D8 /* PanelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65462A18DAFA00EDC2D8 /* PanelTableViewCell.swift */; };
-		CB8C65492A18E93200EDC2D8 /* AvailableConnectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65482A18E93200EDC2D8 /* AvailableConnectorCell.swift */; };
+		CB8C65492A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65482A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift */; };
 		CB8C654B2A18E95100EDC2D8 /* AvailableConnectorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C654A2A18E95100EDC2D8 /* AvailableConnectorsVC.swift */; };
 		CB98B7D92A1F9CA3000F609A /* MenuNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7D82A1F9CA3000F609A /* MenuNavigation.swift */; };
 		CB98B7DB2A20F855000F609A /* ChargingStationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7DA2A20F855000F609A /* ChargingStationVC.swift */; };
@@ -71,9 +83,8 @@
 		CB98B7E42A2441D4000F609A /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7E32A2441D4000F609A /* ValidationResult.swift */; };
 		CB98B7E62A244234000F609A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7E52A244234000F609A /* LoginRequest.swift */; };
 		CB98B7E82A2446AA000F609A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7E72A2446AA000F609A /* Alert.swift */; };
-		CB9988212A50195A00CA90EB /* ConnectorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988202A50195A00CA90EB /* ConnectorsViewModel.swift */; };
-		CB9988232A5019BA00CA90EB /* ApiManageer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988222A5019BA00CA90EB /* ApiManageer.swift */; };
-		CB9988252A501AE400CA90EB /* ProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988242A501AE400CA90EB /* ProductEndPoint.swift */; };
+		CB9988232A5019BA00CA90EB /* NewNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */; };
+		CB9988252A501AE400CA90EB /* ServerEndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988242A501AE400CA90EB /* ServerEndPointType.swift */; };
 		CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */; };
 		CB9988292A51AAAE00CA90EB /* CancelBookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */; };
 		CB99882B2A51C5B600CA90EB /* BookApointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */; };
@@ -99,12 +110,22 @@
 		CBE1386F2A422098005B37F8 /* HelperComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1386E2A422098005B37F8 /* HelperComm.swift */; };
 		CBE1389F2A461768005B37F8 /* TransactionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1389E2A461768005B37F8 /* TransactionDetailsVC.swift */; };
 		CBE8B13A2A3CE0150039F329 /* StationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8B1392A3CE0150039F329 /* StationList.swift */; };
-		CBE8B13E2A3D69AC0039F329 /* CollectionConCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8B13D2A3D69AC0039F329 /* CollectionConCell.swift */; };
+		CBE8B13E2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8B13D2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift */; };
 		CBFA7FD02A2620E80017CAEE /* ChargingUnitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA7FCF2A2620E80017CAEE /* ChargingUnitVC.swift */; };
 		CBFA7FD22A2621390017CAEE /* ChargingWaletStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA7FD12A2621390017CAEE /* ChargingWaletStatusVC.swift */; };
 		CBFA7FD42A2621590017CAEE /* ChargingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA7FD32A2621590017CAEE /* ChargingVC.swift */; };
 		CBFA7FD62A2629AD0017CAEE /* AccountStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA7FD52A2629AD0017CAEE /* AccountStatusVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		945915122C0D5F2F00584627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1F9A092A13AE110050588B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1F9A102A13AE110050588B;
+			remoteInfo = EVApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9402360A2C07720000F03C04 /* Embed Frameworks */ = {
@@ -125,8 +146,21 @@
 		8237BC362AB3234E008D0FA3 /* EVApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EVApp.entitlements; sourceTree = "<group>"; };
 		8281179D2AB48FF8001D56CF /* AvailableChargers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargers.swift; sourceTree = "<group>"; };
 		8281179F2AB4A221001D56CF /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		828117A12AB4A23B001D56CF /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		82848FA32AB6535E006AC042 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		945914F72C0C775700584627 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		945914F92C0C78E900584627 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersViewModel.swift; sourceTree = "<group>"; };
+		945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersRepo.swift; sourceTree = "<group>"; };
+		945915022C0CB6A600584627 /* StoryboardRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRepresentation.swift; sourceTree = "<group>"; };
+		945915042C0CB6CA00584627 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
+		945915062C0CB75100584627 /* StoryBoardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardData.swift; sourceTree = "<group>"; };
+		945915082C0CB89400584627 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		9459150E2C0D5F2E00584627 /* Yahhvi - EV ChargingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yahhvi - EV ChargingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yahhvi___EV_ChargingTests.swift"; sourceTree = "<group>"; };
+		9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersMockRepo.swift; sourceTree = "<group>"; };
+		9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargerViewModelTests.swift; sourceTree = "<group>"; };
+		948EABD42C1073200029C007 /* OnAppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppStartViewModel.swift; sourceTree = "<group>"; };
+		948EABD62C10750E0029C007 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
 		AC2F29DF745FA44CBF788FD0 /* Pods-EVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVApp.debug.xcconfig"; path = "Target Support Files/Pods-EVApp/Pods-EVApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB026F402A378DC000C648B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahhvi - EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,7 +204,7 @@
 		CB8C65422A18D42900EDC2D8 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CB8C65442A18D6EC00EDC2D8 /* PanelViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewVC.swift; sourceTree = "<group>"; };
 		CB8C65462A18DAFA00EDC2D8 /* PanelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelTableViewCell.swift; sourceTree = "<group>"; };
-		CB8C65482A18E93200EDC2D8 /* AvailableConnectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableConnectorCell.swift; sourceTree = "<group>"; };
+		CB8C65482A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableConnectorTableViewCell.swift; sourceTree = "<group>"; };
 		CB8C654A2A18E95100EDC2D8 /* AvailableConnectorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableConnectorsVC.swift; sourceTree = "<group>"; };
 		CB98B7D82A1F9CA3000F609A /* MenuNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigation.swift; sourceTree = "<group>"; };
 		CB98B7DA2A20F855000F609A /* ChargingStationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationVC.swift; sourceTree = "<group>"; };
@@ -179,9 +213,8 @@
 		CB98B7E32A2441D4000F609A /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		CB98B7E52A244234000F609A /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		CB98B7E72A2446AA000F609A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		CB9988202A50195A00CA90EB /* ConnectorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorsViewModel.swift; sourceTree = "<group>"; };
-		CB9988222A5019BA00CA90EB /* ApiManageer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManageer.swift; sourceTree = "<group>"; };
-		CB9988242A501AE400CA90EB /* ProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndPoint.swift; sourceTree = "<group>"; };
+		CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNetworkManager.swift; sourceTree = "<group>"; };
+		CB9988242A501AE400CA90EB /* ServerEndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEndPointType.swift; sourceTree = "<group>"; };
 		CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBookingVC.swift; sourceTree = "<group>"; };
 		CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBookingCell.swift; sourceTree = "<group>"; };
 		CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookApointmentVC.swift; sourceTree = "<group>"; };
@@ -208,7 +241,7 @@
 		CBE1386E2A422098005B37F8 /* HelperComm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperComm.swift; sourceTree = "<group>"; };
 		CBE1389E2A461768005B37F8 /* TransactionDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsVC.swift; sourceTree = "<group>"; };
 		CBE8B1392A3CE0150039F329 /* StationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationList.swift; sourceTree = "<group>"; };
-		CBE8B13D2A3D69AC0039F329 /* CollectionConCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionConCell.swift; sourceTree = "<group>"; };
+		CBE8B13D2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBFA7FCF2A2620E80017CAEE /* ChargingUnitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingUnitVC.swift; sourceTree = "<group>"; };
 		CBFA7FD12A2621390017CAEE /* ChargingWaletStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingWaletStatusVC.swift; sourceTree = "<group>"; };
 		CBFA7FD32A2621590017CAEE /* ChargingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingVC.swift; sourceTree = "<group>"; };
@@ -216,6 +249,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9459150B2C0D5F2E00584627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB1F9A0E2A13AE110050588B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,10 +287,64 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		945914FD2C0CA39900584627 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		945915012C0CB63400584627 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				945915042C0CB6CA00584627 /* ViewControllerType.swift */,
+				945915062C0CB75100584627 /* StoryBoardData.swift */,
+				945915082C0CB89400584627 /* ViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9459150F2C0D5F2F00584627 /* Yahhvi - EV ChargingTests */ = {
+			isa = PBXGroup;
+			children = (
+				9459151C2C0D669900584627 /* ViewModelTests */,
+				945915192C0D60A600584627 /* MockRepo */,
+				945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */,
+			);
+			path = "Yahhvi - EV ChargingTests";
+			sourceTree = "<group>";
+		};
+		945915192C0D60A600584627 /* MockRepo */ = {
+			isa = PBXGroup;
+			children = (
+				9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */,
+			);
+			path = MockRepo;
+			sourceTree = "<group>";
+		};
+		9459151C2C0D669900584627 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		948EABD82C1081950029C007 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CB1F9A142A13AE110050588B /* AppDelegate.swift */,
+				CB1F9A162A13AE110050588B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		CB1F9A082A13AE110050588B = {
 			isa = PBXGroup;
 			children = (
 				CB1F9A132A13AE110050588B /* EVApp */,
+				9459150F2C0D5F2F00584627 /* Yahhvi - EV ChargingTests */,
 				CB1F9A122A13AE110050588B /* Products */,
 				26E85DE766868259BFB77A63 /* Pods */,
 				F6CC248CA3702F5BE53D0192 /* Frameworks */,
@@ -261,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */,
+				9459150E2C0D5F2E00584627 /* Yahhvi - EV ChargingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,13 +363,13 @@
 		CB1F9A132A13AE110050588B /* EVApp */ = {
 			isa = PBXGroup;
 			children = (
+				948EABD82C1081950029C007 /* Delegates */,
+				945914FD2C0CA39900584627 /* Repo */,
 				8237BC362AB3234E008D0FA3 /* EVApp.entitlements */,
 				CB1F9A302A13CCA70050588B /* Common */,
 				CB1F9A2C2A13CBF80050588B /* Model */,
 				CB1F9A2D2A13CC020050588B /* View */,
 				CB1F9A2E2A13CC160050588B /* ViewModel */,
-				CB1F9A142A13AE110050588B /* AppDelegate.swift */,
-				CB1F9A162A13AE110050588B /* SceneDelegate.swift */,
 				CB1F9A1A2A13AE110050588B /* Main.storyboard */,
 				CB1F9A1D2A13AE130050588B /* Assets.xcassets */,
 				CB1F9A1F2A13AE130050588B /* LaunchScreen.storyboard */,
@@ -288,12 +383,13 @@
 			isa = PBXGroup;
 			children = (
 				8281179F2AB4A221001D56CF /* ServiceManager.swift */,
-				828117A12AB4A23B001D56CF /* LoginManager.swift */,
 				CB98B7E52A244234000F609A /* LoginRequest.swift */,
 				CBE8B1392A3CE0150039F329 /* StationList.swift */,
 				CBE138662A408386005B37F8 /* SessionModel.swift */,
 				CBE1386C2A421D51005B37F8 /* DemoModel.swift */,
 				8281179D2AB48FF8001D56CF /* AvailableChargers.swift */,
+				945915022C0CB6A600584627 /* StoryboardRepresentation.swift */,
+				948EABD62C10750E0029C007 /* VersionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,7 +406,8 @@
 		CB1F9A2E2A13CC160050588B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CB9988202A50195A00CA90EB /* ConnectorsViewModel.swift */,
+				945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */,
+				948EABD42C1073200029C007 /* OnAppStartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -319,8 +416,11 @@
 			isa = PBXGroup;
 			children = (
 				CBE138682A421B0A005B37F8 /* NetworkManager.swift */,
-				CB9988222A5019BA00CA90EB /* ApiManageer.swift */,
-				CB9988242A501AE400CA90EB /* ProductEndPoint.swift */,
+				CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */,
+				CBDDE56C2A1F324E000A0460 /* EndPoints.swift */,
+				CB9988242A501AE400CA90EB /* ServerEndPointType.swift */,
+				945914F72C0C775700584627 /* Errors.swift */,
+				945914F92C0C78E900584627 /* HttpMethod.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -331,7 +431,6 @@
 				CB98B7E02A244186000F609A /* Validation */,
 				CB2FA2552A1611C400D8777A /* Extentions.swift */,
 				CBDDE56A2A1F31CE000A0460 /* LoadingOverlay.swift */,
-				CBDDE56C2A1F324E000A0460 /* EndPoints.swift */,
 				CB1F9A2F2A13CC520050588B /* Service */,
 				CB98B7DE2A22792E000F609A /* LocationManager.swift */,
 				CB026F402A378DC000C648B6 /* Utils.swift */,
@@ -345,6 +444,7 @@
 		CB1F9A312A13D2A80050588B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				945915012C0CB63400584627 /* Factory */,
 				CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */,
 				CB1F9A342A13EFA40050588B /* RegistrationVC.swift */,
 				CB1F9A362A13F0920050588B /* SelfUserRegisterVC.swift */,
@@ -401,11 +501,11 @@
 				CB8C65142A1787F200EDC2D8 /* MyBookingListCell.swift */,
 				CB8C653E2A18BAEC00EDC2D8 /* SideMenuTableViewCell.swift */,
 				CB8C65462A18DAFA00EDC2D8 /* PanelTableViewCell.swift */,
-				CB8C65482A18E93200EDC2D8 /* AvailableConnectorCell.swift */,
+				CB8C65482A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift */,
 				CBDDE5622A1DACD3000A0460 /* ChargingTableViewCell.swift */,
 				CBA5E4892A3719EB00FFF238 /* CouponTableViewCell.swift */,
 				CB3EC7022A3A0B1C0075A8C4 /* ChargingSessionCell.swift */,
-				CBE8B13D2A3D69AC0039F329 /* CollectionConCell.swift */,
+				CBE8B13D2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift */,
 				CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */,
 				CB2F940E2A596265006A3A31 /* StationReviewCell.swift */,
 				82848FA32AB6535E006AC042 /* StationCell.swift */,
@@ -436,6 +536,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9459150D2C0D5F2E00584627 /* Yahhvi - EV ChargingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945915142C0D5F2F00584627 /* Build configuration list for PBXNativeTarget "Yahhvi - EV ChargingTests" */;
+			buildPhases = (
+				9459150A2C0D5F2E00584627 /* Sources */,
+				9459150B2C0D5F2E00584627 /* Frameworks */,
+				9459150C2C0D5F2E00584627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945915132C0D5F2F00584627 /* PBXTargetDependency */,
+			);
+			name = "Yahhvi - EV ChargingTests";
+			productName = "Yahhvi - EV ChargingTests";
+			productReference = 9459150E2C0D5F2E00584627 /* Yahhvi - EV ChargingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CB1F9A102A13AE110050588B /* EVApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1F9A252A13AE130050588B /* Build configuration list for PBXNativeTarget "EVApp" */;
@@ -476,9 +594,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					9459150D2C0D5F2E00584627 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CB1F9A102A13AE110050588B;
+					};
 					CB1F9A102A13AE110050588B = {
 						CreatedOnToolsVersion = 14.3;
 						LastSwiftMigration = 1430;
@@ -511,11 +633,19 @@
 			projectRoot = "";
 			targets = (
 				CB1F9A102A13AE110050588B /* EVApp */,
+				9459150D2C0D5F2E00584627 /* Yahhvi - EV ChargingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9459150C2C0D5F2E00584627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB1F9A0F2A13AE110050588B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,6 +701,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9459150A2C0D5F2E00584627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9459151B2C0D60CB00584627 /* AvailableChargersMockRepo.swift in Sources */,
+				945915112C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift in Sources */,
+				9459151E2C0D66C900584627 /* AvailableChargerViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB1F9A0D2A13AE110050588B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,40 +720,47 @@
 				CB8C654B2A18E95100EDC2D8 /* AvailableConnectorsVC.swift in Sources */,
 				CB8C65122A1787C600EDC2D8 /* MyBookingListVC.swift in Sources */,
 				CB61F5CF2A28905E005174E6 /* PrivacyPolicyVC.swift in Sources */,
-				CB9988212A50195A00CA90EB /* ConnectorsViewModel.swift in Sources */,
 				CB2F940D2A596235006A3A31 /* StationReviewVC.swift in Sources */,
 				CB61F5D12A2890DB005174E6 /* HelpCenterVC.swift in Sources */,
 				CBFA7FD22A2621390017CAEE /* ChargingWaletStatusVC.swift in Sources */,
+				948EABD72C10750E0029C007 /* VersionModel.swift in Sources */,
+				945915032C0CB6A600584627 /* StoryboardRepresentation.swift in Sources */,
 				CB98B7E22A2441B0000F609A /* LoginValidation.swift in Sources */,
 				CB8C650E2A177F0300EDC2D8 /* DashboardVC.swift in Sources */,
+				945915052C0CB6CA00584627 /* ViewControllerType.swift in Sources */,
+				948EABD52C1073200029C007 /* OnAppStartViewModel.swift in Sources */,
 				CB8C65432A18D42900EDC2D8 /* ProfileVC.swift in Sources */,
-				CB9988252A501AE400CA90EB /* ProductEndPoint.swift in Sources */,
+				CB9988252A501AE400CA90EB /* ServerEndPointType.swift in Sources */,
 				CBE138692A421B0A005B37F8 /* NetworkManager.swift in Sources */,
 				CB61F5C92A287F60005174E6 /* SettingVC.swift in Sources */,
 				CB2A64DF2A5994EE005EF112 /* BookedSlotCell.swift in Sources */,
 				CB98B7E62A244234000F609A /* LoginRequest.swift in Sources */,
 				CB3EC7032A3A0B1C0075A8C4 /* ChargingSessionCell.swift in Sources */,
 				CB1F9A352A13EFA40050588B /* RegistrationVC.swift in Sources */,
+				945915092C0CB89400584627 /* ViewControllerFactory.swift in Sources */,
 				CBA5E4882A3719CC00FFF238 /* AvailableCouponVC.swift in Sources */,
 				CBE138672A408386005B37F8 /* SessionModel.swift in Sources */,
 				CB2FA2562A1611C400D8777A /* Extentions.swift in Sources */,
 				CB8C650A2A17638400EDC2D8 /* ForgotPasswordVC.swift in Sources */,
+				945914F82C0C775700584627 /* Errors.swift in Sources */,
+				945914FC2C0C866100584627 /* AvailableChargersViewModel.swift in Sources */,
 				CBA5E48A2A3719EB00FFF238 /* CouponTableViewCell.swift in Sources */,
 				CB1F9A332A13D2BE0050588B /* WelcomeVC.swift in Sources */,
-				CBE8B13E2A3D69AC0039F329 /* CollectionConCell.swift in Sources */,
+				CBE8B13E2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift in Sources */,
+				945915072C0CB75100584627 /* StoryBoardData.swift in Sources */,
+				945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
 				CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */,
 				CB98B7E42A2441D4000F609A /* ValidationResult.swift in Sources */,
 				CBE1386F2A422098005B37F8 /* HelperComm.swift in Sources */,
 				CB61F5CB2A2880C8005174E6 /* ChangePasswwordVC.swift in Sources */,
 				CB61F5DA2A2A088F005174E6 /* ActivityIndicator.swift in Sources */,
-				828117A22AB4A23B001D56CF /* LoginManager.swift in Sources */,
 				CBDDE5672A1DE495000A0460 /* WaletVC.swift in Sources */,
 				CB1F9A292A13B0370050588B /* SlideViewController.swift in Sources */,
 				CBDDE5652A1DE47B000A0460 /* WaletTableViewCell.swift in Sources */,
 				CB1F9A152A13AE110050588B /* AppDelegate.swift in Sources */,
 				CB99882B2A51C5B600CA90EB /* BookApointmentVC.swift in Sources */,
-				CB8C65492A18E93200EDC2D8 /* AvailableConnectorCell.swift in Sources */,
+				CB8C65492A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift in Sources */,
 				CB8C650C2A17641700EDC2D8 /* GuestUserVC.swift in Sources */,
 				CB61F5CD2A288C2D005174E6 /* TemsConditionVC.swift in Sources */,
 				CBFA7FD62A2629AD0017CAEE /* AccountStatusVC.swift in Sources */,
@@ -621,11 +768,12 @@
 				CB98B7DB2A20F855000F609A /* ChargingStationVC.swift in Sources */,
 				CBE1386B2A421C88005B37F8 /* BaseViewController.swift in Sources */,
 				CB026F412A378DC000C648B6 /* Utils.swift in Sources */,
-				CB9988232A5019BA00CA90EB /* ApiManageer.swift in Sources */,
+				CB9988232A5019BA00CA90EB /* NewNetworkManager.swift in Sources */,
 				CBE1386D2A421D51005B37F8 /* DemoModel.swift in Sources */,
 				CB3EC7012A3A0AF80075A8C4 /* ChargingSessionVC.swift in Sources */,
 				CB98B7D92A1F9CA3000F609A /* MenuNavigation.swift in Sources */,
 				CB98B7DF2A22792E000F609A /* LocationManager.swift in Sources */,
+				945914FA2C0C78E900584627 /* HttpMethod.swift in Sources */,
 				CBDDE56D2A1F324E000A0460 /* EndPoints.swift in Sources */,
 				CBDDE56B2A1F31CE000A0460 /* LoadingOverlay.swift in Sources */,
 				CBB6A4E82A4DD5FE0002BD73 /* ProgressView.swift in Sources */,
@@ -662,6 +810,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		945915132C0D5F2F00584627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1F9A102A13AE110050588B /* EVApp */;
+			targetProxy = 945915122C0D5F2F00584627 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CB1F9A1A2A13AE110050588B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -682,6 +838,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		945915152C0D5F2F00584627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3AGV4JQQ24;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVChargingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yahhvi - EV Charging.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yahhvi - EV Charging";
+			};
+			name = Debug;
+		};
+		945915162C0D5F2F00584627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3AGV4JQQ24;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVChargingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yahhvi - EV Charging.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yahhvi - EV Charging";
+			};
+			name = Release;
+		};
 		CB1F9A232A13AE130050588B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -921,6 +1122,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		945915142C0D5F2F00584627 /* Build configuration list for PBXNativeTarget "Yahhvi - EV ChargingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945915152C0D5F2F00584627 /* Debug */,
+				945915162C0D5F2F00584627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CB1F9A0C2A13AE110050588B /* Build configuration list for PBXProject "EVApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

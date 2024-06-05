@@ -48,8 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         let token = tokenParts.joined()
         // 2. Print device token to use for PNs payloads
-        print("Device Token: \(token)")
-        let bundleID = Bundle.main.bundleIdentifier;
+//        print("Device Token: \(token)")
+        _ = Bundle.main.bundleIdentifier;
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         banner.applyStyling(titleTextAlign: .center, subtitleTextAlign: .center)
         banner.show()
         banner.onTap = {
-            guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+            guard ((UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController) != nil else {
                 return
             }
             
@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     // MARK: Handle notification in background
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+        guard ((UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController) != nil else {
             return
         }
         
@@ -117,63 +117,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func checkUpdateVersion(viewController: UIViewController){
-      /*  let url = URL(string: "http://beta.greenvelocity.co.in:8080/cms/manager/rest/chargers/ios-version")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                // Handle HTTP request error
-            } else if let data = data {
-                print(response)
-                // Handle HTTP request response
-            } else {
-                // Handle unexpected error
-            }
-        }*/
-        
-        AvailableChargerManager.shared.versionAPIRequest(request: "", success: { response in
-            print(response.ios)
-            guard let response = response.ios else {
-                return
-            }
-            if self.currentVersion < Float(response)! {
-                DispatchQueue.main.async {
-                    
-                    let alertController = UIAlertController(
-                        title: "Update Required",
-                        message: "We have launched new app and improved app. Please update to continue using the app.",
-                        preferredStyle: .alert)
-                    
-                    // Handling OK action
-                    let okAction = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction!) in
-                        UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/yahhvi-ev-charging/id6450030187")!)
-                    }
-                    // Adding action buttons to the alert controller
-                    alertController.addAction(okAction)
-                    viewController.present(alertController, animated: true, completion:nil)
-                }
-            }
-            
-        }, fail: {
-            print("Failed to get response")
-        })
-            /*
-        let alertController = UIAlertController(
-                                    title: "Update Required",
-                                    message: "We have launched new app and improved app. Please update to continue using the app.",
-                                    preferredStyle: .alert)
+  
+        OnAppStartViewModel.shared.versionAPIRequest { res in
+            switch res{
+            case .success(let version):
 
-            // Handling OK action
-            let okAction = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction!) in
-                UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/yahhvi-ev-charging/id6450030187")!)
+                guard let response = version.ios else {
+                    return
+                }
+                if self.currentVersion < Float(response)! {
+                    DispatchQueue.main.async {
+                        
+                        let alertController = UIAlertController(
+                            title: "Update Required",
+                            message: "We have launched new app and improved app. Please update to continue using the app.",
+                            preferredStyle: .alert)
+                        
+                        // Handling OK action
+                        let okAction = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction!) in
+                            UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/yahhvi-ev-charging/id6450030187")!)
+                        }
+                        // Adding action buttons to the alert controller
+                        alertController.addAction(okAction)
+                        viewController.present(alertController, animated: true, completion:nil)
+                    }
+                }
+            case .failure(_):
+                print("Failed to get response")
             }
-            // Adding action buttons to the alert controller
-            alertController.addAction(okAction)
-        viewController.present(alertController, animated: true, completion:nil)
-             */
+        }
     }
     
 }

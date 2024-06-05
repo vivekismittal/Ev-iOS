@@ -7,7 +7,9 @@
 
 import Foundation
 
-class EndPoints{
+struct EndPoints{
+    static let shared = EndPoints()
+    private init() {}
     // Production URL
     // let  baseUrlProd =  "http://cms.greenvelocity.co.in:8087/cms/manager/rest"
     // Development URL
