@@ -18,13 +18,15 @@
 		945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */; };
 		945915032C0CB6A600584627 /* StoryboardRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915022C0CB6A600584627 /* StoryboardRepresentation.swift */; };
 		945915052C0CB6CA00584627 /* ViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915042C0CB6CA00584627 /* ViewControllerType.swift */; };
-		945915072C0CB75100584627 /* StoryBoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915062C0CB75100584627 /* StoryBoardData.swift */; };
+		945915072C0CB75100584627 /* StoryBoardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915062C0CB75100584627 /* StoryBoardType.swift */; };
 		945915092C0CB89400584627 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915082C0CB89400584627 /* ViewControllerFactory.swift */; };
 		945915112C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */; };
 		9459151B2C0D60CB00584627 /* AvailableChargersMockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */; };
 		9459151E2C0D66C900584627 /* AvailableChargerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */; };
 		948EABD52C1073200029C007 /* OnAppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD42C1073200029C007 /* OnAppStartViewModel.swift */; };
 		948EABD72C10750E0029C007 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD62C10750E0029C007 /* VersionModel.swift */; };
+		948EABDA2C10913C0029C007 /* DetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */; };
+		948EABDE2C1099AA0029C007 /* AuthStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */; };
 		94BDC65B2C073E5C00B06B4F /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */; };
 		94BDC6612C073EE100B06B4F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6602C073EE100B06B4F /* FloatingPanel */; };
 		94BDC6642C073F1200B06B4F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6632C073F1200B06B4F /* IQKeyboardManagerSwift */; };
@@ -153,7 +155,7 @@
 		945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersRepo.swift; sourceTree = "<group>"; };
 		945915022C0CB6A600584627 /* StoryboardRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRepresentation.swift; sourceTree = "<group>"; };
 		945915042C0CB6CA00584627 /* ViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerType.swift; sourceTree = "<group>"; };
-		945915062C0CB75100584627 /* StoryBoardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardData.swift; sourceTree = "<group>"; };
+		945915062C0CB75100584627 /* StoryBoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardType.swift; sourceTree = "<group>"; };
 		945915082C0CB89400584627 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		9459150E2C0D5F2E00584627 /* Yahhvi - EV ChargingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yahhvi - EV ChargingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yahhvi___EV_ChargingTests.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,8 @@
 		9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargerViewModelTests.swift; sourceTree = "<group>"; };
 		948EABD42C1073200029C007 /* OnAppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppStartViewModel.swift; sourceTree = "<group>"; };
 		948EABD62C10750E0029C007 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
+		948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryBoard.storyboard; sourceTree = "<group>"; };
+		948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryBoard.storyboard; sourceTree = "<group>"; };
 		AC2F29DF745FA44CBF788FD0 /* Pods-EVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVApp.debug.xcconfig"; path = "Target Support Files/Pods-EVApp/Pods-EVApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB026F402A378DC000C648B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahhvi - EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				945915042C0CB6CA00584627 /* ViewControllerType.swift */,
-				945915062C0CB75100584627 /* StoryBoardData.swift */,
+				945915062C0CB75100584627 /* StoryBoardType.swift */,
 				945915082C0CB89400584627 /* ViewControllerFactory.swift */,
 			);
 			path = Factory;
@@ -340,6 +344,17 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		948EABDC2C1099430029C007 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				CB1F9A1F2A13AE130050588B /* LaunchScreen.storyboard */,
+				CB1F9A1A2A13AE110050588B /* Main.storyboard */,
+				948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */,
+				948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		CB1F9A082A13AE110050588B = {
 			isa = PBXGroup;
 			children = (
@@ -363,18 +378,17 @@
 		CB1F9A132A13AE110050588B /* EVApp */ = {
 			isa = PBXGroup;
 			children = (
-				948EABD82C1081950029C007 /* Delegates */,
-				945914FD2C0CA39900584627 /* Repo */,
-				8237BC362AB3234E008D0FA3 /* EVApp.entitlements */,
+				CB1F9A1D2A13AE130050588B /* Assets.xcassets */,
 				CB1F9A302A13CCA70050588B /* Common */,
+				948EABD82C1081950029C007 /* Delegates */,
+				8237BC362AB3234E008D0FA3 /* EVApp.entitlements */,
+				CB1F9A222A13AE130050588B /* Info.plist */,
 				CB1F9A2C2A13CBF80050588B /* Model */,
+				CB8998A82A2BC08000066BD1 /* PayUBizCoreKit.xcframework */,
+				945914FD2C0CA39900584627 /* Repo */,
+				948EABDC2C1099430029C007 /* StoryBoards */,
 				CB1F9A2D2A13CC020050588B /* View */,
 				CB1F9A2E2A13CC160050588B /* ViewModel */,
-				CB1F9A1A2A13AE110050588B /* Main.storyboard */,
-				CB1F9A1D2A13AE130050588B /* Assets.xcassets */,
-				CB1F9A1F2A13AE130050588B /* LaunchScreen.storyboard */,
-				CB8998A82A2BC08000066BD1 /* PayUBizCoreKit.xcframework */,
-				CB1F9A222A13AE130050588B /* Info.plist */,
 			);
 			path = EVApp;
 			sourceTree = "<group>";
@@ -398,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8C65132A1787D000EDC2D8 /* Cell */,
-				CB1F9A312A13D2A80050588B /* Controller */,
+				CB1F9A312A13D2A80050588B /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,7 +455,7 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		CB1F9A312A13D2A80050588B /* Controller */ = {
+		CB1F9A312A13D2A80050588B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				945915012C0CB63400584627 /* Factory */,
@@ -491,7 +505,7 @@
 				CB2A64DE2A5994EE005EF112 /* BookedSlotCell.swift */,
 				CB2A64E02A599526005EF112 /* BookedSlotVC.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CB8C65132A1787D000EDC2D8 /* Cell */ = {
@@ -652,7 +666,9 @@
 			files = (
 				CB1F9A212A13AE130050588B /* LaunchScreen.storyboard in Resources */,
 				CB1F9A1E2A13AE130050588B /* Assets.xcassets in Resources */,
+				948EABDA2C10913C0029C007 /* DetailStoryBoard.storyboard in Resources */,
 				CB1F9A1C2A13AE110050588B /* Main.storyboard in Resources */,
+				948EABDE2C1099AA0029C007 /* AuthStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +763,7 @@
 				CBA5E48A2A3719EB00FFF238 /* CouponTableViewCell.swift in Sources */,
 				CB1F9A332A13D2BE0050588B /* WelcomeVC.swift in Sources */,
 				CBE8B13E2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift in Sources */,
-				945915072C0CB75100584627 /* StoryBoardData.swift in Sources */,
+				945915072C0CB75100584627 /* StoryBoardType.swift in Sources */,
 				945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
 				CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */,
