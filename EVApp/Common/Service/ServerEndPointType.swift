@@ -8,13 +8,11 @@
 import Foundation
 
 enum ServerEndPointType {
-    case products // Module - GET
-    // case addProduct(product: AddProduct) // POST
     case getAvailableChargingStations
     case getAppVersion
     
     func getUrlRequest() -> URLRequest? {
-        guard let url else { return nil}
+        guard let url else { return nil }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
@@ -29,10 +27,6 @@ enum ServerEndPointType {
     
    private var path: String {
        return switch self {
-        case .products:
-             "chargers/stations"
-            //        case .addProduct:
-            //            return "products/add"
         case .getAvailableChargingStations:
              EndPoints.shared.chargersStations
        case .getAppVersion:
@@ -42,11 +36,6 @@ enum ServerEndPointType {
     
     private var baseURL: String {
        return  switch self {
-         case .products:
-              "http://beta.greenvelocity.co.in:8080/cms/manager/rest/"
-             //        case .addProduct:
-             //            return "https://dummyjson.com/"
-             
          default:
               EndPoints.shared.baseUrlDev
          }
@@ -58,8 +47,6 @@ enum ServerEndPointType {
      
      var method: HTTPMethod {
         return switch self {
-         case .products:
-              .GET
          case .getAvailableChargingStations:
               .GET
         case .getAppVersion:

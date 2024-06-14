@@ -8,6 +8,11 @@
 import UIKit
 
 class MenuNavigation: UINavigationController {
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let menuNavigation = ViewControllerFactory<MenuNavigation>.viewController(for: .MenuNavigation)
+        return menuNavigation as! Self
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

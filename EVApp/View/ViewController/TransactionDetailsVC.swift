@@ -69,7 +69,7 @@ class TransactionDetailsVC: UIViewController {
     }
     func getTransactionApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.chargersTrxSummary
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userTransactionId": userTransactionId
@@ -130,7 +130,7 @@ class TransactionDetailsVC: UIViewController {
         }
     }
     func viewInvoiceApi(){
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        guard let userPk = UserAppStorage.userPk else { return }
         let invoiceUrl = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentInvoice +  String(userPk)
         let headers:HTTPHeaders = [
             

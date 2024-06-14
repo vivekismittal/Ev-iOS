@@ -140,7 +140,7 @@ class ThreeButtonViewModel {
     
     func createParamsForUserRole(roleId: String) -> [String: Any] {
         var params: [String: Any] = [String: Any]()
-        if let realId = UserDefaults.standard.value(forKey: UserDefaultConstants.realId.rawValue) as? Int {
+        if let realId = UserAppStorage.realId {
             params = ["user_id" : realId,
                       "role_id" : Int(roleId) ?? 0,
                       "creator_id" : realId]

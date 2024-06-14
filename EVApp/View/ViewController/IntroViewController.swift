@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import SideMenuSwift
 
 class IntroViewController: UIViewController {
     @IBOutlet weak var container: UIView!
@@ -21,7 +22,7 @@ class IntroViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
 
         for i in 0 ..< 4 {
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageContentViewController") as? SlideViewController {
+            if let vc = UIStoryboard(name: StoryBoardsType.AuthStoryBoard.rawValue, bundle: nil).instantiateViewController(withIdentifier: ViewControllerIdentifier.IntroPageContentViewController.rawValue) as? IntroPageContentViewController {
                     vc.index = i
                     pages.append(vc)
             }
@@ -35,9 +36,10 @@ class IntroViewController: UIViewController {
         pageControl.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
     }
     @IBAction func skip(_ sender: Any) {
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SideMenu") as! SideMenuController
-//
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = WelcomeVC.instantiateUsingStoryboard()
+
+//        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
         @IBAction func pageControlValueChanged(_ sender: UIPageControl) {

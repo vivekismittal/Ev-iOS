@@ -30,10 +30,9 @@ class AvailableConnectorTableViewCell: UITableViewCell {
     var maintenance = [Bool]()
     var stationId = [""]
     var chargerInfo: ChargerInformation?
-    
     private var chargerStationConnectorInfosList = [ChargerStationConnectorInfos]()
     var openActionDelegate: OpenActionProtocol!
-    var indexPathRow: Int!
+    
     var availableChargers:  AvailableChargers!{
         didSet{
             self.setData()
@@ -99,7 +98,7 @@ class AvailableConnectorTableViewCell: UITableViewCell {
     
     
     @objc func openAction(sender: UIButton) {
-        openActionDelegate.openChargingDetailVC(indexPathRow: indexPathRow)
+        openActionDelegate.openChargingDetailVC(availableCharger: availableChargers)
     }
     
     
@@ -128,7 +127,6 @@ extension AvailableConnectorTableViewCell: UICollectionViewDelegate, UICollectio
         
         if let connectorCollectionViewCell = cell as? ConnectorCollectionViewCell{
             
-            
             if let chargerConnectorInfo = self.chargerStationConnectorInfosList.element(at: indexPath.row){
                 connectorCollectionViewCell.openActionDelegate = openActionDelegate
                 connectorCollectionViewCell.chargerInfoName = chargerInfo?.name ?? ""
@@ -144,7 +142,9 @@ extension AvailableConnectorTableViewCell: UICollectionViewDelegate, UICollectio
 protocol OpenActionProtocol{
     func openVC(_ vc: UIViewController)
     
-    func openChargingDetailVC(indexPathRow: Int)
+    func openChargingDetailVC(availableCharger: AvailableChargers)
     
     func showToast(title: String, message: String)
+    
+    func startGuestUserSignupFlow()
 }

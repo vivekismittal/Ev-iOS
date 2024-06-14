@@ -41,9 +41,9 @@ class ChargingVC: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        let orderUnit = UserDefaults.standard.string(forKey: "UNIT")
-        let orderAmt =  UserDefaults.standard.string(forKey: "AMOUNT")
-        let requestedUnit = UserDefaults.standard.integer(forKey: "requestedUnit")
+        let orderUnit = UserAppStorage.unit
+        let orderAmt =  UserAppStorage.amount
+        let requestedUnit = UserAppStorage.requestedUnit
         self.lblUnitPurchased.text = (orderUnit ?? "0") + " kWh"
         self.lblAmountPaid.text =  "Rs: " + (orderAmt ?? "0")
         callMeterValuesApi()
@@ -116,8 +116,8 @@ class ChargingVC: UIViewController {
  
     func callTrxStopApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStop
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
+        let userPk = UserAppStorage.userPk
+        let chrBoxId =  UserAppStorage.chrgBoxId
       //  LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userTransactionId":String(userTransactionId),
@@ -167,8 +167,7 @@ class ChargingVC: UIViewController {
     
     func callMeterValuesApi(){
         let metervalues  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxMeterValues
-        //let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
+        let chrBoxId =  UserAppStorage.chrgBoxId
      //   LoadingOverlay.shared.showOverlay(view: view)
         //self.showSpinner(onView: view)
        
@@ -214,7 +213,7 @@ class ChargingVC: UIViewController {
                     let totalChargingTimeInMinutes = jsonData.dictionaryValue["chargingTimeInMinutes"]!.intValue
                     self.lblStartTime.text = startTime
                     self.lblStartTime.text = startTime
-                    let orderUnit = UserDefaults.standard.string(forKey: "UNIT")
+                    let orderUnit = UserAppStorage.unit
                     if valueUnit.count == 0 {
                        // self.timer?.invalidate()
                     }

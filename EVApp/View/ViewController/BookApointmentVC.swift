@@ -291,7 +291,7 @@ class BookApointmentVC: UIViewController {
 }
 extension BookApointmentVC{
     func callSlotApi(){
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         let loginUrl  = EndPoints.shared.baseUrlDev + EndPoints.shared.advancebookingTimeslots
         self.showSpinner(onView: view)
     let parameters = [
@@ -342,9 +342,9 @@ extension BookApointmentVC{
                     }
     }
 func advBookslots(){
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let loginUrl  = EndPoints.shared.baseUrlDev + EndPoints.shared.advBookslots
-        self.showSpinner(onView: view)
+    let userPk = UserAppStorage.userPk
+    let loginUrl  = EndPoints.shared.baseUrlDev + EndPoints.shared.advBookslots
+    self.showSpinner(onView: view)
     let parameters = [
         "userId":userPk,
         "startTime": self.sTime,

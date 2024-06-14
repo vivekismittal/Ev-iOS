@@ -14,6 +14,12 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var coporateUserContainer: UIView!
     @IBOutlet weak var btnCorporate: UIButton!
     @IBOutlet weak var btnSelfuser: UIButton!
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let vc = ViewControllerFactory<RegistrationVC>.viewController(for: .UserRegistrationScreen)
+        return vc as! Self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)

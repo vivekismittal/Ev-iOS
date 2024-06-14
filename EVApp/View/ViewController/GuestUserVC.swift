@@ -75,7 +75,8 @@ class GuestUserVC: UIViewController {
                             DispatchQueue.main.asyncAfter(deadline: when){
                                 if verified == false{
                                     self.sendotpApi()
-                                    UserDefaults.standard.set(true, forKey: "guestUser")
+                                    UserAppStorage.isGuestUser = true
+                                    
                                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                     nextViewController.mobile =  self.txtMobile.text!

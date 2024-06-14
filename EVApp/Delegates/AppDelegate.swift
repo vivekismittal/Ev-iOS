@@ -16,7 +16,7 @@ import NotificationBannerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
-    var currentVersion: Float = 1.2
+    var currentVersion: Float = 1.6
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let tokenParts = deviceToken.map { data -> String in
             return String(format: "%02.2hhx", data)
         }
-        let token = tokenParts.joined()
+//        let token = tokenParts.joined()
         // 2. Print device token to use for PNs payloads
 //        print("Device Token: \(token)")
         _ = Bundle.main.bundleIdentifier;
@@ -70,8 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 return
             }
             
-            let userLoginStatus = UserDefaults.standard.bool(forKey: "UserLogedIn")
-            if userLoginStatus {
+            
+            if UserAppStorage.didUserLoggedIn {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let landingScreen = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
@@ -89,8 +89,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return
         }
         
-        let userLoginStatus = UserDefaults.standard.bool(forKey: "UserLogedIn")
-        if userLoginStatus {
+        
+       if UserAppStorage.didUserLoggedIn {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let landingScreen = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
@@ -116,37 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    func checkUpdateVersion(viewController: UIViewController){
-  
-        OnAppStartViewModel.shared.versionAPIRequest { res in
-            switch res{
-            case .success(let version):
-
-                guard let response = version.ios else {
-                    return
-                }
-                if self.currentVersion < Float(response)! {
-                    DispatchQueue.main.async {
-                        
-                        let alertController = UIAlertController(
-                            title: "Update Required",
-                            message: "We have launched new app and improved app. Please update to continue using the app.",
-                            preferredStyle: .alert)
-                        
-                        // Handling OK action
-                        let okAction = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction!) in
-                            UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/yahhvi-ev-charging/id6450030187")!)
-                        }
-                        // Adding action buttons to the alert controller
-                        alertController.addAction(okAction)
-                        viewController.present(alertController, animated: true, completion:nil)
-                    }
-                }
-            case .failure(_):
-                print("Failed to get response")
-            }
-        }
-    }
+    
     
 }
 

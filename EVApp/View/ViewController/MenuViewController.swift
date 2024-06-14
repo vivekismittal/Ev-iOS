@@ -15,13 +15,10 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var selectionMenuTrailingConstraint: NSLayoutConstraint!
     private var themeColor = UIColor.white
     
-    var menuList  = ["Profile","Available Charger","Charging Sessions","My Bookings","My Wallet","Settings","Terms and Conditions","App Privacy Policy","Help","Logout","Delete Account"]
-    
     var guest = true
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let userFullName = UserDefaults.standard.string(forKey: "userFullName")
+        let userFullName = UserAppStorage.userFullName
         self.lblUserName.text = userFullName
     }
     
@@ -38,74 +35,91 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuList.count
+        return MenuItems.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let menuCell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableViewCell", for: indexPath) as? SideMenuTableViewCell
-        menuCell!.lblMenu.text = menuList[indexPath.row]
-        return menuCell!
+        let menuCell = tableView.dequeueReusableCell(withIdentifier: SideMenuTableViewCell.identifier, for: indexPath)
+        (menuCell as? SideMenuTableViewCell)?.lblMenu.text = MenuItems.allCases[indexPath.row].rawValue
+        return menuCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      if indexPath.row == 0{
+        switch MenuItems.allCases[indexPath.row]
+        {
+        case .Profile:
+            if UserAppStorage.isGuestUser{
+                self.startGuestUserSignupFlow()
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
             self.present(nextViewController, animated:true, completion: nil)
-          
-        } else if indexPath.row == 1{
-            let nextViewController = ViewControllerFactory.instantiateAvailableChargersViewController()
-            self.present(nextViewController, animated: true, completion: nil)
             
-        } else if indexPath.row == 2{
+            
+        case .Available_Charger:
+            let nextViewController = AvailableConnectorsVC.instantiateUsingStoryboard()
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+            
+        case .Charging_Sessions:
+            if UserAppStorage.isGuestUser{
+                self.startGuestUserSignupFlow()
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
             self.present(nextViewController, animated: true, completion: nil)
             
-        } else if indexPath.row == 3{
+        case .My_Bookings:
+            if UserAppStorage.isGuestUser{
+                self.startGuestUserSignupFlow()
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MyBookingsVC") as! MyBookingsVC
             self.present(nextViewController, animated:true, completion:nil)
-            //let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DashboardVC") as? DashboardVC
-            //self.navigationController?.pushViewController(nextViewController, animated: true)
-        } else if indexPath.row == 4{
+            
+        case .My_Wallet:
+            if UserAppStorage.isGuestUser{
+                self.startGuestUserSignupFlow()
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WaletVC") as! WaletVC
             self.present(nextViewController, animated:true, completion:nil)
             
-        } else if indexPath.row == 5{
+        case .Settings:
+            if UserAppStorage.isGuestUser{
+                self.startGuestUserSignupFlow()
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingVC") as! SettingVC
             self.present(nextViewController, animated:true, completion:nil)
             
-        } else if indexPath.row == 6{
+        case .Terms_and_Conditions:
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TemsConditionVC") as! TemsConditionVC
             self.present(nextViewController, animated:true, completion:nil)
             
-        } else if indexPath.row == 7{
+        case .App_Privacy_Policy:
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
             self.present(nextViewController, animated:true, completion:nil)
             
-        } else if indexPath.row == 8{
+        case .Help:
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HelpCenterVC") as! HelpCenterVC
             self.present(nextViewController, animated:true, completion:nil)
             
-        } else if indexPath.row == 9{
-            //  showAlertController(titleOfAlert: "Alert", messageOfAlert: "Do you want to Logout?", doAction: gotoWelcome())
+        case .Logout:
             let refreshAlert = UIAlertController(title: "Alert", message: "Do you want to Logout", preferredStyle: UIAlertController.Style.alert)
             
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                 print("Handle Ok logic here")
-                UserDefaults.standard.setValue(nil, forKey: "userMobile")
-                UserDefaults.standard.setValue(nil, forKey: "UserLogedIn")
-                UserDefaults.standard.setValue(nil, forKey: "userFullName")
-                UserDefaults.standard.setValue(nil, forKey: "userPk")
-                UserDefaults.standard.setValue(nil, forKey: "chrgBoxId")
+                UserAppStorage.reset()
                 UserDefaults.standard.synchronize()
                 self.gotoWelcome()
             }))
@@ -113,20 +127,15 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
                 print("Handle Cancel Logic here")
             }))
-            
             present(refreshAlert, animated: true, completion: nil)
             
-        } else if indexPath.row == 10{
-            //  showAlertController(titleOfAlert: "Alert", messageOfAlert: "Do you want to Logout?", doAction: gotoWelcome())
+        case .Delete_Account:
             let refreshAlert = UIAlertController(title: "Alert", message: "Do you want to Delete your account", preferredStyle: UIAlertController.Style.alert)
             
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
                 print("Handle Ok logic here")
-                UserDefaults.standard.setValue(nil, forKey: "userMobile")
-                UserDefaults.standard.setValue(nil, forKey: "UserLogedIn")
-                UserDefaults.standard.setValue(nil, forKey: "userFullName")
-                UserDefaults.standard.setValue(nil, forKey: "userPk")
-                UserDefaults.standard.setValue(nil, forKey: "chrgBoxId")
+                UserAppStorage.reset()
+                
                 UserDefaults.standard.synchronize()
                 self.gotoWelcome()
             }))
@@ -134,15 +143,25 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
                 print("Handle Cancel Logic here")
             }))
-            
             present(refreshAlert, animated: true, completion: nil)
-            
         }
     }
     
     func gotoWelcome(){
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
-    }
+    }}
+
+enum MenuItems: String, CaseIterable{
+    case Profile
+    case Available_Charger = "Available Charger"
+    case Charging_Sessions = "Charging Sessions"
+    case My_Bookings = "My Bookings"
+    case My_Wallet = "My Wallet"
+    case Settings
+    case Terms_and_Conditions = "Terms and Conditions"
+    case App_Privacy_Policy = "App Privacy Policy"
+    case Help
+    case Logout
+    case Delete_Account = "Delete Account"
 }

@@ -45,7 +45,6 @@ class ChangePasswwordVC: UIViewController {
     
     func changePassApi(){
         let loginUrl  = EndPoints.shared.baseUrl +  EndPoints.shared.usersChangePassword
-      //  let userMobile = UserDefaults.standard.string(forKey: "userMobile")
         LoadingOverlay.shared.showOverlay(view: view)
     let parameters = [
                 "mobileNumber": mobileNo,
@@ -76,8 +75,7 @@ class ChangePasswwordVC: UIViewController {
                             DispatchQueue.main.asyncAfter(deadline: when){
                                 if verified == false{
                                    // self.sendotpApi()
-                                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+                                    let nextViewController = WelcomeVC.instantiateUsingStoryboard()
                                    // nextViewController.mobile =  self.txtMobile.text!
                                     self.present(nextViewController, animated:true, completion:nil)
                                 }

@@ -16,7 +16,7 @@ class AccountStatusVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDefaults.standard.set(true, forKey: "UserLogedIn")
+        UserAppStorage.didUserLoggedIn = true
         UserDefaults.standard.synchronize()
         // Do any additional setup after loading the view.
         btnNext.layer.cornerRadius = 12

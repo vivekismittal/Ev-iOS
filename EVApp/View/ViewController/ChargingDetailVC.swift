@@ -36,13 +36,43 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     var parkingPrice = String()
     var maitinance = Bool()
     var stationId =  String()
-    var availableCharger = String()
+    var totalAvailableCharger = String()
     var parkingCharges = [0]
     
-//    var chargerConnectionInfo = [ChargerStationConnectorInfos]()
-//    var index : Int?
+    //    var chargerConnectionInfo = [ChargerStationConnectorInfos]()
+    //    var index : Int?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblDistance: UILabel!
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let chargingDetailVC = ViewControllerFactory<ChargingDetailVC>.viewController(for: .ChargingDetail)
+        return chargingDetailVC as! Self
+    }
+    
+    func configure(with availableCharger: AvailableChargers){
+        var chargerStationConnectorInfosList = [ChargerStationConnectorInfos]()
+        
+        availableCharger.chargerInfos?.forEach({ chargerInfo in
+            chargerInfo.chargerStationConnectorInfos?.forEach({ chargerConnector in
+                chargerStationConnectorInfosList.append(chargerConnector)
+            })
+        })
+        
+        name = availableCharger.chargerInfos?.first?.name ?? ""
+        connectorName = chargerStationConnectorInfosList.map { $0.connectorNo ?? "" }
+        price = chargerStationConnectorInfosList.map { $0.chargerPrice ?? 0 }
+        connectorType = chargerStationConnectorInfosList.map { $0.connectorType ?? "" }
+        chargerBoxId = chargerStationConnectorInfosList.map { $0.chargeBoxId ?? "" }
+        available = chargerStationConnectorInfosList.map { $0.available }
+        maitinance = availableCharger.maintenance
+        stationId = availableCharger.stationId ?? ""
+        time = availableCharger.stationTimings ?? ""
+        totalAvailableCharger = "\(availableCharger.availableConnectors ?? 0)/ \(availableCharger.totalConnectors ?? 0)"
+        parkingCharges = chargerStationConnectorInfosList.map { $0.parkingPrice ?? 0 }
+        reason = chargerStationConnectorInfosList.map { $0.reason ?? "" }
+        distance = LocationManager.shared.getDistance(from: (availableCharger.stationChargerAddress)!)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +82,12 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.lblName.text = name
         self.lblAddress.text = address
         let amenities = chargerPointAmeneties.map { String($0) }
-        let amtString = amenities.joined(separator: ",")
+        _ = amenities.joined(separator: ",")
         print(chargerPointAmeneties)
         self.lblAmeneties.text = chargerPointAmeneties
         self.lblDistance.text = distance + " Km"
-//        self.lblRating.text = rating
-        lblTotalAvailableCharger.text = availableCharger
+        //        self.lblRating.text = rating
+        lblTotalAvailableCharger.text = totalAvailableCharger
         lblTime.text = time
         if maitinance == true{
             self.showAlert(title: "Alert!", message: "This charge station is under maintenance, we will inform you once the maintenance is over. The inconvenience caused is deeply regretted.")
@@ -65,13 +95,17 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
     @IBAction func back(_ sender: Any) {
-       // self.navigationController?.popViewController(animated: false)
-        self.dismiss(animated: true)
+        if let navigationController = self.navigationController{
+            navigationController.popViewController(animated: true)
+        } else{
+            self.dismiss(animated: true)
+        }
     }
+    
     @IBAction func reviewAction(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StationReviewVC") as! StationReviewVC
-       nextViewController.stationid = stationId
+        nextViewController.stationid = stationId
         self.present(nextViewController, animated:true, completion:nil)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +129,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             cell?.view2.backgroundColor  = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
             cell?.bcView.layer.borderColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
             cell?.btnStart.addTarget(self, action: #selector(connected(sender:)), for: .touchUpInside)
-
+            
         }else if reason == "Charger in use"{
             cell?.btnStart.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
             cell?.view2.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
@@ -116,41 +150,44 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         }
         if connectorType[indexPath.row] == "DC" {
             cell?.imgCharger.image = UIImage(named: "dc")
-        }else{
+        } else{
             cell?.imgCharger.image = UIImage(named: "ac")
         }
         
-      //  let chrgBoxId = chargerBoxId[indexPath.row]
+        //  let chrgBoxId = chargerBoxId[indexPath.row]
         cell?.lblName.text! =  chargerBoxId[indexPath.row] + "-" + connectorName[indexPath.row]
         cell?.lblDc.text! =  connectorType[indexPath.row]
         
         let intPrice = Float((price[indexPath.row]))
         cell?.lblPrice.text = "₹" + String(format: "%.2f", intPrice) + "/Unit"
-//        cell?.lblPrice.text! =  "₹" + String(Float(price[indexPath.row])) + "/Unit"
-     //   cell?.lblCapacity.text! = "40kWh"
+        //        cell?.lblPrice.text! =  "₹" + String(Float(price[indexPath.row])) + "/Unit"
+        //   cell?.lblCapacity.text! = "40kWh"
         cell?.lblCoName.text! = connectorType[indexPath.row] + " kWh"
         cell?.btnStart.addTarget(self, action: #selector(connected(sender:)), for: .touchUpInside)
         cell?.btnBooking.addTarget(self, action: #selector(apointment(sender:)), for: .touchUpInside)
-
         
-       // UserDefaults.standard.set(chrgBoxId, forKey: "chrgBoxId")
+        
         return cell!
     }
     @objc func connected(sender: UIButton){
-        let reason = reason[sender.tag]
-//        if reason == "Available"{
-            let buttonTag = sender.tag
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingStationVC") as! ChargingStationVC
-            nextViewController.stationName = name
-            nextViewController.stationAddress = address
-            nextViewController.connName = cName
-            nextViewController.chargerBoxId = charBoxId
-            nextViewController.type = ctype
-            nextViewController.price = cPrice
-            nextViewController.parkingPrice = parkingPrice
-            self.present(nextViewController, animated:true, completion:nil)
-//        }
+        if UserAppStorage.isGuestUser{
+            self.startGuestUserSignupFlow()
+            return
+        }
+        _ = reason[sender.tag]
+        //        if reason == "Available"{
+        _ = sender.tag
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingStationVC") as! ChargingStationVC
+        nextViewController.stationName = name
+        nextViewController.stationAddress = address
+        nextViewController.connName = cName
+        nextViewController.chargerBoxId = charBoxId
+        nextViewController.type = ctype
+        nextViewController.price = cPrice
+        nextViewController.parkingPrice = parkingPrice
+        self.present(nextViewController, animated:true, completion:nil)
+        //        }
     }
     @objc func maintinance(sender: UIButton){
         if !available[sender.tag] {
@@ -162,17 +199,21 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
     @objc func apointment(sender: UIButton){
+        if UserAppStorage.isGuestUser{
+            self.startGuestUserSignupFlow()
+            return
+        }
         let buttonTag = sender.tag
         let connector = connectorName[buttonTag]
         let charBoxid = chargerBoxId[buttonTag]
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "BookApointmentVC") as! BookApointmentVC
-//        nextViewController.stationName = name
-//        nextViewController.stationAddress = address
+        //        nextViewController.stationName = name
+        //        nextViewController.stationAddress = address
         nextViewController.connName = connector
         nextViewController.chargeBoxId = charBoxid
-//        nextViewController.type = ctype
-//        nextViewController.price = cPrice
+        //        nextViewController.type = ctype
+        //        nextViewController.price = cPrice
         self.present(nextViewController, animated:true, completion:nil)
         
     }
@@ -181,6 +222,6 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      print("Seleted")
+        print("Seleted")
     }
 }

@@ -119,9 +119,9 @@ class SelfUserRegisterVC: UIViewController {
         self.callRegisterApi()
 
     }
+    
     @IBAction func login(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
         
         
@@ -275,11 +275,8 @@ class SelfUserRegisterVC: UIViewController {
                                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                     nextViewController.mobile =  self.txtMobile.text!
                                     self.present(nextViewController, animated:true, completion:nil)
-                                }else{
-                                    
-                                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
-                                    self.present(nextViewController, animated:true, completion:nil)
+                                } else{
+                                    self.gotoHome()
                                 }
                             }
                             break

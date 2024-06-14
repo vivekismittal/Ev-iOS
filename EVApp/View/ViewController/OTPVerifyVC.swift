@@ -74,7 +74,8 @@ class OTPVerifyVC: UIViewController {
                             let status = jsonData["status"].string
                             let message = jsonData["message"].string
                             let verified = jsonData["verified"].bool
-                            UserDefaults.standard.set(self.mobile, forKey: "userMobile")
+                            UserAppStorage.userMobile = self.mobile
+                            
                             self.showToast(title: "", message: message ?? "")
                         print(message)
                             let when = DispatchTime.now() + 2.0

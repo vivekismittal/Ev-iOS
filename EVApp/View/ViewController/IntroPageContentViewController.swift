@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SlideViewController: UIViewController {
+class IntroPageContentViewController: UIViewController {
     @IBOutlet weak var imgSlide: UIImageView!
     @IBOutlet weak var lblText: UILabel!
     

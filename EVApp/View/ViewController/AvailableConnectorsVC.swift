@@ -7,11 +7,6 @@
 //
 
 import UIKit
-import SkyFloatingLabelTextField
-import Alamofire
-import SwiftyJSON
-import CoreLocation
-
 
 class AvailableConnectorsVC: UIViewController{
     
@@ -24,10 +19,17 @@ class AvailableConnectorsVC: UIViewController{
         getData()
     }
     
+    static func instantiateUsingStoryboard() -> Self {
+        let availableChargerRepo = AvailableChargersRepo()
+        let availableChargerViewModel = AvailableChargersViewModel(availableChargersRepo: availableChargerRepo)
+        let availableChargerViewController =  ViewControllerFactory<AvailableConnectorsVC>.viewController(for: .AvailableCharger)
+        availableChargerViewController.viewModel = availableChargerViewModel
+        return availableChargerViewController as! Self
+    }
     
     
     @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - API Call
@@ -47,73 +49,52 @@ class AvailableConnectorsVC: UIViewController{
     }
 }
 
-extension AvailableConnectorsVC: UITableViewDelegate, UITableViewDataSource, OpenActionProtocol{
+extension AvailableConnectorsVC: UITableViewDelegate, UITableViewDataSource{
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.availableChargingStations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AvailableConnectorTableViewCell.identifier, for: indexPath) as? AvailableConnectorTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AvailableConnectorTableViewCell.identifier, for: indexPath)
         
-        cell?.openActionDelegate = self
-        cell?.indexPathRow = indexPath.row
-        cell?.availableChargers = viewModel.availableChargingStations[indexPath.row]
+        if let availableConnectorTableViewCell = cell as? AvailableConnectorTableViewCell{
+            availableConnectorTableViewCell.openActionDelegate = self
+            availableConnectorTableViewCell.availableChargers = viewModel.availableChargingStations[indexPath.row]
+        }
         
-        return cell!
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 430
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openChargingDetailVC(indexPathRow: indexPath.row)
+        openChargingDetailVC(availableCharger: viewModel.availableChargingStations[indexPath.row])
     }
     
-    func openVC(_ vc: UIViewController) {
-        self.present(vc, animated: true, completion: nil)
-    }
+
+}
+
+extension AvailableConnectorsVC: OpenActionProtocol{
     
-    
-    func openChargingDetailVC(indexPathRow: Int) {
+    func openChargingDetailVC(availableCharger: AvailableChargers) {
         DispatchQueue.main.async {[weak self] in
-            guard let `self` = self else { return }
-            
-            let nextVC = ViewControllerFactory.instantiateChargingDetailViewController()
+            let nextVC = ChargingDetailVC.instantiateUsingStoryboard()
             
             DispatchQueue.global(qos: .userInteractive).async {[weak self] in
-                guard let `self` = self else { return }
                 
-                let availableCharger = viewModel.availableChargingStations[indexPathRow]
-                
-                var chargerStationConnectorInfosList = [ChargerStationConnectorInfos]()
-                
-                availableCharger.chargerInfos?.forEach({ chargerInfo in
-                    chargerInfo.chargerStationConnectorInfos?.forEach({ chargerConnector in
-                        chargerStationConnectorInfosList.append(chargerConnector)
-                    })
-                })
-                
-                
-                nextVC.name = availableCharger.chargerInfos?.first?.name ?? ""
-                nextVC.connectorName = chargerStationConnectorInfosList.map { $0.connectorNo ?? "" }
-                nextVC.price = chargerStationConnectorInfosList.map { $0.chargerPrice ?? 0 }
-                nextVC.connectorType = chargerStationConnectorInfosList.map { $0.connectorType ?? "" }
-                nextVC.chargerBoxId = chargerStationConnectorInfosList.map { $0.chargeBoxId ?? "" }
-                nextVC.available = chargerStationConnectorInfosList.map { $0.available }
-                nextVC.maitinance = viewModel.availableChargingStations[indexPathRow].maintenance
-                nextVC.stationId = viewModel.availableChargingStations[indexPathRow].stationId ?? ""
-                nextVC.time = viewModel.availableChargingStations[indexPathRow].stationTimings ?? ""
-                nextVC.availableCharger = "\(viewModel.availableChargingStations[indexPathRow].availableConnectors ?? 0)/ \(viewModel.availableChargingStations[indexPathRow].totalConnectors ?? 0)"
-                nextVC.parkingCharges = chargerStationConnectorInfosList.map { $0.parkingPrice ?? 0 }
-                nextVC.reason = chargerStationConnectorInfosList.map { $0.reason ?? "" }
-                nextVC.distance = LocationManager.shared.getDistance(from: (viewModel.availableChargingStations[indexPathRow].stationChargerAddress)!)
+                nextVC.configure(with: availableCharger)
                 
                 DispatchQueue.main.async {
-                    self.present(nextVC, animated: true, completion: nil)
+                    self?.navigationController?.pushViewController(nextVC, animated: true)
                 }
             }
             
         }
     }
     
+    func openVC(_ vc: UIViewController) {
+        self.present(vc, animated: true, completion: nil)
+    }
 }

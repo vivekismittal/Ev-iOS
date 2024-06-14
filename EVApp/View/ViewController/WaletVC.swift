@@ -80,7 +80,7 @@ extension WaletVC{
       //  LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
       
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
             let parameters = [
                     "userPk":userPk
                     ] as? [String:AnyObject]
@@ -128,7 +128,7 @@ extension WaletVC{
     }
     func getWaletAmtApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
       //  LoadingOverlay.shared.showOverlay(view: view)
      //   self.showSpinner(onView: view)
       

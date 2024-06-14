@@ -88,8 +88,8 @@ class StationReviewVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
 extension StationReviewVC{
     func callReviewApi(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.userReviewRating
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
+        let userPk = UserAppStorage.userPk
+        let chrBoxId =  UserAppStorage.chrgBoxId
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "stationId": stationid
@@ -131,7 +131,7 @@ extension StationReviewVC{
     }
     func callRatingApi(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.userReviewWriting
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userPK": userPk,

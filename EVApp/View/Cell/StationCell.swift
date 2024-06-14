@@ -8,10 +8,26 @@
 import UIKit
 
 class StationCell: UITableViewCell {
+    static let identifier = "StationCell"
 
     @IBOutlet var lbStationName: UILabel!
     @IBOutlet var lbAddress: UILabel!
     @IBOutlet var distance: UILabel!
+    
+    var availableCharger: AvailableChargers!{
+        didSet{
+            setViews()
+        }
+    }
+    
+    private func setViews(){
+        selectionStyle = .none
+        let chargersInfo = availableCharger.chargerInfos?.first
+        lbStationName.text = chargersInfo?.name ?? ""
+        lbAddress.text = chargersInfo?.chargerAddress?.street ?? ""
+        distance.text = "Distance: \(availableCharger.message ?? "") km"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

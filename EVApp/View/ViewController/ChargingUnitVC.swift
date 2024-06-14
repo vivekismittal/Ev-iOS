@@ -90,8 +90,8 @@ class ChargingUnitVC: UIViewController {
         print("Wallet Amounnt\(waletAmount)")
         let unit = lblUnit.text
         let amount = lblOrderAmt.text
-        UserDefaults.standard.set(unit, forKey: "UNIT")
-        UserDefaults.standard.set(amount, forKey: "AMOUNT")
+        UserAppStorage.unit = unit
+        UserAppStorage.amount = amount
      //   if waletAmount < Float(orderAmount){
         if waletAmount > Float(orderAmount){
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -130,8 +130,8 @@ class ChargingUnitVC: UIViewController {
 extension ChargingUnitVC{
     func callamountUnitApi(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.amountUnit
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
+        let userPk = UserAppStorage.userPk
+        let chrBoxId =  UserAppStorage.chrgBoxId
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "amount": orderAmount,
@@ -186,9 +186,9 @@ extension ChargingUnitVC{
     }
     func callpowerUnitApi(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.wattAmount
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
-        UserDefaults.standard.setValue(self.orderAmount, forKey: "requestedUnit")
+        let userPk = UserAppStorage.userPk
+        let chrBoxId =  UserAppStorage.chrgBoxId
+        UserAppStorage.requestedUnit = orderAmount
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "energyInWatts": self.orderAmount,
@@ -245,9 +245,9 @@ extension ChargingUnitVC{
     // Time base API
     func callUnitTimeAPI(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.timeAmount
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
-        UserDefaults.standard.setValue(self.orderAmount, forKey: "requestedUnit")
+        let userPk = UserAppStorage.userPk
+        let chrBoxId =  UserAppStorage.chrgBoxId
+        UserAppStorage.requestedUnit = orderAmount
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "timeInMinutes": timeInMinutes,
@@ -304,7 +304,7 @@ extension ChargingUnitVC{
     }
     func callApplyCouponApi(){
         let amountUnit = EndPoints.shared.baseUrlDev + EndPoints.shared.discountCoupon
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userPk": userPk,
@@ -339,7 +339,7 @@ extension ChargingUnitVC{
     }
         func getWaletAmtApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+            let userPk = UserAppStorage.userPk
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                     "userPk": userPk

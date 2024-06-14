@@ -84,7 +84,7 @@ class CorporateUserVC: UIViewController {
     }
     @IBAction func login(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     @IBAction func tnc(_ sender: Any) {
@@ -269,10 +269,8 @@ extension CorporateUserVC{
                                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                     nextViewController.mobile =  self.txtMobile.text!
                                     self.present(nextViewController, animated:true, completion:nil)
-                                }else{
-                                    
-                                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
+                                } else{
+                                    let nextViewController = DashboardVC.instantiateUsingStoryboard()
                                     self.present(nextViewController, animated:true, completion:nil)
                                 }
                             }

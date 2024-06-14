@@ -57,6 +57,7 @@ struct EndPoints{
     let userReviewRating = "/users/review-rating"
     let userReviewWriting = "/users/review-writing"
     let version = "/chargers/ios-version"
+    let appStoreLink = "https://apps.apple.com/us/app/yahhvi-ev-charging/id6450030187"
 }
 
 

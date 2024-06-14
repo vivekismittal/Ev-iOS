@@ -42,7 +42,7 @@ class ProfileVC: UIViewController {
     func getUserApi(){
         let loginUrl  = EndPoints.shared.baseUrlDev +  EndPoints.shared.getUserByPhone
         LoadingOverlay.shared.showOverlay(view: view)
-        let userMobile = UserDefaults.standard.string(forKey: "userMobile")
+        let userMobile = UserAppStorage.userMobile
         let parameters = [
             "mobileNumber": userMobile
         ] as? [String:AnyObject]
@@ -82,8 +82,8 @@ class ProfileVC: UIViewController {
                 self.txtMobile.text = phone
                 self.txtVehicleModel.text = vehicleModel
                 self.lblFullName.text = fullName
-                UserDefaults.standard.set(fullName, forKey: "userFullName")
-                UserDefaults.standard.set(userPk, forKey: "userPk")
+                UserAppStorage.userFullName = fullName
+                UserAppStorage.userPk = userPk
               //  self.txtGst.text = vehicleModel
 
                 break
@@ -96,7 +96,7 @@ class ProfileVC: UIViewController {
     func updateUserApi(){
         let loginUrl  = EndPoints.shared.baseUrlDev +  EndPoints.shared.usersUpdate
         LoadingOverlay.shared.showOverlay(view: view)
-        let userMobile = UserDefaults.standard.string(forKey: "userMobile")
+        let userMobile = UserAppStorage.userMobile
         let parameters = [
             "firstName": txtFullName.text!,
             "phone": txtMobile.text!,

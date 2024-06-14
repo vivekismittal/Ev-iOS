@@ -20,19 +20,21 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var txtMobile: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordView: UIView!
     
- 
+    static func instantiateUsingStoryboard() -> Self {
+         let welcomeVC = ViewControllerFactory<WelcomeVC>.viewController(for: .WelcomeScreen)
+         return welcomeVC as! Self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
-       
-
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.btnNext.layer.cornerRadius = 12
     }
+    
     @IBAction func next(_ sender: Any) {
         let mobileValid = txtMobile.text!.isPhoneNumber
         let pass = txtPassword.text
@@ -57,8 +59,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
         //self.navigationController?.pushViewController(nextViewController, animated: false)
     }
     @IBAction func createAccount(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "RegistrationVC") as! RegistrationVC
+        let nextViewController = RegistrationVC.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     
@@ -114,7 +115,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                             print(status)
                             self.showToast(title: "", message: message ?? "")
                             if status == "True"{
-                                UserDefaults.standard.set(self.txtMobile.text, forKey: "userMobile")
+                                UserAppStorage.userMobile = self.txtMobile.text
                                 let when = DispatchTime.now() + 2
                                 DispatchQueue.main.asyncAfter(deadline: when){
                                     if verified == false{
@@ -123,12 +124,10 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                         nextViewController.mobile =  self.txtMobile.text!
                                         self.present(nextViewController, animated:true, completion:nil)
-                                    }else{
-                                        UserDefaults.standard.set(true, forKey: "UserLogedIn")
+                                    } else{
+                                        UserAppStorage.didUserLoggedIn = true
                                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
-                                        UserDefaults.standard.set(true, forKey: "UserLogedIn")
-                                        UserDefaults.standard.synchronize()
                                         self.present(nextViewController, animated:true, completion:nil)
                                     }
                                 }

@@ -101,9 +101,9 @@ class WaitingVC: UIViewController {
 extension WaitingVC{
     func callTrxStartApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStart
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
-       var chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
-        let orderAmt =  UserDefaults.standard.string(forKey: "AMOUNT")
+        let userPk = UserAppStorage.userPk
+        var chrBoxId =  UserAppStorage.chrgBoxId
+        let orderAmt =  UserAppStorage.amount
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "connectorId":connName,
@@ -155,8 +155,7 @@ extension WaitingVC{
     }
     @objc func callMeterValuesApi(){
         let metervalues  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxMeterValues
-        //let userPk = UserDefaults.standard.integer(forKey: "userPk")
-        let chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
+        let chrBoxId =  UserAppStorage.chrgBoxId
      //   LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userTransactionId":String(userTransactionId),
@@ -199,7 +198,7 @@ extension WaitingVC{
                     let timeBasedCharging = jsonData.dictionaryValue["timerBasedCharging"]!.boolValue
                   //  self.lblStartTime.text = startTime
                   //  self.lblStartTime.text = startTime
-                    let orderUnit = UserDefaults.standard.string(forKey: "UNIT")
+                    let orderUnit = UserAppStorage.unit
                     if error != "Meter Value Details Not Found"{
                         if !self.moveChargedVC{
                             return

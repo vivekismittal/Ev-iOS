@@ -36,10 +36,13 @@ class DashboardVC: UIViewController, FloatingPanelControllerDelegate, GMSMapView
 //    var availableChargers = Any()
     
     @objc func methodOfReceivedNotification(notification: Notification){
-        
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
         self.navigationController?.present(nextViewController, animated: true, completion: nil)
+    }
+    
+     static func instantiateUsingStoryboard() -> Self {
+        let dashboardVC = ViewControllerFactory<DashboardVC>.viewController(for: .HomeDashboard)
+        return dashboardVC as! Self
     }
     
     // MARK: - LifeCycle
@@ -47,28 +50,23 @@ class DashboardVC: UIViewController, FloatingPanelControllerDelegate, GMSMapView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
-//            self.btnSignup.layer.cornerRadius  = 12
-            callChargerApi()
-            getUserApi()
-            self.mapView.delegate = self
-            self.mapView.translatesAutoresizingMaskIntoConstraints = false
-            self.mapView.setNeedsLayout()
-            self.mapView.layoutIfNeeded()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
         
-            if let currentLocation = LocationManager.shared.curentLocation{
-                let coordinate = currentLocation.location.coordinate
-                print(coordinate.latitude)
-                print(coordinate.longitude)
-            }
-            let deviceID = UIDevice.current.identifierForVendor!.uuidString
-            print("Device UUID\(deviceID)")
-            let app = UIApplication.shared.delegate as! AppDelegate
-            app.checkUpdateVersion(viewController: self)
+        callChargerApi()
+        
+        self.mapView.delegate = self
+        self.mapView.translatesAutoresizingMaskIntoConstraints = false
+        self.mapView.setNeedsLayout()
+        self.mapView.layoutIfNeeded()
+        btnStation.layer.cornerRadius = 30
+
+        if let currentLocation = LocationManager.shared.curentLocation{
+            let coordinate = currentLocation.location.coordinate
+        }
+        self.checkUpdateVersion(viewController: self)
     }
 
     override func viewDidLayoutSubviews() {
-        btnStation.layer.cornerRadius = 30
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,9 +78,6 @@ class DashboardVC: UIViewController, FloatingPanelControllerDelegate, GMSMapView
         }
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        LocationManager.shared.curentLocation = nil
-//    }
     
     
     // MARK: - Button Action
@@ -98,99 +93,43 @@ class DashboardVC: UIViewController, FloatingPanelControllerDelegate, GMSMapView
     }
     
     @IBAction func openScreen(_ sender: Any) {
-        if let vc
-            =
-            self.storyboard?.instantiateViewController(withIdentifier:
-                                                        "PanelViewVC") as? PanelViewVC{
-            //   vc.stationIndex = index
-            vc.isShowStations = true
-            self.isSheetAppear = true
-            if #available(iOS 15.0, *) {
-                if let sheet = vc.sheetPresentationController{
-                    sheet.detents = [.medium() , .large()] // Sheet style
-                    sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-                    // Inside Scrolling
-                    sheet.prefersGrabberVisible = true
-                    sheet.preferredCornerRadius = 24
-                    sheet.largestUndimmedDetentIdentifier = .medium
-                }
-            } else {
-                // Fallback on earlier versions
-            }
-            self.navigationController?.present (vc, animated: true)
-        }
+        openBottomPanel()
     }
-//    @IBAction func signup(_ sender: Any) {
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
-//        self.present(nextViewController, animated:true, completion:nil)
-//    }
+    
+    func openBottomPanel(stationID: String? = nil){
+        let panelVC = PanelViewVC.instantiateUsingStoryboard()
+        panelVC.stationID = stationID
+
+        self.isSheetAppear = true
+        if #available(iOS 15.0, *) {
+            if let sheet = panelVC.sheetPresentationController{
+                sheet.detents = [.medium() , .large()] // Sheet style
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                // Inside Scrolling
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 24
+                sheet.largestUndimmedDetentIdentifier = .medium
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        self.navigationController?.present (panelVC, animated: true)
+    }
     
     
     func showLocation(){
         if let currentLocation = LocationManager.shared.curentLocation{
             let coordinate = currentLocation.location.coordinate
-            // getAddrFrmLtLng(latitude: coordinate.latitude, longitude: coordinate.longitude)
-            //  let currentAdd = self.add
-            //NotificationCenter.default.post(name: Notification.Name("currentAdd"), object: currentAdd)
-            
-            self.mapView.camera = .init(latitude:coordinate.latitude,longitude: coordinate.longitude, zoom: 10.0)
+            self.mapView.camera = .init(latitude:coordinate.latitude,longitude: coordinate.longitude, zoom: 17.0)
             self.trackLocations = coordinate
-            UserDefaults.standard.setValue(trackLocations.latitude, forKey: "trackLocationsLat")
-            UserDefaults.standard.setValue(trackLocations.longitude, forKey: "trackLocationsLong")
+            UserAppStorage.trackLocationsLat = trackLocations.latitude
+            UserAppStorage.trackLocationsLong = trackLocations.longitude
+
             self.mapView.isMyLocationEnabled = true
             
             
         }
     }
-    
-    /*  ********************* Unused Code *************************
-     
-     
-     func cratePin(latitude:Double,longitude:Double){
-     
-     let myMarker = GMSMarker()
-     myMarker.position = CLLocationCoordinate2DMake(latitude, longitude)
-     //myMarker.title = self.add
-     myMarker.title = "Marker"
-     // I have taken a pin image which is a custom image
-     let markerImage = UIImage(named: "address")!.withRenderingMode(.alwaysTemplate)
-     
-     //creating a marker view
-     let markerView = UIImageView(image: markerImage)
-     
-     //changing the tint color of the image
-     markerView.tintColor = UIColor.green
-     myMarker.map = mapView
-     
-     mapView.selectedMarker = myMarker // This line is important which opens the snippet
-     // drawLineTo(coordinate: coordinate)
-     
-     let destinationAdd = self.address
-     //  NotificationCenter.default.post(name: Notification.Name("destinationAdd"), object: destinationAdd)
-     //  print(coordinate)
-     
-     }
-     func showLocations(){
-     var bounds = GMSCoordinateBounds()
-     for location in locationDict
-     {
-     let latitude = location["latitude"]
-     let longitude = location["longitude"]
-     print(latitude)
-     let marker = GMSMarker()
-     marker.position = CLLocationCoordinate2D(latitude:latitude as! CLLocationDegrees, longitude:longitude as! CLLocationDegrees)
-     marker.map = self.mapView
-     bounds = bounds.includingCoordinate(marker.position)
-     }
-     
-     mapView.setMinZoom(1, maxZoom: 15)//prevent to over zoom on fit and animate if bounds be too small
-     
-     let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
-     mapView.animate(with: update)
-     
-     mapView.setMinZoom(1, maxZoom: 20) // allow the user zoom in more than level 15 again
-     //    } */
 }
 
 
@@ -204,7 +143,7 @@ extension DashboardVC{
         guard let stationid = getStationID(coordinate: marker.position) else {
             return true
         }
-        showscreen(stationid: stationid)
+        openBottomPanel(stationID: getStationID(coordinate: marker.position))
         return true
     }
     
@@ -233,25 +172,7 @@ extension DashboardVC{
         return nil
     }
     
-    func showscreen(stationid: String){
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier:"PanelViewVC") as? PanelViewVC{
-            vc.stationID = stationid
-            self.isSheetAppear = true
-            if #available(iOS 15.0, *) {
-                if let sheet = vc.sheetPresentationController{
-                    sheet.detents = [.medium() , .large()] // Sheet style
-                    sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-                    // Inside Scrolling
-                    sheet.prefersGrabberVisible = true
-                    sheet.preferredCornerRadius = 24
-                    sheet.largestUndimmedDetentIdentifier = .medium
-                }
-            } else {
-                // Fallback on earlier versions
-            }
-            self.navigationController?.present (vc, animated: true)
-        }
-    }
+    
     
     
     // MARK: - API Call
@@ -261,7 +182,7 @@ extension DashboardVC{
         
         // self.showSpinner(onView: view)
         
-        let userMobile = UserDefaults.standard.string(forKey: "userMobile")
+        let userMobile = UserAppStorage.userMobile
         let parameters = [
             "mobileNumber": userMobile
         ] as? [String:AnyObject]
@@ -275,11 +196,11 @@ extension DashboardVC{
             case .success(let value):
                 print(response)
                 
-                let statusCode = response.response?.statusCode
-                print(statusCode!)
+//                let statusCode = response.response?.statusCode
+//                print(statusCode!)
                 
                 let jsonData = JSON(value)
-                print(jsonData)
+//                print(jsonData)
                 
 //                let status = jsonData["status"].string
 //                let message = jsonData["message"].string
@@ -296,9 +217,9 @@ extension DashboardVC{
                 let fullName = (firstName ?? "")  + (lastName ?? "")
                 //  self.showToast(title: "", message: message ?? "")
                 
-                UserDefaults.standard.set(fullName, forKey: "userFullName")
-                UserDefaults.standard.set(eMail, forKey: "eMail")
-                UserDefaults.standard.set(userPk, forKey: "userPk")
+                UserAppStorage.userFullName = fullName
+                UserAppStorage.email = eMail ?? ""
+                UserAppStorage.userPk = userPk
                 //  self.txtGst.text = vehicleModel
                 print(userPk)
                 break
@@ -326,13 +247,12 @@ extension DashboardVC{
                 print(response)
                 
                 let statusCode = response.response?.statusCode
-                print(statusCode)
                 
                 let jsonData = JSON(value)
                 print(jsonData)
                 
                 let stationId = jsonData.arrayValue.map {$0["stationId"].stringValue}
-                let name = jsonData.arrayValue.map {$0["name"].stringValue}
+                _ = jsonData.arrayValue.map {$0["name"].stringValue}
                 let street = jsonData.arrayValue.map {$0["stationChargerAddress"].dictionaryValue}.map {$0["street"]!.stringValue}
                 let latitude = jsonData.arrayValue.map {$0["stationChargerAddress"].dictionaryValue}.map {$0["latitude"]!.stringValue}
                 let longitude = jsonData.arrayValue.map {$0["stationChargerAddress"].dictionaryValue}.map {$0["longitude"]!.stringValue}
@@ -345,8 +265,8 @@ extension DashboardVC{
                 self.stationId = stationId
                 print(latitude)
                 print(longitude)
-                trackLocations.latitude = UserDefaults.standard.value(forKey: "trackLocationsLat") as! CLLocationDegrees
-                trackLocations.longitude = UserDefaults.standard.value(forKey: "trackLocationsLong") as! CLLocationDegrees
+                trackLocations.latitude = UserAppStorage.trackLocationsLat ?? 0
+                trackLocations.longitude = UserAppStorage.trackLocationsLong ?? 0
                 //My location
                 let lat = trackLocations.latitude
                 let curLocation = CLLocation(latitude: trackLocations.latitude, longitude: trackLocations.longitude)
@@ -357,7 +277,6 @@ extension DashboardVC{
                     let latitude = location["latitude"]?.floatValue
                     let longitude = location["longitude"]?.floatValue
                     self.latTemp.append(latitude)
-                    print(latitude)
                     let marker = GMSMarker()
                     marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude ?? 00.00),longitude: CLLocationDegrees(longitude ?? 00.00))
                     // marker.map = self.mapView
@@ -374,18 +293,10 @@ extension DashboardVC{
                     print(String(format: "The distance to charger is %.01fkm", distance))
                     
                 }
-                print(self.latTemp)
-                print( self.distance)
-//                mapView.setMinZoom(1, maxZoom: 15)//prevent to over zoom on fit and animate if bounds be too small
+
                 
-//                let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
-//                mapView.animate(with: update)
-                
-                let camera = GMSCameraPosition.camera(withLatitude: trackLocations.latitude, longitude: trackLocations.longitude, zoom: 15.0)
-                self.mapView.camera = camera
-                
-//                mapView.setMinZoom(1, maxZoom: 20) // allow the user zoom in more than level 15 again
-                
+//                let camera = GMSCameraPosition.camera(withLatitude: trackLocations.latitude, longitude: trackLocations.longitude, zoom: 17.0)
+//                self.mapView.camera = camera
                 break
             case .failure:
                 print(Error.self)
@@ -393,84 +304,61 @@ extension DashboardVC{
             }
         }
     }
-    
-    
-    /* ********************* Unused Code *************************
-     
-     func getAddrFrmLtLng(latitude:Any, longitude:Any){
-     
-     let geoCoder = CLGeocoder()
-     let location = CLLocation(latitude: latitude as! CLLocationDegrees, longitude: longitude as! CLLocationDegrees)
-     
-     geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-     
-     var placeMark: CLPlacemark!
-     placeMark = placemarks?[0]
-     self.displayLocationInfo(placemark: placeMark)
-     
-     })
-     }
-     
-     func displayLocationInfo(placemark: CLPlacemark?) -> String    {
-     
-     var locality =  ""
-     var postalCode =  ""
-     var administrativeArea = ""
-     var country = ""
-     var sublocality = ""
-     var throughfare = ""
-     
-     var name = ""
-     
-     if let containsPlacemark = placemark {
-     //stop updating location to save battery life
-     //            locationManager.stopUpdatingLocation()
-     locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality! : ""
-     postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode! : ""
-     administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea! : ""
-     country = (containsPlacemark.country != nil) ? containsPlacemark.country! : ""
-     sublocality = (containsPlacemark.subLocality != nil) ? containsPlacemark.subLocality! : ""
-     throughfare = (containsPlacemark.thoroughfare != nil) ? containsPlacemark.thoroughfare! : ""
-     
-     }
-     
-     var adr: String  = ""
-     
-     if throughfare != "" {
-     
-     adr = throughfare + ", "
-     
-     }
-     if sublocality != "" {
-     
-     adr = adr + sublocality + ", "
-     
-     }
-     if locality != "" {
-     
-     adr = adr + locality + ", "
-     
-     }
-     if administrativeArea != "" {
-     
-     adr = adr + administrativeArea + ", "
-     
-     }
-     if postalCode != "" {
-     
-     adr = adr + postalCode + ", "
-     
-     }
-     if country != "" {
-     
-     adr = adr + country
-     self.address = adr
-     print(adr)
-     
-     }
-     
-     return adr
-     }
-     
-     */
 }
+
+
+/*
+ eMail: String
+ phone: String
+ lastName: String
+ sex: String
+ referralStatus: Bool
+ corporateUser: Bool
+ 
+ 
+ {
+   "eMail" : null,
+   "phone" : "8273928231",
+   "manufacturer" : null,
+   "vehicleType" : null,
+   "amount" : 0,
+   "vehicleRegistrationNumber" : null,
+   "referralPoints" : null,
+   "lastName" : null,
+   "sex" : "MALE",
+   "referralStatus" : false,
+   "address" : {
+     "shortForm" : null,
+     "countryAlpha2OrNull" : null,
+     "empty" : true,
+     "websiteName" : null,
+     "street" : null,
+     "billingAddress" : null,
+     "chargerType" : null,
+     "addressPk" : null,
+     "gstNumber" : null,
+     "city" : null,
+     "country" : null,
+     "zipCode" : null,
+     "houseNumber" : null,
+     "state" : null,
+     "operatingMode" : null,
+     "phoneNumber" : null,
+     "stateCode" : null
+   },
+   "corporateUser" : false,
+   "note" : null,
+   "referralLink" : "https:\/\/play.google.com\/store\/apps\/details?id=com.yahhvi.evcharing&ref=G5DYVN6H4A",
+   "birthDay" : null,
+   "message" : "User Details Found",
+   "vinNumber" : null,
+   "referralCode" : "G5DYVN6H4A",
+   "userPk" : 1159,
+   "password" : null,
+   "status" : "True",
+   "photo" : null,
+   "countryId" : null,
+   "guestUser" : true,
+   "firstName" : "Guest"
+ }
+ */

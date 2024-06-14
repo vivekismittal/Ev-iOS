@@ -27,6 +27,10 @@
 		948EABD72C10750E0029C007 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD62C10750E0029C007 /* VersionModel.swift */; };
 		948EABDA2C10913C0029C007 /* DetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */; };
 		948EABDE2C1099AA0029C007 /* AuthStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */; };
+		948EAC132C1482D40029C007 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC122C1482D40029C007 /* DashboardViewModel.swift */; };
+		948EAC152C15BF020029C007 /* GuestSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC142C15BF020029C007 /* GuestSignupViewController.swift */; };
+		948EAC172C160ED00029C007 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC162C160ED00029C007 /* StorageKey.swift */; };
+		948EAC192C160F330029C007 /* UserAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC182C160F330029C007 /* UserAppStorage.swift */; };
 		94BDC65B2C073E5C00B06B4F /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */; };
 		94BDC6612C073EE100B06B4F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6602C073EE100B06B4F /* FloatingPanel */; };
 		94BDC6642C073F1200B06B4F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6632C073F1200B06B4F /* IQKeyboardManagerSwift */; };
@@ -42,7 +46,7 @@
 		CB1F9A1C2A13AE110050588B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1F9A1A2A13AE110050588B /* Main.storyboard */; };
 		CB1F9A1E2A13AE130050588B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1F9A1D2A13AE130050588B /* Assets.xcassets */; };
 		CB1F9A212A13AE130050588B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1F9A1F2A13AE130050588B /* LaunchScreen.storyboard */; };
-		CB1F9A292A13B0370050588B /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A282A13B0370050588B /* SlideViewController.swift */; };
+		CB1F9A292A13B0370050588B /* IntroPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A282A13B0370050588B /* IntroPageContentViewController.swift */; };
 		CB1F9A2B2A13B0FC0050588B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A2A2A13B0FC0050588B /* IntroViewController.swift */; };
 		CB1F9A332A13D2BE0050588B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */; };
 		CB1F9A352A13EFA40050588B /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A342A13EFA40050588B /* RegistrationVC.swift */; };
@@ -165,6 +169,10 @@
 		948EABD62C10750E0029C007 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
 		948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryBoard.storyboard; sourceTree = "<group>"; };
 		948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryBoard.storyboard; sourceTree = "<group>"; };
+		948EAC122C1482D40029C007 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		948EAC142C15BF020029C007 /* GuestSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSignupViewController.swift; sourceTree = "<group>"; };
+		948EAC162C160ED00029C007 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		948EAC182C160F330029C007 /* UserAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppStorage.swift; sourceTree = "<group>"; };
 		AC2F29DF745FA44CBF788FD0 /* Pods-EVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVApp.debug.xcconfig"; path = "Target Support Files/Pods-EVApp/Pods-EVApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB026F402A378DC000C648B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahhvi - EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +182,7 @@
 		CB1F9A1D2A13AE130050588B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1F9A202A13AE130050588B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB1F9A222A13AE130050588B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB1F9A282A13B0370050588B /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		CB1F9A282A13B0370050588B /* IntroPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageContentViewController.swift; sourceTree = "<group>"; };
 		CB1F9A2A2A13B0FC0050588B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		CB1F9A342A13EFA40050588B /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
@@ -299,14 +307,14 @@
 			path = Repo;
 			sourceTree = "<group>";
 		};
-		945915012C0CB63400584627 /* Factory */ = {
+		945915012C0CB63400584627 /* ViewControllerFactory */ = {
 			isa = PBXGroup;
 			children = (
 				945915042C0CB6CA00584627 /* ViewControllerType.swift */,
 				945915062C0CB75100584627 /* StoryBoardType.swift */,
 				945915082C0CB89400584627 /* ViewControllerFactory.swift */,
 			);
-			path = Factory;
+			path = ViewControllerFactory;
 			sourceTree = "<group>";
 		};
 		9459150F2C0D5F2F00584627 /* Yahhvi - EV ChargingTests */ = {
@@ -411,6 +419,7 @@
 		CB1F9A2D2A13CC020050588B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				945915012C0CB63400584627 /* ViewControllerFactory */,
 				CB8C65132A1787D000EDC2D8 /* Cell */,
 				CB1F9A312A13D2A80050588B /* ViewController */,
 			);
@@ -422,6 +431,7 @@
 			children = (
 				945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */,
 				948EABD42C1073200029C007 /* OnAppStartViewModel.swift */,
+				948EAC122C1482D40029C007 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -435,6 +445,8 @@
 				CB9988242A501AE400CA90EB /* ServerEndPointType.swift */,
 				945914F72C0C775700584627 /* Errors.swift */,
 				945914F92C0C78E900584627 /* HttpMethod.swift */,
+				948EAC162C160ED00029C007 /* StorageKey.swift */,
+				948EAC182C160F330029C007 /* UserAppStorage.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -458,52 +470,52 @@
 		CB1F9A312A13D2A80050588B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				945915012C0CB63400584627 /* Factory */,
-				CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */,
-				CB1F9A342A13EFA40050588B /* RegistrationVC.swift */,
-				CB1F9A362A13F0920050588B /* SelfUserRegisterVC.swift */,
-				CB1F9A382A13F0A80050588B /* CorporateUserVC.swift */,
-				CB1F9A3A2A13F0EE0050588B /* OTPVerifyVC.swift */,
-				CB8C65092A17638400EDC2D8 /* ForgotPasswordVC.swift */,
-				CB8C650B2A17641700EDC2D8 /* GuestUserVC.swift */,
-				CB1F9A2A2A13B0FC0050588B /* IntroViewController.swift */,
-				CB1F9A282A13B0370050588B /* SlideViewController.swift */,
-				CB8C650D2A177F0300EDC2D8 /* DashboardVC.swift */,
-				CB8C650F2A1785CC00EDC2D8 /* MyBookingsVC.swift */,
-				CB8C65112A1787C600EDC2D8 /* MyBookingListVC.swift */,
-				CB8C65422A18D42900EDC2D8 /* ProfileVC.swift */,
-				CB8C65442A18D6EC00EDC2D8 /* PanelViewVC.swift */,
-				CB8C654A2A18E95100EDC2D8 /* AvailableConnectorsVC.swift */,
-				CBDDE5602A1DAC67000A0460 /* ChargingDetailVC.swift */,
-				CBDDE5662A1DE495000A0460 /* WaletVC.swift */,
-				CB8C653C2A18B45600EDC2D8 /* MenuViewController.swift */,
-				CBDDE5682A1DF430000A0460 /* AddMmoneyVC.swift */,
-				CB98B7D82A1F9CA3000F609A /* MenuNavigation.swift */,
-				CB98B7DA2A20F855000F609A /* ChargingStationVC.swift */,
-				CBFA7FCF2A2620E80017CAEE /* ChargingUnitVC.swift */,
-				CBFA7FD12A2621390017CAEE /* ChargingWaletStatusVC.swift */,
-				CBFA7FD32A2621590017CAEE /* ChargingVC.swift */,
 				CBFA7FD52A2629AD0017CAEE /* AccountStatusVC.swift */,
-				CB61F5C82A287F60005174E6 /* SettingVC.swift */,
-				CB61F5CA2A2880C8005174E6 /* ChangePasswwordVC.swift */,
-				CB61F5CC2A288C2D005174E6 /* TemsConditionVC.swift */,
-				CB61F5CE2A28905E005174E6 /* PrivacyPolicyVC.swift */,
-				CB61F5D02A2890DB005174E6 /* HelpCenterVC.swift */,
-				CB8999662A3067C600066BD1 /* PaymentVC.swift */,
+				CBDDE5682A1DF430000A0460 /* AddMmoneyVC.swift */,
+				CB8C654A2A18E95100EDC2D8 /* AvailableConnectorsVC.swift */,
 				CBA5E4872A3719CC00FFF238 /* AvailableCouponVC.swift */,
-				CBA5E48B2A372F1F00FFF238 /* CoupopDetaliVC.swift */,
-				CBA5E48D2A37393F00FFF238 /* StartChargingVC.swift */,
-				CB3EC7002A3A0AF80075A8C4 /* ChargingSessionVC.swift */,
-				CB77B0652A4067CC008707C3 /* ThanksVC.swift */,
-				CBE1389E2A461768005B37F8 /* TransactionDetailsVC.swift */,
-				CBC2D9DD2A4829BD00AAE562 /* ChangPassOtpVC.swift */,
-				CBC2D9DF2A487ABC00AAE562 /* PDFWebViewController.swift */,
-				CBB6A4E52A4DD1260002BD73 /* WaitingVC.swift */,
-				CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */,
 				CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */,
-				CB2F940C2A596235006A3A31 /* StationReviewVC.swift */,
 				CB2A64DE2A5994EE005EF112 /* BookedSlotCell.swift */,
 				CB2A64E02A599526005EF112 /* BookedSlotVC.swift */,
+				CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */,
+				CB61F5CA2A2880C8005174E6 /* ChangePasswwordVC.swift */,
+				CBC2D9DD2A4829BD00AAE562 /* ChangPassOtpVC.swift */,
+				CBDDE5602A1DAC67000A0460 /* ChargingDetailVC.swift */,
+				CB3EC7002A3A0AF80075A8C4 /* ChargingSessionVC.swift */,
+				CB98B7DA2A20F855000F609A /* ChargingStationVC.swift */,
+				CBFA7FCF2A2620E80017CAEE /* ChargingUnitVC.swift */,
+				CBFA7FD32A2621590017CAEE /* ChargingVC.swift */,
+				CBFA7FD12A2621390017CAEE /* ChargingWaletStatusVC.swift */,
+				CB1F9A382A13F0A80050588B /* CorporateUserVC.swift */,
+				CBA5E48B2A372F1F00FFF238 /* CoupopDetaliVC.swift */,
+				CB8C650D2A177F0300EDC2D8 /* DashboardVC.swift */,
+				CB8C65092A17638400EDC2D8 /* ForgotPasswordVC.swift */,
+				CB8C650B2A17641700EDC2D8 /* GuestUserVC.swift */,
+				CB61F5D02A2890DB005174E6 /* HelpCenterVC.swift */,
+				CB1F9A2A2A13B0FC0050588B /* IntroViewController.swift */,
+				CB98B7D82A1F9CA3000F609A /* MenuNavigation.swift */,
+				CB8C653C2A18B45600EDC2D8 /* MenuViewController.swift */,
+				CB8C65112A1787C600EDC2D8 /* MyBookingListVC.swift */,
+				CB8C650F2A1785CC00EDC2D8 /* MyBookingsVC.swift */,
+				CB1F9A3A2A13F0EE0050588B /* OTPVerifyVC.swift */,
+				CB8C65442A18D6EC00EDC2D8 /* PanelViewVC.swift */,
+				CB8999662A3067C600066BD1 /* PaymentVC.swift */,
+				CBC2D9DF2A487ABC00AAE562 /* PDFWebViewController.swift */,
+				CB61F5CE2A28905E005174E6 /* PrivacyPolicyVC.swift */,
+				CB8C65422A18D42900EDC2D8 /* ProfileVC.swift */,
+				CB1F9A342A13EFA40050588B /* RegistrationVC.swift */,
+				CB1F9A362A13F0920050588B /* SelfUserRegisterVC.swift */,
+				CB61F5C82A287F60005174E6 /* SettingVC.swift */,
+				CB1F9A282A13B0370050588B /* IntroPageContentViewController.swift */,
+				CBA5E48D2A37393F00FFF238 /* StartChargingVC.swift */,
+				CB2F940C2A596235006A3A31 /* StationReviewVC.swift */,
+				CB61F5CC2A288C2D005174E6 /* TemsConditionVC.swift */,
+				CB77B0652A4067CC008707C3 /* ThanksVC.swift */,
+				CBE1389E2A461768005B37F8 /* TransactionDetailsVC.swift */,
+				CBB6A4E52A4DD1260002BD73 /* WaitingVC.swift */,
+				CBDDE5662A1DE495000A0460 /* WaletVC.swift */,
+				CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */,
+				948EAC142C15BF020029C007 /* GuestSignupViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -762,7 +774,9 @@
 				945914FC2C0C866100584627 /* AvailableChargersViewModel.swift in Sources */,
 				CBA5E48A2A3719EB00FFF238 /* CouponTableViewCell.swift in Sources */,
 				CB1F9A332A13D2BE0050588B /* WelcomeVC.swift in Sources */,
+				948EAC152C15BF020029C007 /* GuestSignupViewController.swift in Sources */,
 				CBE8B13E2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift in Sources */,
+				948EAC172C160ED00029C007 /* StorageKey.swift in Sources */,
 				945915072C0CB75100584627 /* StoryBoardType.swift in Sources */,
 				945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
@@ -772,7 +786,7 @@
 				CB61F5CB2A2880C8005174E6 /* ChangePasswwordVC.swift in Sources */,
 				CB61F5DA2A2A088F005174E6 /* ActivityIndicator.swift in Sources */,
 				CBDDE5672A1DE495000A0460 /* WaletVC.swift in Sources */,
-				CB1F9A292A13B0370050588B /* SlideViewController.swift in Sources */,
+				CB1F9A292A13B0370050588B /* IntroPageContentViewController.swift in Sources */,
 				CBDDE5652A1DE47B000A0460 /* WaletTableViewCell.swift in Sources */,
 				CB1F9A152A13AE110050588B /* AppDelegate.swift in Sources */,
 				CB99882B2A51C5B600CA90EB /* BookApointmentVC.swift in Sources */,
@@ -793,6 +807,7 @@
 				CBDDE56D2A1F324E000A0460 /* EndPoints.swift in Sources */,
 				CBDDE56B2A1F31CE000A0460 /* LoadingOverlay.swift in Sources */,
 				CBB6A4E82A4DD5FE0002BD73 /* ProgressView.swift in Sources */,
+				948EAC132C1482D40029C007 /* DashboardViewModel.swift in Sources */,
 				CBE1389F2A461768005B37F8 /* TransactionDetailsVC.swift in Sources */,
 				CB98B7E82A2446AA000F609A /* Alert.swift in Sources */,
 				8281179E2AB48FF8001D56CF /* AvailableChargers.swift in Sources */,
@@ -816,6 +831,7 @@
 				CB8C653F2A18BAEC00EDC2D8 /* SideMenuTableViewCell.swift in Sources */,
 				CB2F940F2A596265006A3A31 /* StationReviewCell.swift in Sources */,
 				CB8C65102A1785CC00EDC2D8 /* MyBookingsVC.swift in Sources */,
+				948EAC192C160F330029C007 /* UserAppStorage.swift in Sources */,
 				CBFA7FD02A2620E80017CAEE /* ChargingUnitVC.swift in Sources */,
 				CBDDE5632A1DACD3000A0460 /* ChargingTableViewCell.swift in Sources */,
 				CB1F9A392A13F0A80050588B /* CorporateUserVC.swift in Sources */,

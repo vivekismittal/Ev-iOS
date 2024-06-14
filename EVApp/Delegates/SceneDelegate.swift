@@ -14,14 +14,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
      
-        var userLoginStatus = UserDefaults.standard.bool(forKey: "UserLogedIn")
-        if userLoginStatus == true {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let landingScreen = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
+        
+        
+        if UserAppStorage.didUserLoggedIn {
+            let landingScreen = MenuNavigation.instantiateUsingStoryboard()
             self.window?.rootViewController = landingScreen
-        } else {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let landingScreen = storyBoard.instantiateViewController(withIdentifier: "IntroViewController") as! IntroViewController
+        } 
+        else {
+            let storyBoard : UIStoryboard = UIStoryboard(name: StoryBoardsType.AuthStoryBoard.rawValue, bundle:nil)
+            let landingScreen = storyBoard.instantiateViewController(withIdentifier: "IntroViewNavController")/* as! IntroViewController*/
             self.window?.rootViewController = landingScreen
         }
         guard let _ = (scene as? UIWindowScene) else { return }

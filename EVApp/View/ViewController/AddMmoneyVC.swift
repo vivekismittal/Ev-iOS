@@ -112,11 +112,10 @@ class AddMmoneyVC: UIViewController {
 extension AddMmoneyVC{
     func addWaletAmtApi(amt:String,mode:String,AddOn:String,id:String){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.addWaletAmt
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
         self.showSpinner(onView: view)
        
         let parameters = [
-            "userPk":userPk,
+            "userPk":UserAppStorage.userPk,
             "amount": amt,
             "status":"true",
             "transactionType": "Credit",
@@ -164,7 +163,7 @@ extension AddMmoneyVC{
     }
     func getWaletAmtApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWaletAmt
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         self.showSpinner(onView: view)
        
     //    LoadingOverlay.shared.showOverlay(view: view)
@@ -204,9 +203,9 @@ extension AddMmoneyVC{
 extension AddMmoneyVC: PayUCheckoutProDelegate{
     
     private func getPaymentParam() -> PayUPaymentParam {
-        let userMobile = UserDefaults.standard.string(forKey: "userMobile")
-        let eMail = UserDefaults.standard.string(forKey: "eMail")
-        let userFullName = UserDefaults.standard.string(forKey: "userFullName")
+        let userMobile = UserAppStorage.userMobile
+        let eMail = UserAppStorage.email
+        let userFullName = UserAppStorage.userFullName
         let paymentParam = PayUPaymentParam(key: "XpvgUb",
                                             transactionId: String(currentTime),
                                             amount: txtAmount.text ?? "0" ,
@@ -328,7 +327,7 @@ extension AddMmoneyVC: PayUCheckoutProDelegate{
         var payment_hash = ""
         let hashStringWithoutSalt = (param[HashConstant.hashString] ?? "")
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentHash
-        let userPk = UserDefaults.standard.integer(forKey: "userPk")
+        let userPk = UserAppStorage.userPk
         LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "hashData": hashStringWithoutSalt

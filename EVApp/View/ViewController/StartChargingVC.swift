@@ -36,9 +36,9 @@ class StartChargingVC: UIViewController {
     
 func callTrxStartApi(){
     let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStart
-    let userPk = UserDefaults.standard.integer(forKey: "userPk")
-   var chrBoxId =  UserDefaults.standard.string(forKey: "chrgBoxId")
-    let orderAmt =  UserDefaults.standard.string(forKey: "AMOUNT")
+    let userPk = UserAppStorage.userPk
+    var chrBoxId =  UserAppStorage.chrgBoxId
+    let orderAmt =  UserAppStorage.amount
    // LoadingOverlay.shared.showOverlay(view: view)
     self.showSpinner(onView: view)
     

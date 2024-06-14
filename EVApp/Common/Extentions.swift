@@ -22,10 +22,10 @@ extension UITextField {
 }
 
 extension UIViewController{
+    
     func gotoHome(){
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
-        self.present(nextViewController, animated:true, completion:nil)
+        let landingScreen = MenuNavigation.instantiateUsingStoryboard()
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = landingScreen
     }
     
     func showAlert(title:String,message:String){
@@ -70,7 +70,40 @@ extension UIViewController{
         view.layer.shadowOpacity = 0.8
         view.layer.shadowOffset = CGSize.zero
         view.layer.shadowRadius = 5
-        
+    }
+    
+    func checkUpdateVersion(viewController: UIViewController){
+  
+        OnAppStartViewModel.shared.versionAPIRequest { res in
+            switch res{
+            case .success(let version):
+
+                guard let response = version.ios, let responseVersion = Float(response) else {
+                    return
+                }
+                
+                if (UIApplication.shared.delegate as! AppDelegate).currentVersion < responseVersion {
+                    DispatchQueue.main.async {
+                        let alertController = UIAlertController(
+                            title: "Update Required",
+                            message: "We have launched new app and improved app. Please update to continue using the app.",
+                            preferredStyle: .alert)
+                        
+                        // Handling OK action
+                        guard let url = URL(string: EndPoints.shared.appStoreLink) else { return }
+                        
+                        let okAction = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction!) in
+                            UIApplication.shared.open(url)
+                        }
+                        // Adding action buttons to the alert controller
+                        alertController.addAction(okAction)
+                        viewController.present(alertController, animated: true, completion:nil)
+                    }
+                }
+            case .failure(_):
+                print("Failed to get response")
+            }
+        }
     }
 }
 
@@ -78,4 +111,25 @@ extension Array {
     func element(at index: Int) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
+}
+
+
+class ClickListener: UITapGestureRecognizer {
+    var onClick : (() -> Void)? = nil
+}
+
+extension UIView {
+    
+    func setOnClickListener(action :@escaping () -> Void){
+        let tapRecogniser = ClickListener(target: self, action: #selector(onViewClicked(sender:)))
+        tapRecogniser.onClick = action
+        self.addGestureRecognizer(tapRecogniser)
+    }
+    
+    @objc private func onViewClicked(sender: ClickListener) {
+        if let onClick = sender.onClick {
+            onClick()
+        }
+    }
+    
 }

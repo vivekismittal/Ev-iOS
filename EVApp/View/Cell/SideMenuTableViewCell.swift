@@ -8,6 +8,7 @@
 import UIKit
 
 class SideMenuTableViewCell: UITableViewCell {
+    static let identifier = "SideMenuTableViewCell"
 
     @IBOutlet weak var imgMenu: UIImageView!
     @IBOutlet weak var lblMenu: UILabel!

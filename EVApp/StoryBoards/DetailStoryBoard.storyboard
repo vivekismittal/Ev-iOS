@@ -502,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeQ-aS-kvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5106.1538461538457" y="1619.431279620853"/>
+            <point key="canvasLocation" x="6032.8244274809158" y="1619.0140845070423"/>
         </scene>
         <!--Charging DetailVC-->
         <scene sceneID="epQ-y3-qmv">
@@ -939,7 +939,25 @@ Urineioven</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1l-gk-h15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6187" y="1619"/>
+            <point key="canvasLocation" x="7112.2137404580153" y="1618.3098591549297"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bvg-Bl-AP0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bvg-g9-pDC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9RU-ow-Pf2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IE6-Xw-0ZN" kind="relationship" relationship="rootViewController" id="cZe-wC-kyj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKC-w9-pEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5106.1068702290077" y="1619.0140845070423"/>
         </scene>
     </scenes>
     <resources>
