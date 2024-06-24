@@ -61,6 +61,7 @@ class WaitingVC: UIViewController {
             print("running")
         }
     }
+    
     @IBAction func start(_ sender: Any) {
         self.secondsRemaining = 120
         self.proView.isHidden = true

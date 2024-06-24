@@ -25,7 +25,8 @@ extension UIViewController{
     
     func gotoHome(){
         let landingScreen = MenuNavigation.instantiateUsingStoryboard()
-        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = landingScreen
+        UIApplication.shared.windows.first?.rootViewController = landingScreen
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     func showAlert(title:String,message:String){

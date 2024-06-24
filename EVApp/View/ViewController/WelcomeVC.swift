@@ -126,9 +126,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                                         self.present(nextViewController, animated:true, completion:nil)
                                     } else{
                                         UserAppStorage.didUserLoggedIn = true
-                                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
-                                        self.present(nextViewController, animated:true, completion:nil)
+                                        self.gotoHome()
                                     }
                                 }
                             }

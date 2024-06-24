@@ -13,7 +13,6 @@ class StartChargingVC: UIViewController {
     
     @IBOutlet weak var btnStartCharging: UIButton!
     
-//    var unit  = 0.0
     var connName = ""
     var chargerBoxId:String = ""
     var timeBasedCharging = false

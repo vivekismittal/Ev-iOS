@@ -28,7 +28,7 @@ class ChargingUnitVC: UIViewController {
    private var orderAmount = Float() {
         didSet{
             self.lblOrderAmt.text =  orderAmount.rupeeString(withPrecision: 1)
-            self.lblTotalTax.text =  ((orderAmount * 18)/100).rupeeString(withPrecision: 1)
+            self.lblTotalTax.text =  orderAmount.rupeeString(withPrecision: 1)
             self.lblDiscountValue.text =  0.rupeeString()
         }
     }
