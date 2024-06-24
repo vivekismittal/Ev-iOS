@@ -3,188 +3,95 @@
 //  EVApp
 //
 //  Created by Brijesh Bhardwaj on 14/06/23.
-//
+//  Corrected by Vivek Mittal
 
 import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ChargingSessionVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ChargingSessionVC: UIViewController{
     
     @IBOutlet weak var sessionTable: UITableView!
-    var amount = [Int?]()
-    var chargingStatus = [""]
-    var stationName = [String?]()
-    var userTransactionId = [Int]()
-    var paymentTransactionId = [Int?]()
-    var date = [String?]()
-    var chargingCompleted = [Bool]()
-    var boxID = [Int]()
-    var connectorID = [Int]()
-    //  var amount = [""]
-    // var chargers = [ChargerInfo]()
-    var name = [""]
+    private var chargingSessionViewModel: UserChargingSessionViewModel!
+    private var chargingSessions = [UserChargingSession](){
+        didSet{
+            DispatchQueue.main.async{
+                self.sessionTable.reloadData()
+            }
+        }
+    }
+    
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let chargingSessionVC = ViewControllerFactory<Self>.viewController(for: .UserChargingSessionsScreen)
+        chargingSessionVC.chargingSessionViewModel = UserChargingSessionViewModel()
+        return chargingSessionVC
+    }
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.trxMeterValuesApi()
+        sessionTable.delegate = self
+        sessionTable.dataSource = self
+        self.getAllUserChargingSessions()
     }
     
-    // MARK: - Delegate & Data Source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return amount.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChargingSessionCell", for: indexPath) as? ChargingSessionCell
-        //  cell?.layer.cornerRadius = 12
-        cell?.lblTranId.text =  "Transaction ID: "  + String(paymentTransactionId[indexPath.row] ?? 0)
-        cell?.lblDate.text = "Date: " + (date[indexPath.row] ?? "")
-        cell?.lblAmount.text = "Amount: "  + String(amount[indexPath.row] ?? 0)
-        cell?.lblStationName.text =  "Station Name: " + (stationName[indexPath.row] ?? "")
-        if !chargingCompleted[indexPath.row] {
-            cell?.lblCharging.textColor = UIColor.red
-        }
-        cell?.lblDistance.text = ""
-        cell!.lblCharging.text! =  chargingStatus[indexPath.row]
-        return cell!
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if amount[indexPath.row] == nil || amount[indexPath.row] == 0 {
-            return 0
-        }
-        return 110
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if chargingCompleted[indexPath.row] {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TransactionDetailsVC") as! TransactionDetailsVC
-            nextViewController.userTransactionId = String(userTransactionId[indexPath.row])
-            nextViewController.isCommingFromTransactionList = true
-            self.present(nextViewController, animated:true, completion:nil)
+    private func getAllUserChargingSessions(){
+        self.showSpinner(onView: view)
+        chargingSessionViewModel.getAllUserChargingSessions{[weak self] res in
+            self?.removeSpinner()
+            switch res{
+            case .success(let data):
+                guard let chargingSessions = data.userTrxSessions else { return }
+                self?.chargingSessions = chargingSessions
+                
+            case .failure(let error):
+                print(error)
+            }
             
-        }else {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingVC") as! ChargingVC
-            nextViewController.userTransactionId = userTransactionId[indexPath.row]
-            nextViewController.chargerBoxId = String(boxID[indexPath.row])
-            nextViewController.connName = String(connectorID[indexPath.row])
-            self.present(nextViewController, animated:true, completion:nil)
         }
     }
     
     // MARK: - Action Method
     @IBAction func back(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
+        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
+}
+
+// MARK: - Delegate & Data Source
+extension ChargingSessionVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chargingSessions.count
+    }
     
-    // MARK: - API Call
-    func trxMeterValuesApi(){
-        let url  = EndPoints.shared.baseUrlDev + EndPoints.shared.paymentUsertrxsession
-        let userPk = UserAppStorage.userPk
-      //  LoadingOverlay.shared.showOverlay(view: view)
-        self.showSpinner(onView: view)
-      
-        let parameters = [
-            "userPk":userPk
-        ] as? [String:AnyObject]
-        print(parameters)
-        AF.request(url, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-            response in
-           // LoadingOverlay.shared.hideOverlayView()
-            self.removeSpinner()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ChargingSessionCell.identifier, for: indexPath)
+        if let sessionCell = cell as? ChargingSessionCell{
+            sessionCell.chargingSession = self.chargingSessions[indexPath.row]
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let session = chargingSessions[indexPath.row]
+        if session.chargingCompleted == true {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TransactionDetailsVC") as! TransactionDetailsVC
+            nextViewController.userTransactionId = String(session.userTransactionId ?? 0)
+            nextViewController.isCommingFromTransactionList = true
+            self.present(nextViewController, animated:true, completion:nil)
+        } else {
             
-            switch (response.result) {
-                
-            case .success(let value):
-                print(response)
-                
-                let statusCode = response.response?.statusCode
-                print(statusCode!)
-                
-                let jsonData = JSON(value)
-                print(jsonData)
-                let amount = jsonData["userTrxSessions"].arrayValue.map {$0["amountDebited"].intValue}
-                let chargingStatus = jsonData["userTrxSessions"].arrayValue.map {$0["chargingStatus"].stringValue}
-                let chargingCompleted = jsonData["userTrxSessions"].arrayValue.map {$0["chargingCompleted"].boolValue}
-                let stationName = jsonData["userTrxSessions"].arrayValue.map {$0["stationName"].stringValue}
-                let userTransactionId = jsonData["userTrxSessions"].arrayValue.map {$0["userTransactionId"].intValue}
-                let paymentTransactionId = jsonData["userTrxSessions"].arrayValue.map {$0["paymentTransactionId"].intValue}
-                let boxID = jsonData["userTrxSessions"].arrayValue.map{ $0["chargeboxId"].intValue}
-                let connectorID = jsonData["userTrxSessions"].arrayValue.map{ $0["connectorId"].intValue}
-                let date = jsonData["userTrxSessions"].arrayValue.map {$0["date"].stringValue}
-                for amt  in amount{
-                    if  amt != 0{
-                        self.amount.append(amt)
-                    }
-                }
-                print(amount)
-                print(chargingStatus)
-                print(userTransactionId)
-                //
-               // self.amount = amount
-                self.chargingStatus = chargingStatus
-                self.stationName =   stationName
-                self.userTransactionId = userTransactionId
-                self.paymentTransactionId = paymentTransactionId
-                self.date =   date
-                self.chargingCompleted = chargingCompleted
-                self.boxID = boxID
-                self.connectorID = connectorID
-                self.sessionTable.reloadData()
-                // Remove local notification from app if all transaction is completed.
-                if self.chargingCompleted.allSatisfy({$0}) {
-                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["chargingalert"])
-                }
-                
-                break
-            case .failure:
-                print(Error.self)
-                
-            }
+            let nextViewController = ChargingVC.instantiateUsingStoryboard(orderChargingUnitInWatt: session.energyInWatts ?? 0, orderChargingAmount: session.amount ?? 0)
+            nextViewController.userTransactionId = session.userTransactionId ?? 0
+            nextViewController.chargerBoxId = session.chargeboxId ?? ""
+            nextViewController.connName = session.connectorId ?? ""
+            self.present(nextViewController, animated:true, completion:nil)
         }
     }
-    
-    /********************************* Unused Code **************************************
-    func postApiCall(parameters:[String:Any],requestUrl:String){
-        //   let url  = EndPoints().baseUrlDev + EndPoints().trxMeterValues
-        guard let reqUrl = URL(string: requestUrl) else { return }
-        print(reqUrl)
-        
-        let request = NSMutableURLRequest(url: reqUrl)
-        //  uncomment this and add auth token, if your project needs.
-        //  let config = URLSessionConfiguration.default
-        //  let authString = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMywiUGFzc3dvcmQiOiIkMmEkMTAkYVhpVm9wU3JSLjBPYmdMMUk2RU5zdU9LQzlFR0ZqNzEzay5ta1pDcENpMTI3MG1VLzR3SUsiLCJpYXQiOjE1MTczOTc5MjV9.JaSh3FvpAxFxbq8z_aZ_4OhrWO-ytBQNu6A-Fw4pZBY"
-        //  config.httpAdditionalHeaders = ["Authorization" : authString]
-        
-        let session = URLSession.shared
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: [])
-        let task: Void = session.dataTask(with: request as URLRequest) { data, response, error in
-            LoadingOverlay.shared.hideOverlayView()
-            guard let data = data else { return }
-            do {
-                let gitData = try JSONDecoder().decode(SessionModel.self, from: data)
-                print("response data:", gitData.error)
-                
-            } catch let err {
-                print("Err", err)
-            }
-        }.resume()
-    }
-   
-    */
-}
-enum NetworkError: Error {
-    
-    case domainError
-    case decodingError
-    case responseError
-    case encodingError
 }

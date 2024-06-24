@@ -10,17 +10,14 @@ import Foundation
 class AvailableChargersRepo{
     
     func getAvailableChargingStations(completionHandler: @escaping ResultHandler<[AvailableChargers]>) {
-        
-        NewNetworkManager.shared.request(
-            endPointType: .getAvailableChargingStations, modelType: [AvailableChargers].self) { response in
+        NewNetworkManager.shared.request(endPointType: .getAvailableChargingStations, modelType: [AvailableChargers].self) { response in
+            switch response {
+            case .success(let stations):
+                completionHandler(.success(stations))
                 
-                switch response {
-                case .success(let stations):
-                    completionHandler(.success(stations))
-                    
-                case .failure(let error):
-                    completionHandler(.failure(error))
-                }
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
+        }
     }
 }

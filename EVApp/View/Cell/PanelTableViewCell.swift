@@ -35,11 +35,11 @@ class PanelTableViewCell: UITableViewCell {
         btnStart.layer.masksToBounds = true
         
         switch chargerConnectorInfo.reason{
-        case "Available":
+        case .Available:
             btnStart.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-        case "Charger in use":
+        case .Charger_in_use:
             btnStart.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        case "UnderMaintenance":
+        case .Under_Maintenance:
             btnStart.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         default:
             btnStart.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
@@ -62,28 +62,7 @@ class PanelTableViewCell: UITableViewCell {
     }
     
     @objc func connected(sender: UIButton){
-        
-        let reason = chargerConnectorInfo.reason
-        if reason == "Available"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingStationVC") as! ChargingStationVC
-            
-            nextViewController.stationId = chargerConnectorInfo.stationId ?? ""
-            nextViewController.parkingPrice = String(chargerConnectorInfo.parkingPrice ?? 0)
-            nextViewController.stationName = chargerInfoName ?? ""
-            nextViewController.stationAddress = chargerAddress?.street ?? ""
-            nextViewController.connName = chargerConnectorInfo.connectorNo ?? ""
-            nextViewController.chargerBoxId = chargerConnectorInfo.chargeBoxId ?? ""
-            nextViewController.type = chargerConnectorInfo.connectorType ?? ""
-            nextViewController.price = String(chargerConnectorInfo.chargerPrice ?? 0)
-            self.openActionDelegate.openVC(nextViewController)
-        } else if reason == "Charger in use"{
-            self.openActionDelegate.showToast(title: "Yahhvi", message: "Charger in use")
-        } else if reason == "UnderMaintenance"{
-            self.openActionDelegate.showToast(title: "Yahhvi", message: "Under Maintenance")
-        } else{
-            self.openActionDelegate.showToast(title: "Yahhvi", message: "Power Loss")
-        }
+        openActionDelegate.connect(to: chargerConnectorInfo, chargerInfoName: chargerInfoName, streetAddress: chargerAddress?.street)
     }
 
 }

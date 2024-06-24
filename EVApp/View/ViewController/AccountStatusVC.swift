@@ -29,7 +29,7 @@ class AccountStatusVC: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
+        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     /*

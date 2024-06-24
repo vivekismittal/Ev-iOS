@@ -26,6 +26,12 @@ class AvailableCouponVC: UIViewController,UITableViewDelegate,UITableViewDataSou
     @IBOutlet weak var lblmMinAmt: UILabel!
     @IBOutlet weak var couponDetailsView: UIView!
     @IBOutlet weak var couponTable: UITableView!
+    
+     static func instantiateUsingStoryboard() -> Self {
+         let availableCouponVc = ViewControllerFactory<AvailableCouponVC>.viewController(for: .AvailableCouponScreen)
+         return availableCouponVc as! Self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,9 +39,7 @@ class AvailableCouponVC: UIViewController,UITableViewDelegate,UITableViewDataSou
     }
     
     @IBAction func back(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingUnitVC") as! ChargingUnitVC
-        self.present(nextViewController, animated:true, completion:nil)
+        self.dismiss(animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return couponCode.count

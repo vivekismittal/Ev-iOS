@@ -23,9 +23,20 @@
 		945915112C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */; };
 		9459151B2C0D60CB00584627 /* AvailableChargersMockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */; };
 		9459151E2C0D66C900584627 /* AvailableChargerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */; };
+		948AE2162C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */; };
+		948AE21A2C245B1A00D6C3F6 /* ChargingUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */; };
+		948AE21C2C245B7300D6C3F6 /* ChargingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21B2C245B7300D6C3F6 /* ChargingRepo.swift */; };
+		948AE21E2C245E4700D6C3F6 /* MyWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21D2C245E4700D6C3F6 /* MyWallet.swift */; };
+		948AE2202C246ECE00D6C3F6 /* WalletRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21F2C246ECE00D6C3F6 /* WalletRepo.swift */; };
+		948AE2222C246FC600D6C3F6 /* ChargingAmountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2212C246FC600D6C3F6 /* ChargingAmountModel.swift */; };
+		948AE2242C26E41000D6C3F6 /* TruncatingFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2232C26E41000D6C3F6 /* TruncatingFloat.swift */; };
+		948AE2262C270D6300D6C3F6 /* NumericHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2252C270D6300D6C3F6 /* NumericHelper.swift */; };
+		948AE2282C28912600D6C3F6 /* UserChargingSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */; };
+		948AE22A2C2894D700D6C3F6 /* UserChargingSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */; };
+		948AE22C2C2936B300D6C3F6 /* WalletStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */; };
 		948EABD52C1073200029C007 /* OnAppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD42C1073200029C007 /* OnAppStartViewModel.swift */; };
 		948EABD72C10750E0029C007 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD62C10750E0029C007 /* VersionModel.swift */; };
-		948EABDA2C10913C0029C007 /* DetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */; };
+		948EABDA2C10913C0029C007 /* ChargingStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABD92C10913C0029C007 /* ChargingStoryBoard.storyboard */; };
 		948EABDE2C1099AA0029C007 /* AuthStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */; };
 		948EAC132C1482D40029C007 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC122C1482D40029C007 /* DashboardViewModel.swift */; };
 		948EAC152C15BF020029C007 /* GuestSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EAC142C15BF020029C007 /* GuestSignupViewController.swift */; };
@@ -105,8 +116,8 @@
 		CBDDE5612A1DAC67000A0460 /* ChargingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5602A1DAC67000A0460 /* ChargingDetailVC.swift */; };
 		CBDDE5632A1DACD3000A0460 /* ChargingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5622A1DACD3000A0460 /* ChargingTableViewCell.swift */; };
 		CBDDE5652A1DE47B000A0460 /* WaletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5642A1DE47B000A0460 /* WaletTableViewCell.swift */; };
-		CBDDE5672A1DE495000A0460 /* WaletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5662A1DE495000A0460 /* WaletVC.swift */; };
-		CBDDE5692A1DF431000A0460 /* AddMmoneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5682A1DF430000A0460 /* AddMmoneyVC.swift */; };
+		CBDDE5672A1DE495000A0460 /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5662A1DE495000A0460 /* WalletVC.swift */; };
+		CBDDE5692A1DF431000A0460 /* AddMoneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE5682A1DF430000A0460 /* AddMoneyVC.swift */; };
 		CBDDE56B2A1F31CE000A0460 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE56A2A1F31CE000A0460 /* LoadingOverlay.swift */; };
 		CBDDE56D2A1F324E000A0460 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDE56C2A1F324E000A0460 /* EndPoints.swift */; };
 		CBE138672A408386005B37F8 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE138662A408386005B37F8 /* SessionModel.swift */; };
@@ -165,9 +176,20 @@
 		945915102C0D5F2F00584627 /* Yahhvi___EV_ChargingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yahhvi___EV_ChargingTests.swift"; sourceTree = "<group>"; };
 		9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersMockRepo.swift; sourceTree = "<group>"; };
 		9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargerViewModelTests.swift; sourceTree = "<group>"; };
+		948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingConnectorHelper.swift; sourceTree = "<group>"; };
+		948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingUnitViewModel.swift; sourceTree = "<group>"; };
+		948AE21B2C245B7300D6C3F6 /* ChargingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingRepo.swift; sourceTree = "<group>"; };
+		948AE21D2C245E4700D6C3F6 /* MyWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWallet.swift; sourceTree = "<group>"; };
+		948AE21F2C246ECE00D6C3F6 /* WalletRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRepo.swift; sourceTree = "<group>"; };
+		948AE2212C246FC600D6C3F6 /* ChargingAmountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingAmountModel.swift; sourceTree = "<group>"; };
+		948AE2232C26E41000D6C3F6 /* TruncatingFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruncatingFloat.swift; sourceTree = "<group>"; };
+		948AE2252C270D6300D6C3F6 /* NumericHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericHelper.swift; sourceTree = "<group>"; };
+		948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChargingSessionModel.swift; sourceTree = "<group>"; };
+		948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChargingSessionViewModel.swift; sourceTree = "<group>"; };
+		948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletStoryBoard.storyboard; sourceTree = "<group>"; };
 		948EABD42C1073200029C007 /* OnAppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppStartViewModel.swift; sourceTree = "<group>"; };
 		948EABD62C10750E0029C007 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
-		948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryBoard.storyboard; sourceTree = "<group>"; };
+		948EABD92C10913C0029C007 /* ChargingStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChargingStoryBoard.storyboard; sourceTree = "<group>"; };
 		948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryBoard.storyboard; sourceTree = "<group>"; };
 		948EAC122C1482D40029C007 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		948EAC142C15BF020029C007 /* GuestSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSignupViewController.swift; sourceTree = "<group>"; };
@@ -242,8 +264,8 @@
 		CBDDE5602A1DAC67000A0460 /* ChargingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingDetailVC.swift; sourceTree = "<group>"; };
 		CBDDE5622A1DACD3000A0460 /* ChargingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingTableViewCell.swift; sourceTree = "<group>"; };
 		CBDDE5642A1DE47B000A0460 /* WaletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaletTableViewCell.swift; sourceTree = "<group>"; };
-		CBDDE5662A1DE495000A0460 /* WaletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaletVC.swift; sourceTree = "<group>"; };
-		CBDDE5682A1DF430000A0460 /* AddMmoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMmoneyVC.swift; sourceTree = "<group>"; };
+		CBDDE5662A1DE495000A0460 /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
+		CBDDE5682A1DF430000A0460 /* AddMoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyVC.swift; sourceTree = "<group>"; };
 		CBDDE56A2A1F31CE000A0460 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		CBDDE56C2A1F324E000A0460 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		CBE138662A408386005B37F8 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
@@ -303,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				945914FE2C0CA3D500584627 /* AvailableChargersRepo.swift */,
+				948AE21B2C245B7300D6C3F6 /* ChargingRepo.swift */,
+				948AE21F2C246ECE00D6C3F6 /* WalletRepo.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -357,8 +381,9 @@
 			children = (
 				CB1F9A1F2A13AE130050588B /* LaunchScreen.storyboard */,
 				CB1F9A1A2A13AE110050588B /* Main.storyboard */,
-				948EABD92C10913C0029C007 /* DetailStoryBoard.storyboard */,
+				948EABD92C10913C0029C007 /* ChargingStoryBoard.storyboard */,
 				948EABDD2C1099AA0029C007 /* AuthStoryBoard.storyboard */,
+				948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -412,6 +437,9 @@
 				8281179D2AB48FF8001D56CF /* AvailableChargers.swift */,
 				945915022C0CB6A600584627 /* StoryboardRepresentation.swift */,
 				948EABD62C10750E0029C007 /* VersionModel.swift */,
+				948AE21D2C245E4700D6C3F6 /* MyWallet.swift */,
+				948AE2212C246FC600D6C3F6 /* ChargingAmountModel.swift */,
+				948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +460,8 @@
 				945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */,
 				948EABD42C1073200029C007 /* OnAppStartViewModel.swift */,
 				948EAC122C1482D40029C007 /* DashboardViewModel.swift */,
+				948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */,
+				948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -440,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE138682A421B0A005B37F8 /* NetworkManager.swift */,
+				948AE2232C26E41000D6C3F6 /* TruncatingFloat.swift */,
 				CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */,
 				CBDDE56C2A1F324E000A0460 /* EndPoints.swift */,
 				CB9988242A501AE400CA90EB /* ServerEndPointType.swift */,
@@ -463,6 +494,8 @@
 				CBE1386A2A421C88005B37F8 /* BaseViewController.swift */,
 				CBE1386E2A422098005B37F8 /* HelperComm.swift */,
 				CBB6A4E72A4DD5FE0002BD73 /* ProgressView.swift */,
+				948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */,
+				948AE2252C270D6300D6C3F6 /* NumericHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -471,7 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				CBFA7FD52A2629AD0017CAEE /* AccountStatusVC.swift */,
-				CBDDE5682A1DF430000A0460 /* AddMmoneyVC.swift */,
+				CBDDE5682A1DF430000A0460 /* AddMoneyVC.swift */,
 				CB8C654A2A18E95100EDC2D8 /* AvailableConnectorsVC.swift */,
 				CBA5E4872A3719CC00FFF238 /* AvailableCouponVC.swift */,
 				CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */,
@@ -513,7 +546,7 @@
 				CB77B0652A4067CC008707C3 /* ThanksVC.swift */,
 				CBE1389E2A461768005B37F8 /* TransactionDetailsVC.swift */,
 				CBB6A4E52A4DD1260002BD73 /* WaitingVC.swift */,
-				CBDDE5662A1DE495000A0460 /* WaletVC.swift */,
+				CBDDE5662A1DE495000A0460 /* WalletVC.swift */,
 				CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */,
 				948EAC142C15BF020029C007 /* GuestSignupViewController.swift */,
 			);
@@ -678,8 +711,9 @@
 			files = (
 				CB1F9A212A13AE130050588B /* LaunchScreen.storyboard in Resources */,
 				CB1F9A1E2A13AE130050588B /* Assets.xcassets in Resources */,
-				948EABDA2C10913C0029C007 /* DetailStoryBoard.storyboard in Resources */,
+				948EABDA2C10913C0029C007 /* ChargingStoryBoard.storyboard in Resources */,
 				CB1F9A1C2A13AE110050588B /* Main.storyboard in Resources */,
+				948AE22C2C2936B300D6C3F6 /* WalletStoryBoard.storyboard in Resources */,
 				948EABDE2C1099AA0029C007 /* AuthStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +781,7 @@
 				CB1F9A2B2A13B0FC0050588B /* IntroViewController.swift in Sources */,
 				CB8C654B2A18E95100EDC2D8 /* AvailableConnectorsVC.swift in Sources */,
 				CB8C65122A1787C600EDC2D8 /* MyBookingListVC.swift in Sources */,
+				948AE2242C26E41000D6C3F6 /* TruncatingFloat.swift in Sources */,
 				CB61F5CF2A28905E005174E6 /* PrivacyPolicyVC.swift in Sources */,
 				CB2F940D2A596235006A3A31 /* StationReviewVC.swift in Sources */,
 				CB61F5D12A2890DB005174E6 /* HelpCenterVC.swift in Sources */,
@@ -779,19 +814,23 @@
 				948EAC172C160ED00029C007 /* StorageKey.swift in Sources */,
 				945915072C0CB75100584627 /* StoryBoardType.swift in Sources */,
 				945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */,
+				948AE2282C28912600D6C3F6 /* UserChargingSessionModel.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
+				948AE21A2C245B1A00D6C3F6 /* ChargingUnitViewModel.swift in Sources */,
 				CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */,
 				CB98B7E42A2441D4000F609A /* ValidationResult.swift in Sources */,
 				CBE1386F2A422098005B37F8 /* HelperComm.swift in Sources */,
+				948AE2262C270D6300D6C3F6 /* NumericHelper.swift in Sources */,
 				CB61F5CB2A2880C8005174E6 /* ChangePasswwordVC.swift in Sources */,
 				CB61F5DA2A2A088F005174E6 /* ActivityIndicator.swift in Sources */,
-				CBDDE5672A1DE495000A0460 /* WaletVC.swift in Sources */,
+				CBDDE5672A1DE495000A0460 /* WalletVC.swift in Sources */,
 				CB1F9A292A13B0370050588B /* IntroPageContentViewController.swift in Sources */,
 				CBDDE5652A1DE47B000A0460 /* WaletTableViewCell.swift in Sources */,
 				CB1F9A152A13AE110050588B /* AppDelegate.swift in Sources */,
 				CB99882B2A51C5B600CA90EB /* BookApointmentVC.swift in Sources */,
 				CB8C65492A18E93200EDC2D8 /* AvailableConnectorTableViewCell.swift in Sources */,
 				CB8C650C2A17641700EDC2D8 /* GuestUserVC.swift in Sources */,
+				948AE2162C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift in Sources */,
 				CB61F5CD2A288C2D005174E6 /* TemsConditionVC.swift in Sources */,
 				CBFA7FD62A2629AD0017CAEE /* AccountStatusVC.swift in Sources */,
 				CB77B0662A4067CC008707C3 /* ThanksVC.swift in Sources */,
@@ -809,19 +848,23 @@
 				CBB6A4E82A4DD5FE0002BD73 /* ProgressView.swift in Sources */,
 				948EAC132C1482D40029C007 /* DashboardViewModel.swift in Sources */,
 				CBE1389F2A461768005B37F8 /* TransactionDetailsVC.swift in Sources */,
+				948AE21E2C245E4700D6C3F6 /* MyWallet.swift in Sources */,
 				CB98B7E82A2446AA000F609A /* Alert.swift in Sources */,
 				8281179E2AB48FF8001D56CF /* AvailableChargers.swift in Sources */,
 				CBC2D9E02A487ABC00AAE562 /* PDFWebViewController.swift in Sources */,
+				948AE22A2C2894D700D6C3F6 /* UserChargingSessionViewModel.swift in Sources */,
 				CB8999672A3067C600066BD1 /* PaymentVC.swift in Sources */,
 				CBE8B13A2A3CE0150039F329 /* StationList.swift in Sources */,
 				828117A02AB4A221001D56CF /* ServiceManager.swift in Sources */,
+				948AE2222C246FC600D6C3F6 /* ChargingAmountModel.swift in Sources */,
 				CB8C65452A18D6EC00EDC2D8 /* PanelViewVC.swift in Sources */,
 				CBC2D9DE2A4829BD00AAE562 /* ChangPassOtpVC.swift in Sources */,
+				948AE2202C246ECE00D6C3F6 /* WalletRepo.swift in Sources */,
 				CB2A64E12A599526005EF112 /* BookedSlotVC.swift in Sources */,
 				CB8C65472A18DAFA00EDC2D8 /* PanelTableViewCell.swift in Sources */,
 				CBFA7FD42A2621590017CAEE /* ChargingVC.swift in Sources */,
 				CBDDE5612A1DAC67000A0460 /* ChargingDetailVC.swift in Sources */,
-				CBDDE5692A1DF431000A0460 /* AddMmoneyVC.swift in Sources */,
+				CBDDE5692A1DF431000A0460 /* AddMoneyVC.swift in Sources */,
 				CB8C653D2A18B45600EDC2D8 /* MenuViewController.swift in Sources */,
 				CBA5E48E2A37393F00FFF238 /* StartChargingVC.swift in Sources */,
 				CBB6A4E62A4DD1260002BD73 /* WaitingVC.swift in Sources */,
@@ -837,6 +880,7 @@
 				CB1F9A392A13F0A80050588B /* CorporateUserVC.swift in Sources */,
 				82848FA42AB6535E006AC042 /* StationCell.swift in Sources */,
 				CBA5E48C2A372F1F00FFF238 /* CoupopDetaliVC.swift in Sources */,
+				948AE21C2C245B7300D6C3F6 /* ChargingRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1090,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1071,12 +1115,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";
@@ -1105,7 +1150,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1130,12 +1175,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";

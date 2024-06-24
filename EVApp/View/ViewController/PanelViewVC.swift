@@ -14,7 +14,7 @@ class PanelViewVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
-    var viewModel: AvailableChargersViewModel!
+    var viewModel = AvailableChargersViewModel.shared
     
     var chargerStationConnectorInfos = [ChargerStationConnectorInfos]()
     
@@ -32,11 +32,8 @@ class PanelViewVC: UIViewController {
     var reason : String?
     
     static func instantiateUsingStoryboard() -> Self {
-        let panelVC = ViewControllerFactory<PanelViewVC>.viewController(for: .ChargerPanel)
-        let availableChargerRepo = AvailableChargersRepo()
-        let availableChargerViewModel = AvailableChargersViewModel(availableChargersRepo: availableChargerRepo)
-        panelVC.viewModel = availableChargerViewModel
-        return panelVC as! Self
+        let panelVC = ViewControllerFactory<Self>.viewController(for: .ChargerPanel)
+        return panelVC
     }
     
     // MARK: - Life Cycle
@@ -80,6 +77,7 @@ class PanelViewVC: UIViewController {
         }
         
         DispatchQueue.main.async {
+            self.removeSpinner()
             self.tableView.reloadData()
         }
     }
@@ -90,7 +88,6 @@ class PanelViewVC: UIViewController {
         viewModel.fetchSortedAvailableChargingStations(sorted: isShowStations){[weak self] res in
             switch res{
             case .success(_):
-                self?.removeSpinner()
                 self?.setData()
             case .failure(let error):
                 print(error)
@@ -127,7 +124,6 @@ extension PanelViewVC: UITableViewDelegate, UITableViewDataSource{
                 panelTableViewCell.chargerAddress = particularChargerAddress
                 panelTableViewCell.chargerConnectorInfo = chargerStationConnectorInfos[indexPath.row]
             }
-            
             return cell
         }
     }
@@ -155,15 +151,8 @@ extension PanelViewVC: OpenActionProtocol{
     
     func openChargingDetailVC(availableCharger: AvailableChargers) {
         DispatchQueue.main.async {[weak self] in
-            let nextVC = ChargingDetailVC.instantiateUsingStoryboard()
-            
-            DispatchQueue.global(qos: .userInteractive).async {[weak self] in
-                nextVC.configure(with: availableCharger)
-                
-                DispatchQueue.main.async {
-                    self?.openVC(nextVC)
-                }
-            }
+            let nextVC = ChargingDetailVC.instantiateUsingStoryboard(with: availableCharger)
+            self?.openVC(nextVC)
         }
     }
 }

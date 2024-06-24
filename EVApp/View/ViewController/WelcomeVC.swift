@@ -127,7 +127,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                                     } else{
                                         UserAppStorage.didUserLoggedIn = true
                                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
+                                        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
                                         self.present(nextViewController, animated:true, completion:nil)
                                     }
                                 }

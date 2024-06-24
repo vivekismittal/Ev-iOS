@@ -72,8 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             
             
             if UserAppStorage.didUserLoggedIn {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let landingScreen = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
+                let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
             }
         }
@@ -91,8 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
        if UserAppStorage.didUserLoggedIn {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let landingScreen = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
+           let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
         }
 

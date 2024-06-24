@@ -27,10 +27,20 @@ class ChargingVC: UIViewController {
     var secondsRemaining = 120
     var connName = ""
     var chargerBoxId:String = ""
-    var orderAmount = 0
+//    var orderAmount = Float()
     weak var timer: Timer?
     var conUnit = String()
     var timeBasedCharging = false
+    private var orderChargingUnitInWatt: Float!
+    private var orderChargingAmount: Float!
+    
+    static func instantiateUsingStoryboard(orderChargingUnitInWatt: Float,orderChargingAmount: Float) -> Self {
+        let chargingVC = ViewControllerFactory<Self>.viewController(for: .OnGoingChargingScreen)
+        chargingVC.orderChargingAmount  = orderChargingAmount
+        chargingVC.orderChargingUnitInWatt = orderChargingUnitInWatt
+        return chargingVC
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnStop.layer.cornerRadius = 12
@@ -38,14 +48,14 @@ class ChargingVC: UIViewController {
         self.amountView.layer.cornerRadius = 12
         addLocalNotification()
         updateTimeBasedUI()
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        let orderUnit = UserAppStorage.unit
-        let orderAmt =  UserAppStorage.amount
-        let requestedUnit = UserAppStorage.requestedUnit
-        self.lblUnitPurchased.text = (orderUnit ?? "0") + " kWh"
-        self.lblAmountPaid.text =  "Rs: " + (orderAmt ?? "0")
+//        let orderUnit = UserAppStorage.unit
+//        let orderAmt =  UserAppStorage.amount
+//        let requestedUnit = UserAppStorage.requestedUnit
+        self.lblUnitPurchased.text = "\(orderChargingUnitInWatt!) kWh"
+        self.lblAmountPaid.text =  orderChargingAmount.rupeeString()
         callMeterValuesApi()
        // executeRepeatedly()
         timer =  Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in
@@ -88,13 +98,8 @@ class ChargingVC: UIViewController {
        
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MenuNavigationPoint") as! MenuNavigation
+        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
-        //                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        //                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StartChargingVC") as! StartChargingVC
-        //                self.present(nextViewController, animated:true, completion:nil)
-        
-        
     }
     
     @IBAction func stopChargingPressed(_ sender: Any) {
@@ -179,7 +184,7 @@ class ChargingVC: UIViewController {
         ] as? [String:AnyObject]
         //{"chargeBoxIdentity":"1212","connectorId":1,"idTag":"user001","userTransactionId":"384"}
         print(parameters)
-        print(orderAmount)
+//        print(orderAmount)
         AF.request(metervalues, method:.post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
           //  LoadingOverlay.shared.hideOverlayView()
@@ -213,7 +218,7 @@ class ChargingVC: UIViewController {
                     let totalChargingTimeInMinutes = jsonData.dictionaryValue["chargingTimeInMinutes"]!.intValue
                     self.lblStartTime.text = startTime
                     self.lblStartTime.text = startTime
-                    let orderUnit = UserAppStorage.unit
+//                    let orderUnit = UserAppStorage.unit
                     if valueUnit.count == 0 {
                        // self.timer?.invalidate()
                     }
@@ -235,7 +240,7 @@ class ChargingVC: UIViewController {
                     }
                         let cUnit = (self.unitCons.last ?? 0) - (self.unitCons.first ?? 0)
                         let conUnit = value.last
-                        let unit = cUnit/1000
+                        let unit = cUnit / 1000
                         self.conUnit = String(unit)
                         // print(conUnit)
                         self.lblUnitConsumed.text = String(unit) + " Unit"
@@ -250,8 +255,8 @@ class ChargingVC: UIViewController {
                                 //self.timer.invalidate()
                             }
                         }
-                    }else {
-                        if Float(unit) >= Float(orderUnit ?? "0") ?? 0.0 {
+                    } else {
+                        if unit >= self.orderChargingUnitInWatt {
                             DispatchQueue.main.async {
                                 self.callTrxStopApi()
                                 print("Stop Charging")

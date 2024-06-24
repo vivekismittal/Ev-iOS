@@ -116,8 +116,6 @@ class AvailableConnectorTableViewCell: UITableViewCell {
 extension AvailableConnectorTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print(chargerInfosList.first?.name)
-//        print(chargerInfosList.count)
         return chargerStationConnectorInfosList.count
     }
     
@@ -147,4 +145,6 @@ protocol OpenActionProtocol{
     func showToast(title: String, message: String)
     
     func startGuestUserSignupFlow()
+    
+    func connect(to chargerConnectorInfo: ChargerStationConnectorInfos, chargerInfoName: String?, streetAddress: String?)
 }

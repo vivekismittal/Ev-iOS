@@ -26,7 +26,7 @@ class LocationManager:NSObject{
     public static let shared = LocationManager()
     
     var locationUpdated: handler?
-    var curentLocation: LocationAddress?
+    var currentLocation: LocationAddress?
     
     private var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
@@ -43,8 +43,8 @@ class LocationManager:NSObject{
         locationManager.startUpdatingLocation()
     }
     
-    func getDistance(from location: StationChargerAddress) -> String{
-        let coordinate = curentLocation?.location.coordinate
+    func getDistance(from location: StationChargerAddress) -> Float{
+        let coordinate = currentLocation?.location.coordinate
         
         let curLocation = CLLocation(latitude: coordinate?.latitude ?? 00.00, longitude: coordinate?.longitude ?? 00.00)
         
@@ -52,8 +52,7 @@ class LocationManager:NSObject{
         let longitude = Double(location.longitude ?? "") ?? 0
         let charLocation = CLLocation(latitude: latitude, longitude: longitude)
         let totDistance = curLocation.distance(from: charLocation)
-        let distance  = String(format: "%.01f", Float(totDistance)/1000)
-        return distance
+        return Float(totDistance / 1000)
     }
     
 }
@@ -65,7 +64,7 @@ extension LocationManager:CLLocationManagerDelegate{
         if CLLocationCoordinate2DIsValid(firstLocation.coordinate){
             print(firstLocation.coordinate)
             
-            curentLocation = .init(location: firstLocation)
+            currentLocation = .init(location: firstLocation)
         }
         if let update = locationUpdated{
             update()

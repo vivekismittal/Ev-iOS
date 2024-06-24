@@ -20,15 +20,21 @@ class WaitingVC: UIViewController {
     @IBOutlet weak var lblRemSecond: UILabel!
     var secondsRemaining = 120
     var progressViewCircle = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), lineWidth: 15, rounded: false)
-    var unit  = 0.0
+    var orderChargingUnitInWatt  = Float()
+    var orderChargingAmount = Float()
     var connName = ""
     var chargerBoxId:String = ""
     var unitCons = [Int]()
     var userTransactionId = 0
     var conUnit = String()
-    var orderAmount = 0
+//    var orderAmount = 0
     var transaId = Int()
     var moveChargedVC = true
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let waitingVC = ViewControllerFactory<Self>.viewController(for: .ChargingWaitingScreen)
+        return waitingVC
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,13 +109,12 @@ extension WaitingVC{
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxStart
         let userPk = UserAppStorage.userPk
         var chrBoxId =  UserAppStorage.chrgBoxId
-        let orderAmt =  UserAppStorage.amount
         LoadingOverlay.shared.showOverlay(view: view)
             let parameters = [
                 "connectorId":connName,
                 "idTag":"tag001",
                 "chargeBoxIdentity":chargerBoxId,
-                "amount":orderAmt,
+                "amount":orderChargingAmount,
                 "userPk":userPk,
                 "paymentTransactionId": 0
                     ] as? [String:AnyObject]
@@ -155,7 +160,7 @@ extension WaitingVC{
     }
     @objc func callMeterValuesApi(){
         let metervalues  = EndPoints.shared.baseUrlDev + EndPoints.shared.trxMeterValues
-        let chrBoxId =  UserAppStorage.chrgBoxId
+//        let chrBoxId =  UserAppStorage.chrgBoxId
      //   LoadingOverlay.shared.showOverlay(view: view)
         let parameters = [
             "userTransactionId":String(userTransactionId),
@@ -164,8 +169,8 @@ extension WaitingVC{
             "idTag":"user001"
         ] as? [String:AnyObject]
         //{"chargeBoxIdentity":"1212","connectorId":1,"idTag":"user001","userTransactionId":"384"}
-        print(parameters)
-        print(orderAmount)
+//        print(parameters)
+//        print(orderAmount)
         AF.request(metervalues, method:.post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
           //  LoadingOverlay.shared.hideOverlayView()
@@ -198,16 +203,13 @@ extension WaitingVC{
                     let timeBasedCharging = jsonData.dictionaryValue["timerBasedCharging"]!.boolValue
                   //  self.lblStartTime.text = startTime
                   //  self.lblStartTime.text = startTime
-                    let orderUnit = UserAppStorage.unit
                     if error != "Meter Value Details Not Found"{
                         if !self.moveChargedVC{
                             return
                         }
                         self.timer?.invalidate()
                         self.timer = nil
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingVC") as! ChargingVC
-                        nextViewController.orderAmount = Int(self.unit)
+                        let nextViewController = ChargingVC.instantiateUsingStoryboard(orderChargingUnitInWatt: self.orderChargingUnitInWatt, orderChargingAmount: self.orderChargingAmount)
                         nextViewController.connName = self.connName
                         self.moveChargedVC = false
                         nextViewController.chargerBoxId = self.chargerBoxId

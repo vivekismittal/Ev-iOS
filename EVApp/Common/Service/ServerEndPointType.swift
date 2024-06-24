@@ -7,17 +7,24 @@
 
 import Foundation
 
+typealias HttpBody = [String : Any?]
+
 enum ServerEndPointType {
     case getAvailableChargingStations
     case getAppVersion
+    case getWalletAmount(HttpBody)
+    case getChargingAmountBasedOnTime(HttpBody)
+    case getChargingAmountBasedOnPower(HttpBody)
+    case getChargingAmountBasedOnAmount(HttpBody)
+    case getUserChargingSessions(HttpBody)
     
     func getUrlRequest() -> URLRequest? {
         guard let url else { return nil }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
-        if let parameters = body {
-            request.httpBody = try? JSONEncoder().encode(parameters)
+        if let body {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         }
         
         request.allHTTPHeaderFields = headers
@@ -25,45 +32,75 @@ enum ServerEndPointType {
     }
     
     
-   private var path: String {
-       return switch self {
+    private var path: String {
+        return switch self {
         case .getAvailableChargingStations:
-             EndPoints.shared.chargersStations
-       case .getAppVersion:
-           EndPoints.shared.version
+            EndPoints.shared.chargersStations
+        case .getAppVersion:
+            EndPoints.shared.version
+        case .getWalletAmount:
+            EndPoints.shared.getWalletAmount
+        case .getChargingAmountBasedOnTime:
+            EndPoints.shared.timeAmount
+        case .getChargingAmountBasedOnPower:
+            EndPoints.shared.wattAmount
+        case .getChargingAmountBasedOnAmount:
+            EndPoints.shared.amountUnit
+        case .getUserChargingSessions:
+            EndPoints.shared.paymentUsertrxsession
         }
     }
     
     private var baseURL: String {
-       return  switch self {
-         default:
-              EndPoints.shared.baseUrlDev
-         }
-     }
-     
-     var url: URL? {
-         return URL(string: "\(baseURL)\(path)")
-     }
-     
-     var method: HTTPMethod {
+        return  switch self {
+        default:
+            EndPoints.shared.baseUrlDev
+        }
+    }
+    
+    var url: URL? {
+        return URL(string: "\(baseURL)\(path)")
+    }
+    
+    var method: HTTPMethod {
         return switch self {
-         case .getAvailableChargingStations:
-              .GET
+        case .getAvailableChargingStations:
+                .GET
         case .getAppVersion:
                 .GET
-         }
-     }
-     
-     var body: Encodable? {
-         return switch(self){
-         default:
-             nil
-         }
-     }
-     
-     var headers: [String : String]? {
-         commonHeaders
-     }
+        case .getWalletAmount:
+                .POST
+        case .getChargingAmountBasedOnTime:
+                .POST
+        case .getChargingAmountBasedOnPower:
+                .POST
+        case .getChargingAmountBasedOnAmount:
+                .POST
+        case .getUserChargingSessions:
+                .POST
+        }
+    }
+    
+    var body: HttpBody? {
+        return switch(self){
+        case .getWalletAmount(let body):
+            body
+        case .getChargingAmountBasedOnTime(let body):
+            body
+        case .getChargingAmountBasedOnPower(let body):
+            body
+        case .getChargingAmountBasedOnAmount(let body):
+            body
+        case .getUserChargingSessions(let body):
+            body
+        default:
+            nil
+        }
+    }
+    
+    var headers: [String : String]? {
+        commonHeaders
+    }
     
     private var commonHeaders: [String: String] {
         return [

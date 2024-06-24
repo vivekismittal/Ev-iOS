@@ -12,14 +12,8 @@ struct UserAppStorage{
     @Storage<Bool>(key: .didUserLoggedIn, defaultValue: false)
     static var didUserLoggedIn: Bool
     
-    @Storage<String?>(key: .UNIT, defaultValue: nil)
-    static var unit: String?
-    
-    @Storage<String?>(key: .AMOUNT, defaultValue: nil)
-    static var amount: String?
-    
     @Storage<Int?>(key: .userPk, defaultValue: nil)
-    static var userPk: Int?
+    static var userPk: Int? //test = 1197
     
     @Storage<Int?>(key: .real_id, defaultValue: nil)
         static var realId: Int?
@@ -27,8 +21,8 @@ struct UserAppStorage{
     @Storage<String?>(key: .chrgBoxId, defaultValue: nil)
     static var chrgBoxId: String?
     
-    @Storage<Int?>(key: .requestedUnit, defaultValue: nil)
-    static var requestedUnit: Int?
+//    @Storage<Int?>(key: .requestedUnit, defaultValue: nil)
+//    static var requestedUnit: Int?
     
     @Storage<Double?>(key: .trackLocationsLong, defaultValue: nil)
     static var trackLocationsLong: Double?

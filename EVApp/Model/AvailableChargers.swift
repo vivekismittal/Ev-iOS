@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AvailableChargers: Codable{
+struct AvailableChargers: Decodable{
     var stationId: String?
     var location: String?
     var avgRating: Double?
@@ -24,7 +24,7 @@ struct AvailableChargers: Codable{
     
 }
 
-struct ChargerInformation: Codable{
+struct ChargerInformation: Decodable{
     var distance: String?
     var chargeBoxPK: Double?
     var chargeBoxId: String?
@@ -46,7 +46,7 @@ struct ChargerInformation: Codable{
 struct ChargerAddress: Codable{
     var street: String?
     var houseNumber: String?
-   var zipCode: String?
+    var zipCode: String?
     var city: String?
     var country: String?
     var latitude: String?
@@ -63,26 +63,41 @@ struct ChargerPointAmeneties: Codable {
     var amenities: String?
 }
 
-struct ChargerStationConnectorInfos: Codable {
+struct ChargerStationConnectorInfos: Decodable {
     var stationId: String?
     var connectorId: String?
     var connectorNo: String?
     var connectorType: String?
     var location: String?
-    var reason: String?
+    var reason: ChargingConnectoreReason?
     var chargeBoxPk: Int?
     var id: Int?
     var chargeBoxId: String?
-    var chargerPrice: Int?
+    var chargerPrice: Float?
     var parkingPrice: Int?
     var stationStatus: String?
     var stationLocation: String?
     var startTime: String?
     var endTime: String?
     var idTag: String?
-    var available: Bool
+    var available: Bool?
+}
+
+enum ChargingConnectoreReason:  Decodable {
+    case Available, Charger_in_use, Under_Maintenance
+    case unknown(value: String)
     
-    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let status = try? container.decode(String.self)
+        switch status {
+              case "Available": self = .Available
+              case "Charger in use": self = .Charger_in_use
+              case "UnderMaintenance": self = .Under_Maintenance
+              default:
+                 self = .unknown(value: status ?? "unknown")
+          }
+      }
 }
 
 struct StationChargerAddress: Codable{

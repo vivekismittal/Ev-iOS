@@ -9,8 +9,9 @@ import Foundation
 
 enum StoryBoardsType: String{
     case Main
-    case DetailStoryBoard
+    case ChargingStoryBoard
     case AuthStoryBoard
+    case WalletStoryBoard
 }
 
 

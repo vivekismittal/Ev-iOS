@@ -25,7 +25,7 @@ class StationCell: UITableViewCell {
         let chargersInfo = availableCharger.chargerInfos?.first
         lbStationName.text = chargersInfo?.name ?? ""
         lbAddress.text = chargersInfo?.chargerAddress?.street ?? ""
-        distance.text = "Distance: \(availableCharger.message ?? "") km"
+        distance.text = "Distance: " + LocationManager.shared.getDistance(from: availableCharger.stationChargerAddress ?? StationChargerAddress()).precisedString(upTo: 1) + "km"
     }
     
     override func awakeFromNib() {

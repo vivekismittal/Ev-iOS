@@ -33,7 +33,7 @@ struct EndPoints{
     let waletTransaction = "/payment/wallet/transaction"
     let usersUpdate = "/users/update"
     let getUserByPhone = "/users/phone"
-    let getWaletAmt = "/payment/wallet/amount"
+    let getWalletAmount = "/payment/wallet/amount"
     let addWaletAmt = "/payment/wallet/add"
     let couponDetail = "/chargers/coupon-details"
     let amountUnit = "/chargers/amount/unit"

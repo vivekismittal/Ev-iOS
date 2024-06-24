@@ -43,9 +43,7 @@ class CoupopDetaliVC: UIViewController {
     }
 
     @IBAction func back(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AvailableCouponVC") as! AvailableCouponVC
-        self.present(nextViewController, animated:true, completion:nil)
+        self.dismiss(animated: true)
     }
     
 }

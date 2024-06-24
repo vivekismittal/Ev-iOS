@@ -8,17 +8,19 @@
 import Foundation
 
 class AvailableChargersViewModel{
+    static let shared = AvailableChargersViewModel()
     private let availableChargersRepo: AvailableChargersRepo
     var availableChargingStations: [AvailableChargers]
     
     
-    init(availableChargersRepo: AvailableChargersRepo, availableChargingStations: [AvailableChargers] = [AvailableChargers]()) {
+   private init(availableChargersRepo: AvailableChargersRepo = AvailableChargersRepo(), availableChargingStations: [AvailableChargers] = [AvailableChargers]()) {
         self.availableChargersRepo = availableChargersRepo
         self.availableChargingStations = availableChargingStations
     }
     
     func fetchSortedAvailableChargingStations(sorted: Bool = true, completionHandler: @escaping ResultHandler<Bool>) {
-        availableChargersRepo.getAvailableChargingStations(){ [weak self] response  in
+        if availableChargingStations.isEmpty{
+            availableChargersRepo.getAvailableChargingStations(){ [weak self] response  in
                 switch response {
                 case .success(let stations):
                     self?.availableChargingStations = stations
@@ -29,19 +31,20 @@ class AvailableChargersViewModel{
                 case .failure(let error):
                     completionHandler(.failure(error))
                 }
-            
+            }
+        } else{
+            DispatchQueue.global(qos: .userInitiated).async {[weak self] in
+                if sorted{
+                    self?.sortChargingStationsByDistance()
+                }
+                completionHandler(.success(true))
+            }
         }
     }
     
     private func sortChargingStationsByDistance(){
-        for var charger in self.availableChargingStations {
-            if let address = charger.stationChargerAddress{
-                let distance = LocationManager.shared.getDistance(from: address)
-                charger.message = distance
-            }
+        self.availableChargingStations.sort{
+            LocationManager.shared.getDistance(from: $0.stationChargerAddress ?? StationChargerAddress()) < LocationManager.shared.getDistance(from: $1.stationChargerAddress ?? StationChargerAddress())
         }
-        self.availableChargingStations.sort{ Float($0.message ?? "0") ?? 0 < Float($1.message ?? "0") ?? 0}
-        
-        
     }
 }

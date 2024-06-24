@@ -8,6 +8,8 @@
 import UIKit
 
 class ChargingSessionCell: UITableViewCell {
+    static let identifier = "ChargingSessionCell"
+    
     @IBOutlet weak var bcView: UIView!
     @IBOutlet weak var lblTranId: UILabel!
     @IBOutlet weak var lblCharging: UILabel!
@@ -15,9 +17,23 @@ class ChargingSessionCell: UITableViewCell {
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var lblStationName: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    
+    var chargingSession: UserChargingSession!{
+        didSet{
+            lblTranId.text =  "Transaction ID: \(chargingSession.paymentTransactionId ?? 0)"
+            lblDate.text = "Date: " + (chargingSession.date ?? "")
+            lblAmount.text = "Amount: "  + (chargingSession.amountDebited?.rupeeString() ?? "NA")
+            lblStationName.text =  "Station Name: " + (chargingSession.stationName ?? "")
+            if chargingSession.chargingCompleted == false {
+                lblCharging.textColor = UIColor.red
+            }
+            lblDistance.text = ""
+            lblCharging.text = chargingSession.chargingStatus
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         self.bcView.layer.cornerRadius = 12
     }
 

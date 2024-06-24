@@ -10,7 +10,7 @@ import UIKit
 
 class AvailableConnectorsVC: UIViewController{
     
-    var viewModel: AvailableChargersViewModel!
+    var viewModel: AvailableChargersViewModel = AvailableChargersViewModel.shared
     
     @IBOutlet weak var chargerTable: UITableView!
     
@@ -20,10 +20,8 @@ class AvailableConnectorsVC: UIViewController{
     }
     
     static func instantiateUsingStoryboard() -> Self {
-        let availableChargerRepo = AvailableChargersRepo()
-        let availableChargerViewModel = AvailableChargersViewModel(availableChargersRepo: availableChargerRepo)
         let availableChargerViewController =  ViewControllerFactory<AvailableConnectorsVC>.viewController(for: .AvailableCharger)
-        availableChargerViewController.viewModel = availableChargerViewModel
+        
         return availableChargerViewController as! Self
     }
     
@@ -80,16 +78,8 @@ extension AvailableConnectorsVC: OpenActionProtocol{
     
     func openChargingDetailVC(availableCharger: AvailableChargers) {
         DispatchQueue.main.async {[weak self] in
-            let nextVC = ChargingDetailVC.instantiateUsingStoryboard()
-            
-            DispatchQueue.global(qos: .userInteractive).async {[weak self] in
-                
-                nextVC.configure(with: availableCharger)
-                
-                DispatchQueue.main.async {
-                    self?.navigationController?.pushViewController(nextVC, animated: true)
-                }
-            }
+            let nextVC = ChargingDetailVC.instantiateUsingStoryboard(with: availableCharger)
+            self?.navigationController?.pushViewController(nextVC, animated: true)
             
         }
     }

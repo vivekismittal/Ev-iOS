@@ -10,274 +10,217 @@ import SkyFloatingLabelTextField
 
 
 class ChargingStationVC: UIViewController {
-
+    
     @IBOutlet weak var imgChargerType: UIImageView!
-    //    @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblType: UILabel!
     @IBOutlet weak var lblConName: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var lblStationName: UILabel!
     @IBOutlet weak var textField: SkyFloatingLabelTextField!
-    @IBOutlet weak var amountStack: UIStackView!
-    @IBOutlet weak var poweStack: UIStackView!
+    @IBOutlet weak var defaultValueOptionsStack: UIStackView!
+    @IBOutlet weak var chargeTypeStack: UIStackView!
     @IBOutlet weak var btnNext: UIButton!
-    @IBOutlet weak var amountView: UIView!
-    @IBOutlet weak var powerVIew: UIView!
-    @IBOutlet weak var timeView: UIView!
-    @IBOutlet weak var btn120Min: UIButton!
     
-    @IBOutlet weak var amountView4: UIView!
-    @IBOutlet weak var amountView3: UIView!
-    @IBOutlet weak var amountView2: UIView!
-    @IBOutlet weak var amountView1: UIView!
-    // Amount button
-    @IBOutlet weak var amountButton1: UIButton!
-    @IBOutlet weak var amountButton2: UIButton!
-    @IBOutlet weak var amountButton3: UIButton!
-    @IBOutlet weak var amountButton4: UIButton!
+    private var chargerConnectorInfo: ChargerStationConnectorInfos!
+    private var orderAmount = 0
+    private var startChargingType: StartChargingType = .Power
+    private var stationName = ""
+    private var stationAddress = ""
     
-    @IBOutlet weak var powerView4: UIView!
-    @IBOutlet weak var powerView3: UIView!
-    @IBOutlet weak var powerView2: UIView!
-    @IBOutlet weak var powerView1: UIView!
-    var orderAmount = 0
-  //  var power = 10
-    var amtFlag = false
-    var unitFlag = false
-    var timeFlag = false
-    var stationName = ""
-    var stationAddress = ""
-    var connName = String()
-    var stationId = String()
-    var type = ""
-    var price = ""
-    var parkingPrice = ""
-    var chargerBoxId:String = ""
+    static func instantiateUsingStoryboard(with chargerConnectorInfo: ChargerStationConnectorInfos, chargerInfoName: String, streetAddress: String) -> Self {
+        let chargingStationVC = ViewControllerFactory<Self>.viewController(for: .ChargingStationScreen)
+        chargingStationVC.chargerConnectorInfo = chargerConnectorInfo
+        chargingStationVC.stationName = chargerInfoName
+        chargingStationVC.stationAddress = streetAddress
+        return chargingStationVC
+    }
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lblConName.text = "Connector ID: " + connName
-        self.lblType.text = "Charger Id: " + stationId
-//        self.lblPrice.text = "Rs:" + price + "/Unit"
+        self.lblConName.text = "Connector ID: \(chargerConnectorInfo.connectorNo ?? "NA")"
+        self.lblType.text = "Charger Id: \( chargerConnectorInfo.stationId ?? "NA")"
         self.btnNext.layer.cornerRadius = 12
         lblStationName.text = stationName
         lblLocation.text = stationAddress
+        addAllStartChargingTypeInStack()
+        textField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.textField.placeholder = "Power(kWh)"
-        //self.textField.placeholder = "First name"
-        self.textField.title = "Power(kWh)"
-        self.amountStack.isHidden = true
-        self.poweStack.isHidden = false
-        self.textField.text  = "10"
-        self.unitFlag = true
-        self.amtFlag = false
-        self.timeFlag = false
-        
-        self.orderAmount = 10
-        self.amountView.layer.cornerRadius = 12
-        self.timeView.layer.cornerRadius = 12
-        self.powerVIew.layer.cornerRadius = 12
-        amountView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        timeView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        powerVIew.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
-        powerView1.layer.cornerRadius = 8
-        powerView2.layer.cornerRadius = 8
-        powerView3.layer.cornerRadius = 8
-        powerView4.layer.cornerRadius = 8
-        amountView1.layer.cornerRadius = 8
-        amountView2.layer.cornerRadius = 8
-        amountView3.layer.cornerRadius = 8
-        amountView4.layer.cornerRadius = 8
-        self.lblConName.text = "Connector ID:" + connName
-        self.lblType.text = "Charger Id: " + stationId
-//        self.lblPrice.text = "Rs:" + price + "/Unit"
+        self.lblConName.text = "Connector ID: \(chargerConnectorInfo.connectorNo ?? "NA")"
+        self.lblType.text = "Charger Id: \(chargerConnectorInfo.stationId ?? "NA")"
         self.btnNext.layer.cornerRadius = 12
         lblStationName.text = stationName
         lblLocation.text = stationAddress
-        if type == "DC" {
+        if chargerConnectorInfo.connectorType == "DC" {
             imgChargerType.image = UIImage(named: "dc")
-        }else {
+        } else{
             imgChargerType.image = UIImage(named: "ac")
         }
-        
     }
     
-    // MARK: - Action Method
+    private func addAllStartChargingTypeInStack(){
+        for view in chargeTypeStack.arrangedSubviews {
+            chargeTypeStack.removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
+        
+        chargeTypeStack.distribution = .fillEqually
+        chargeTypeStack.alignment = .fill
+        
+        StartChargingType.allCases.forEach { chargeType in
+            addOptionInStack(title: chargeType.rawValue, in: chargeTypeStack){[weak self] in                self?.selectChargeType(chargeType)
+                self?.updateBackgroundForChargeTypeOption(chargeType)
+            }
+        }
+        updateBackgroundForChargeTypeOption(startChargingType)
+    }
+    
+    fileprivate func selectChargeType(_ chargeType: StartChargingType) {
+        startChargingType = chargeType
+        updateDefaultValueOptionsList()
+        
+        if let value = chargeType.getDefaultValuesOptions().first{
+            orderAmount = value
+        }
+        self.textField.text  =  String(orderAmount)
+        
+        switch chargeType{
+        case .Power:
+            self.textField.title = "Power(kWh)"
+            self.textField.placeholder = "Power(kWh)"
+            
+        case .Amount:
+            self.textField.title = "Amount(₹)"
+            self.textField.placeholder = "Amount(₹)"
+            
+        case .Time:
+            self.textField.title = "Time(Min)"
+            self.textField.placeholder = "Time(Min)"
+        }
+    }
+    
+    private func updateBackgroundForChargeTypeOption(_ type: StartChargingType){
+        chargeTypeStack.arrangedSubviews.forEach { arrangedSubview in
+            if let buttonView = arrangedSubview as? UIButton, let chargeType = StartChargingType(rawValue: buttonView.currentTitle ?? ""){
+                if chargeType == type{
+                    buttonView.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
+                } else{
+                    buttonView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+                }
+            }
+        }
+    }
+    
+    private func updateDefaultValueOptionsList(){
+        for view in defaultValueOptionsStack.arrangedSubviews {
+            defaultValueOptionsStack.removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
+        
+        defaultValueOptionsStack.distribution = .fillEqually
+        defaultValueOptionsStack.alignment = .fill
+        
+        startChargingType.getDefaultValuesOptions().forEach { value in
+            let title = switch startChargingType {
+            case .Power:
+                "\(value) kWH"
+            case .Amount:
+                "₹\(value)"
+            case .Time:
+                "\(value) Min"
+            }
+            addOptionInStack(title: title, in: defaultValueOptionsStack, onClick: {[weak self] in
+                self?.orderAmount = value
+                self?.textField.text = String(self?.orderAmount ?? 0)
+            })
+        }
+    }
+    
+    private func addOptionInStack(title: String,in stackView: UIStackView, onClick: @escaping ()->()){
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        
+        if let chargeType = StartChargingType(rawValue: title){
+            if chargeType == startChargingType{
+                selectChargeType(chargeType)
+            }
+        } else {
+            button.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
+        }
+        
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
+        button.setOnClickListener {
+            onClick()
+        }
+        stackView.addArrangedSubview(button)
+    }
     
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
     @IBAction func next(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingUnitVC") as! ChargingUnitVC
+        guard let intVal = Int(textField.text ?? "0") else { return }
+        let nextViewController = ChargingUnitVC.instantiateUsingStoryboard(with: startChargingType,intVal)
         
-        var intVal = Int(textField.text ?? "0")!
-        
-        if amtFlag == true{
-            //nextViewController.orderAmount = self.orderAmount
-            if intVal < 100 {
-                showAlert(title: "Yahhvi", message: "Amount must be at least ₹100. ")
-            }else if intVal > 2000{
-                showAlert(title: "Yahhvi", message: "Amount must be less than ₹2000. ")
-            }else{
-                nextViewController.orderAmount = Int(textField.text!) ?? 0
-                nextViewController.amountFlag = true
-            }
-            
-        }else if unitFlag == true{
-           // nextViewController.orderAmount = self.orderAmount
+        switch startChargingType {
+        case .Power:
             if intVal < 5{
-                showAlert(title: "Yahhvi", message: "Power must be at least 5kWh. ")
-            }else if intVal > 100{
-                showAlert(title: "Yahhvi", message: "Power must be less than 100kWh. ")
+                return showAlert(title: "Yahhvi", message: "Power must be at least 5kWh.")
             }
-            else{
-                nextViewController.orderAmount = Int(textField.text!) ?? 0
-                nextViewController.unitsFlag = true
+            if intVal > 100{
+                return  showAlert(title: "Yahhvi", message: "Power must be less than 100kWh.")
             }
             
-        }else if timeFlag == true {
+        case .Time:
             if intVal < 15{
-                showAlert(title: "Yahhvi", message: "Time must be at least 15 Mins. ")
-            }else if intVal > 600{
-                showAlert(title: "Yahhvi", message: "Time must be less than 10 Hours. ")
-            }else{
-                nextViewController.timeFlag = true
-                nextViewController.timeInMinutes = textField.text ?? "0"
+                return  showAlert(title: "Yahhvi", message: "Time must be at least 15 Mins.")
+            }
+            if intVal > 600{
+                return showAlert(title: "Yahhvi", message: "Time must be less than 10 Hours. ")
             }
             
+        case .Amount:
+            if intVal < 100 {
+                return showAlert(title: "Yahhvi", message: "Amount must be at least ₹100.")
+            }
+            if intVal > 2000{
+                return showAlert(title: "Yahhvi", message: "Amount must be less than ₹2000.")
+            }
         }
-        
-        nextViewController.connName = connName
-        nextViewController.chargerBoxId = chargerBoxId
+        nextViewController.connName = chargerConnectorInfo.connectorNo ?? "NA"
+        nextViewController.chargerBoxId = chargerConnectorInfo.chargeBoxId ?? "NA"
         nextViewController.stationName = stationName
         nextViewController.stationAddress = stationAddress
-        nextViewController.parkingPrice = parkingPrice
-        self.present(nextViewController, animated:true, completion:nil)
+        nextViewController.parkingPrice = chargerConnectorInfo.parkingPrice ?? 0
+        self.present(nextViewController,animated: true,completion: nil)
     }
+}
+
+extension ChargingStationVC: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+}
+
+enum StartChargingType: String, CaseIterable{
+    case Power
+    case Amount
+    case Time
     
-    @IBAction func power(_ sender: Any) {
-        self.textField.title = "Power(kWh)"
-        self.textField.placeholder = "Power(kWh)"
-        unitFlag = true
-        amtFlag = false
-        timeFlag = false
-        self.orderAmount = 10
-        self.amountStack.isHidden = true
-        self.poweStack.isHidden = false
-        self.textField.text  =  String(orderAmount)
-        amountView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        timeView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        powerVIew.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
-    }
-    @IBAction func amount(_ sender: Any) {
-        self.textField.title = "Amount(₹)"
-        self.textField.placeholder = "Amount(₹)"
-        amtFlag = true
-        unitFlag = false
-        timeFlag = false
-        changeAmountAndTime()
-        self.orderAmount = 500
-        amountView.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
-        timeView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        powerVIew.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.amountStack.isHidden = false
-        self.poweStack.isHidden = true
-        self.textField.text  = String(orderAmount)
-    }
-    @IBAction func time(_ sender: Any) {
-        self.textField.title = "Time(Min)"
-        self.textField.placeholder = "Time(Min)"
-        amtFlag = false
-        unitFlag = false
-        timeFlag = true
-        changeAmountAndTime()
-        self.orderAmount = 15
-        timeView.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
-        amountView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        powerVIew.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.amountStack.isHidden = false
-        self.poweStack.isHidden = true
-        self.textField.text  = String(orderAmount)
-    }
-    
-    func changeAmountAndTime(){
-        if timeFlag {
-            amountButton1.setTitle("15 Min", for: .normal)
-            amountButton2.setTitle("30 Min", for: .normal)
-            amountButton3.setTitle("60 Min", for: .normal)
-            amountButton4.setTitle("120 Min", for: .normal)
-        } else {
-            amountButton1.setTitle("₹500", for: .normal)
-            amountButton2.setTitle("₹1000", for: .normal)
-            amountButton3.setTitle("₹1500", for: .normal)
-            amountButton4.setTitle("₹2000", for: .normal)
+    func getDefaultValuesOptions()->[Int]{
+        return switch self {
+        case .Power:
+            [10,20,30,40]
+        case .Time:
+            [15,30,60,120]
+        case .Amount:
+            [300,500,700,1000]
         }
     }
-    @IBAction func power1(_ sender: Any) {
-        self.orderAmount = 10
-        self.textField.text  =  String(orderAmount)
-    }
-    @IBAction func power2(_ sender: Any) {
-        self.orderAmount = 20
-        self.textField.text  = String(orderAmount)
-    }
-    @IBAction func power3(_ sender: Any) {
-        self.orderAmount = 30
-        self.textField.text  = String(orderAmount)
-    }
-    @IBAction func power4(_ sender: Any) {
-        self.orderAmount = 40
-        self.textField.text  = String(orderAmount)
-    }
-    @IBAction func amount1(_ sender: Any) {
-        if timeFlag{
-            self.orderAmount = 15
-        }else{
-            self.orderAmount = 500
-        }
-        self.textField.text  =  String(orderAmount)
-        changeAmountAndTime()
-    }
-    @IBAction func amount2(_ sender: Any) {
-        if timeFlag{
-            self.orderAmount = 30
-        }else{
-            self.orderAmount = 1000
-        }
-        self.textField.text  =   String(orderAmount)
-        changeAmountAndTime()
-    }
-    @IBAction func amount3(_ sender: Any) {
-        if timeFlag{
-            self.orderAmount = 60
-        }else{
-            self.orderAmount = 1500
-        }
-        self.textField.text  =  String(orderAmount)
-        changeAmountAndTime()
-    }
-    @IBAction func amount4(_ sender: Any) {
-        if timeFlag{
-            self.orderAmount = 120
-        }else{
-            self.orderAmount = 2000
-        }
-        self.textField.text  =  String(orderAmount)
-        changeAmountAndTime()
-    }
-        func applyShadowOnButton(_ button: UIButton) {
-            view.layer.cornerRadius = 18
-            view.center = self.view.center
-            view.backgroundColor = #colorLiteral(red: 0.4901960784, green: 0.7882352941, blue: 0, alpha: 1)
-            view.layer.shadowColor = UIColor.gray.cgColor
-            view.layer.shadowOpacity = 0.8
-            view.layer.shadowOffset = CGSize.zero
-            view.layer.shadowRadius = 5
-    
-        }
 }

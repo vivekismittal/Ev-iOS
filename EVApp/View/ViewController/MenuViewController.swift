@@ -68,8 +68,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
                 self.startGuestUserSignupFlow()
                 return
             }
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChargingSessionVC") as! ChargingSessionVC
+            let nextViewController = ChargingSessionVC.instantiateUsingStoryboard()
             self.present(nextViewController, animated: true, completion: nil)
             
         case .My_Bookings:
@@ -86,8 +85,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
                 self.startGuestUserSignupFlow()
                 return
             }
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WaletVC") as! WaletVC
+            let nextViewController = WalletVC.instantiateUsingStoryboard()
             self.present(nextViewController, animated:true, completion:nil)
             
         case .Settings:

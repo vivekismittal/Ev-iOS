@@ -16,7 +16,7 @@ final class NewNetworkManager {
         completion: @escaping ResultHandler<T>
     ) {
         guard let urlRequest = endPointType.getUrlRequest() else {
-            completion(.failure(.invalidURL)) // I forgot to mention this in the video
+            completion(.failure(.invalidURL))
             return
         }
 
