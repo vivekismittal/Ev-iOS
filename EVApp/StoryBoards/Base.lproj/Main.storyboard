@@ -4378,47 +4378,6 @@
             <point key="canvasLocation" x="2488" y="-1364"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="06P-c7-1Zf">
-            <size key="intrinsicContentSize" width="93.5" height="23"/>
-        </designable>
-        <designable name="0RS-3h-cM4">
-            <size key="intrinsicContentSize" width="112.5" height="23"/>
-        </designable>
-        <designable name="4xj-mS-Upx">
-            <size key="intrinsicContentSize" width="93.5" height="23"/>
-        </designable>
-        <designable name="6Np-cx-PSP">
-            <size key="intrinsicContentSize" width="123.5" height="23"/>
-        </designable>
-        <designable name="9aD-sT-ddH">
-            <size key="intrinsicContentSize" width="80" height="23"/>
-        </designable>
-        <designable name="Fdb-E1-71X">
-            <size key="intrinsicContentSize" width="80" height="23"/>
-        </designable>
-        <designable name="Hzq-MV-QxV">
-            <size key="intrinsicContentSize" width="43" height="23"/>
-        </designable>
-        <designable name="Yhp-bn-b5z">
-            <size key="intrinsicContentSize" width="120" height="23"/>
-        </designable>
-        <designable name="cZM-Ws-S8D">
-            <size key="intrinsicContentSize" width="146.5" height="23"/>
-        </designable>
-        <designable name="foc-IV-mai">
-            <size key="intrinsicContentSize" width="233" height="23"/>
-        </designable>
-        <designable name="h9t-tn-BgC">
-            <size key="intrinsicContentSize" width="118.5" height="23"/>
-        </designable>
-        <designable name="if2-fc-Kry">
-            <size key="intrinsicContentSize" width="123.5" height="23"/>
-        </designable>
-        <designable name="o2D-0G-wjL">
-            <size key="intrinsicContentSize" width="123.5" height="23"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Screenshot 2023-05-19 at 3.44.01 PM" width="594" height="888"/>
         <image name="Screenshot 2023-05-19 at 3.44.11 PM" width="554" height="714"/>

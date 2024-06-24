@@ -489,11 +489,6 @@
             <point key="canvasLocation" x="5826.7175572519081" y="2312.6760563380285"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="P2N-zk-WAb">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="23.333333333333332"/>
-        </designable>
-    </designables>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="img2" width="103" height="167"/>
