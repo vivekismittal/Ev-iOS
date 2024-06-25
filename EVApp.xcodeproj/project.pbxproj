@@ -34,6 +34,7 @@
 		948AE2282C28912600D6C3F6 /* UserChargingSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */; };
 		948AE22A2C2894D700D6C3F6 /* UserChargingSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */; };
 		948AE22C2C2936B300D6C3F6 /* WalletStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */; };
+		948AE22E2C2ADA3F00D6C3F6 /* StartChargingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE22D2C2ADA3F00D6C3F6 /* StartChargingModel.swift */; };
 		948EABD52C1073200029C007 /* OnAppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD42C1073200029C007 /* OnAppStartViewModel.swift */; };
 		948EABD72C10750E0029C007 /* VersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EABD62C10750E0029C007 /* VersionModel.swift */; };
 		948EABDA2C10913C0029C007 /* ChargingStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EABD92C10913C0029C007 /* ChargingStoryBoard.storyboard */; };
@@ -187,6 +188,7 @@
 		948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChargingSessionModel.swift; sourceTree = "<group>"; };
 		948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChargingSessionViewModel.swift; sourceTree = "<group>"; };
 		948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletStoryBoard.storyboard; sourceTree = "<group>"; };
+		948AE22D2C2ADA3F00D6C3F6 /* StartChargingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChargingModel.swift; sourceTree = "<group>"; };
 		948EABD42C1073200029C007 /* OnAppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppStartViewModel.swift; sourceTree = "<group>"; };
 		948EABD62C10750E0029C007 /* VersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionModel.swift; sourceTree = "<group>"; };
 		948EABD92C10913C0029C007 /* ChargingStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChargingStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				948AE21D2C245E4700D6C3F6 /* MyWallet.swift */,
 				948AE2212C246FC600D6C3F6 /* ChargingAmountModel.swift */,
 				948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */,
+				948AE22D2C2ADA3F00D6C3F6 /* StartChargingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -855,6 +858,7 @@
 				948AE22A2C2894D700D6C3F6 /* UserChargingSessionViewModel.swift in Sources */,
 				CB8999672A3067C600066BD1 /* PaymentVC.swift in Sources */,
 				CBE8B13A2A3CE0150039F329 /* StationList.swift in Sources */,
+				948AE22E2C2ADA3F00D6C3F6 /* StartChargingModel.swift in Sources */,
 				828117A02AB4A221001D56CF /* ServiceManager.swift in Sources */,
 				948AE2222C246FC600D6C3F6 /* ChargingAmountModel.swift in Sources */,
 				CB8C65452A18D6EC00EDC2D8 /* PanelViewVC.swift in Sources */,

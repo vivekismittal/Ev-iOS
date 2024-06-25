@@ -17,6 +17,7 @@ enum ServerEndPointType {
     case getChargingAmountBasedOnPower(HttpBody)
     case getChargingAmountBasedOnAmount(HttpBody)
     case getUserChargingSessions(HttpBody)
+    case startCharging(HttpBody)
     
     func getUrlRequest() -> URLRequest? {
         guard let url else { return nil }
@@ -48,6 +49,8 @@ enum ServerEndPointType {
             EndPoints.shared.amountUnit
         case .getUserChargingSessions:
             EndPoints.shared.paymentUsertrxsession
+        case .startCharging:
+            EndPoints.shared.trxStart
         }
     }
     
@@ -78,6 +81,8 @@ enum ServerEndPointType {
                 .POST
         case .getUserChargingSessions:
                 .POST
+        case .startCharging:
+                .POST
         }
     }
     
@@ -92,6 +97,8 @@ enum ServerEndPointType {
         case .getChargingAmountBasedOnAmount(let body):
             body
         case .getUserChargingSessions(let body):
+            body
+        case .startCharging(let body):
             body
         default:
             nil

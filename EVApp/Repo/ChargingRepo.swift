@@ -10,7 +10,7 @@ class ChargingRepo{
     
     func getChargingAmountBasedOnType(httpBody: HttpBody,type: StartChargingType,completion: @escaping ResultHandler<ChargingAmountModel>){
         
-        let endpoint: ServerEndPointType =  switch type {
+        let endpoint: ServerEndPointType = switch type {
         case .Power:
                 .getChargingAmountBasedOnPower(httpBody)
         case .Amount:
@@ -24,6 +24,10 @@ class ChargingRepo{
     
     func getUserChargingSessions(httpBody: HttpBody,completion: @escaping ResultHandler<UserChargingSessionResponse>){
         NewNetworkManager.shared.request(endPointType: .getUserChargingSessions(httpBody), modelType: UserChargingSessionResponse.self,completion: completion)
+    }
+    
+    func startCharging(httpBody: HttpBody, completion: @escaping ResultHandler<StartChargingModel>){
+        NewNetworkManager.shared.request(endPointType: .startCharging(httpBody), modelType: StartChargingModel.self, completion: completion)
     }
     
 }

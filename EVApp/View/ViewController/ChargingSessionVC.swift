@@ -6,8 +6,6 @@
 //  Corrected by Vivek Mittal
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class ChargingSessionVC: UIViewController{
     

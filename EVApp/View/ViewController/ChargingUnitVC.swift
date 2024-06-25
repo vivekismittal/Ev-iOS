@@ -105,11 +105,8 @@ class ChargingUnitVC: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-//        let unit = lblUnit.text
-//        UserAppStorage.unit = unit
-//        UserAppStorage.amount = amount
         if walletAmount > orderAmount{
-            let nextViewController = StartChargingVC.instantiateUsingStoryboard()
+            let nextViewController = StartChargingVC.instantiateUsingStoryboard(with: chargingUnitViewModel)
             nextViewController.connName = connName
             nextViewController.orderChargingAmount = orderAmount
             nextViewController.orderChargingUnitInWatt = energyInWatts
