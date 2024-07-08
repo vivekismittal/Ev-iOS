@@ -12,6 +12,14 @@
 		82848FA42AB6535E006AC042 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82848FA32AB6535E006AC042 /* StationCell.swift */; };
 		82B3C3202AC83AA300669388 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 82B3C31F2AC83AA300669388 /* NotificationBannerSwift */; };
 		940236032C075A9E00F03C04 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 940236022C075A9E00F03C04 /* GoogleMaps */; };
+		94214D982C2D0B5B003AC11D /* ChargingMeterValuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214D972C2D0B5B003AC11D /* ChargingMeterValuesModel.swift */; };
+		94214D9A2C2D11F5003AC11D /* MainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214D992C2D11F5003AC11D /* MainThread.swift */; };
+		94214DBC2C35ADAC003AC11D /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214DBB2C35ADAC003AC11D /* EmptyModel.swift */; };
+		94214DBE2C35B4B6003AC11D /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214DBD2C35B4B6003AC11D /* LocalNotificationService.swift */; };
+		94214DC02C35C660003AC11D /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214DBF2C35C660003AC11D /* ProgressRingView.swift */; };
+		94214DC62C364556003AC11D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 94214DC52C364556003AC11D /* Lottie */; };
+		94214DC92C364889003AC11D /* OngoingCharging.json in Resources */ = {isa = PBXBuildFile; fileRef = 94214DC82C364889003AC11D /* OngoingCharging.json */; };
+		94214DDB2C3798EE003AC11D /* ChargingVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94214DDA2C3798EE003AC11D /* ChargingVCModel.swift */; };
 		945914F82C0C775700584627 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914F72C0C775700584627 /* Errors.swift */; };
 		945914FA2C0C78E900584627 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914F92C0C78E900584627 /* HttpMethod.swift */; };
 		945914FC2C0C866100584627 /* AvailableChargersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */; };
@@ -24,7 +32,7 @@
 		9459151B2C0D60CB00584627 /* AvailableChargersMockRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */; };
 		9459151E2C0D66C900584627 /* AvailableChargerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */; };
 		948AE2162C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */; };
-		948AE21A2C245B1A00D6C3F6 /* ChargingUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */; };
+		948AE21A2C245B1A00D6C3F6 /* ChargingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE2192C245B1A00D6C3F6 /* ChargingViewModel.swift */; };
 		948AE21C2C245B7300D6C3F6 /* ChargingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21B2C245B7300D6C3F6 /* ChargingRepo.swift */; };
 		948AE21E2C245E4700D6C3F6 /* MyWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21D2C245E4700D6C3F6 /* MyWallet.swift */; };
 		948AE2202C246ECE00D6C3F6 /* WalletRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE21F2C246ECE00D6C3F6 /* WalletRepo.swift */; };
@@ -165,6 +173,13 @@
 		8281179D2AB48FF8001D56CF /* AvailableChargers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargers.swift; sourceTree = "<group>"; };
 		8281179F2AB4A221001D56CF /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		82848FA32AB6535E006AC042 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		94214D972C2D0B5B003AC11D /* ChargingMeterValuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingMeterValuesModel.swift; sourceTree = "<group>"; };
+		94214D992C2D11F5003AC11D /* MainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThread.swift; sourceTree = "<group>"; };
+		94214DBB2C35ADAC003AC11D /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		94214DBD2C35B4B6003AC11D /* LocalNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
+		94214DBF2C35C660003AC11D /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		94214DC82C364889003AC11D /* OngoingCharging.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = OngoingCharging.json; path = ../../../../../Downloads/OngoingCharging.json; sourceTree = "<group>"; };
+		94214DDA2C3798EE003AC11D /* ChargingVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingVCModel.swift; sourceTree = "<group>"; };
 		945914F72C0C775700584627 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		945914F92C0C78E900584627 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersViewModel.swift; sourceTree = "<group>"; };
@@ -178,7 +193,7 @@
 		9459151A2C0D60CB00584627 /* AvailableChargersMockRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargersMockRepo.swift; sourceTree = "<group>"; };
 		9459151D2C0D66C900584627 /* AvailableChargerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargerViewModelTests.swift; sourceTree = "<group>"; };
 		948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingConnectorHelper.swift; sourceTree = "<group>"; };
-		948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingUnitViewModel.swift; sourceTree = "<group>"; };
+		948AE2192C245B1A00D6C3F6 /* ChargingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingViewModel.swift; sourceTree = "<group>"; };
 		948AE21B2C245B7300D6C3F6 /* ChargingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingRepo.swift; sourceTree = "<group>"; };
 		948AE21D2C245E4700D6C3F6 /* MyWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWallet.swift; sourceTree = "<group>"; };
 		948AE21F2C246ECE00D6C3F6 /* WalletRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRepo.swift; sourceTree = "<group>"; };
@@ -296,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94214DC62C364556003AC11D /* Lottie in Frameworks */,
 				94BDC6642C073F1200B06B4F /* IQKeyboardManagerSwift in Frameworks */,
 				940236032C075A9E00F03C04 /* GoogleMaps in Frameworks */,
 				CB2A64E42A5AA143005EF112 /* Cosmos in Frameworks */,
@@ -321,6 +337,22 @@
 				5FFC838322D15CA8993DE273 /* Pods-EVApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		94214DC32C363F27003AC11D /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				94214DBF2C35C660003AC11D /* ProgressRingView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		94214DC72C36486B003AC11D /* LottieAssests */ = {
+			isa = PBXGroup;
+			children = (
+				94214DC82C364889003AC11D /* OngoingCharging.json */,
+			);
+			path = LottieAssests;
 			sourceTree = "<group>";
 		};
 		945914FD2C0CA39900584627 /* Repo */ = {
@@ -413,6 +445,7 @@
 		CB1F9A132A13AE110050588B /* EVApp */ = {
 			isa = PBXGroup;
 			children = (
+				94214DC72C36486B003AC11D /* LottieAssests */,
 				CB1F9A1D2A13AE130050588B /* Assets.xcassets */,
 				CB1F9A302A13CCA70050588B /* Common */,
 				948EABD82C1081950029C007 /* Delegates */,
@@ -443,6 +476,9 @@
 				948AE2212C246FC600D6C3F6 /* ChargingAmountModel.swift */,
 				948AE2272C28912600D6C3F6 /* UserChargingSessionModel.swift */,
 				948AE22D2C2ADA3F00D6C3F6 /* StartChargingModel.swift */,
+				94214D972C2D0B5B003AC11D /* ChargingMeterValuesModel.swift */,
+				94214DBB2C35ADAC003AC11D /* EmptyModel.swift */,
+				94214DDA2C3798EE003AC11D /* ChargingVCModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +486,7 @@
 		CB1F9A2D2A13CC020050588B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94214DC32C363F27003AC11D /* SwiftUIViews */,
 				945915012C0CB63400584627 /* ViewControllerFactory */,
 				CB8C65132A1787D000EDC2D8 /* Cell */,
 				CB1F9A312A13D2A80050588B /* ViewController */,
@@ -463,7 +500,7 @@
 				945914FB2C0C866100584627 /* AvailableChargersViewModel.swift */,
 				948EABD42C1073200029C007 /* OnAppStartViewModel.swift */,
 				948EAC122C1482D40029C007 /* DashboardViewModel.swift */,
-				948AE2192C245B1A00D6C3F6 /* ChargingUnitViewModel.swift */,
+				948AE2192C245B1A00D6C3F6 /* ChargingViewModel.swift */,
 				948AE2292C2894D700D6C3F6 /* UserChargingSessionViewModel.swift */,
 			);
 			path = ViewModel;
@@ -481,6 +518,7 @@
 				945914F92C0C78E900584627 /* HttpMethod.swift */,
 				948EAC162C160ED00029C007 /* StorageKey.swift */,
 				948EAC182C160F330029C007 /* UserAppStorage.swift */,
+				94214DBD2C35B4B6003AC11D /* LocalNotificationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -499,6 +537,7 @@
 				CBB6A4E72A4DD5FE0002BD73 /* ProgressView.swift */,
 				948AE2152C1EB43B00D6C3F6 /* ChargingConnectorHelper.swift */,
 				948AE2252C270D6300D6C3F6 /* NumericHelper.swift */,
+				94214D992C2D11F5003AC11D /* MainThread.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -644,6 +683,7 @@
 				94BDC6742C0747F500B06B4F /* PayUIndia-CheckoutPro */,
 				94BDC6762C0747F500B06B4F /* PayUIndia-CheckoutProBase */,
 				940236022C075A9E00F03C04 /* GoogleMaps */,
+				94214DC52C364556003AC11D /* Lottie */,
 			);
 			productName = EVApp;
 			productReference = CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */;
@@ -689,6 +729,7 @@
 				94BDC6702C07469000B06B4F /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
 				94BDC6732C0747F500B06B4F /* XCRemoteSwiftPackageReference "PayUCheckoutPro-iOS" */,
 				940236012C075A9D00F03C04 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				94214DC42C364556003AC11D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = CB1F9A122A13AE110050588B /* Products */;
 			projectDirPath = "";
@@ -714,6 +755,7 @@
 			files = (
 				CB1F9A212A13AE130050588B /* LaunchScreen.storyboard in Resources */,
 				CB1F9A1E2A13AE130050588B /* Assets.xcassets in Resources */,
+				94214DC92C364889003AC11D /* OngoingCharging.json in Resources */,
 				948EABDA2C10913C0029C007 /* ChargingStoryBoard.storyboard in Resources */,
 				CB1F9A1C2A13AE110050588B /* Main.storyboard in Resources */,
 				948AE22C2C2936B300D6C3F6 /* WalletStoryBoard.storyboard in Resources */,
@@ -819,7 +861,7 @@
 				945914FF2C0CA3D500584627 /* AvailableChargersRepo.swift in Sources */,
 				948AE2282C28912600D6C3F6 /* UserChargingSessionModel.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
-				948AE21A2C245B1A00D6C3F6 /* ChargingUnitViewModel.swift in Sources */,
+				948AE21A2C245B1A00D6C3F6 /* ChargingViewModel.swift in Sources */,
 				CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */,
 				CB98B7E42A2441D4000F609A /* ValidationResult.swift in Sources */,
 				CBE1386F2A422098005B37F8 /* HelperComm.swift in Sources */,
@@ -839,13 +881,16 @@
 				CB77B0662A4067CC008707C3 /* ThanksVC.swift in Sources */,
 				CB98B7DB2A20F855000F609A /* ChargingStationVC.swift in Sources */,
 				CBE1386B2A421C88005B37F8 /* BaseViewController.swift in Sources */,
+				94214D9A2C2D11F5003AC11D /* MainThread.swift in Sources */,
 				CB026F412A378DC000C648B6 /* Utils.swift in Sources */,
 				CB9988232A5019BA00CA90EB /* NewNetworkManager.swift in Sources */,
 				CBE1386D2A421D51005B37F8 /* DemoModel.swift in Sources */,
 				CB3EC7012A3A0AF80075A8C4 /* ChargingSessionVC.swift in Sources */,
 				CB98B7D92A1F9CA3000F609A /* MenuNavigation.swift in Sources */,
+				94214DC02C35C660003AC11D /* ProgressRingView.swift in Sources */,
 				CB98B7DF2A22792E000F609A /* LocationManager.swift in Sources */,
 				945914FA2C0C78E900584627 /* HttpMethod.swift in Sources */,
+				94214DDB2C3798EE003AC11D /* ChargingVCModel.swift in Sources */,
 				CBDDE56D2A1F324E000A0460 /* EndPoints.swift in Sources */,
 				CBDDE56B2A1F31CE000A0460 /* LoadingOverlay.swift in Sources */,
 				CBB6A4E82A4DD5FE0002BD73 /* ProgressView.swift in Sources */,
@@ -862,12 +907,15 @@
 				828117A02AB4A221001D56CF /* ServiceManager.swift in Sources */,
 				948AE2222C246FC600D6C3F6 /* ChargingAmountModel.swift in Sources */,
 				CB8C65452A18D6EC00EDC2D8 /* PanelViewVC.swift in Sources */,
+				94214DBC2C35ADAC003AC11D /* EmptyModel.swift in Sources */,
 				CBC2D9DE2A4829BD00AAE562 /* ChangPassOtpVC.swift in Sources */,
 				948AE2202C246ECE00D6C3F6 /* WalletRepo.swift in Sources */,
 				CB2A64E12A599526005EF112 /* BookedSlotVC.swift in Sources */,
 				CB8C65472A18DAFA00EDC2D8 /* PanelTableViewCell.swift in Sources */,
+				94214D982C2D0B5B003AC11D /* ChargingMeterValuesModel.swift in Sources */,
 				CBFA7FD42A2621590017CAEE /* ChargingVC.swift in Sources */,
 				CBDDE5612A1DAC67000A0460 /* ChargingDetailVC.swift in Sources */,
+				94214DBE2C35B4B6003AC11D /* LocalNotificationService.swift in Sources */,
 				CBDDE5692A1DF431000A0460 /* AddMoneyVC.swift in Sources */,
 				CB8C653D2A18B45600EDC2D8 /* MenuViewController.swift in Sources */,
 				CBA5E48E2A37393F00FFF238 /* StartChargingVC.swift in Sources */,
@@ -1094,7 +1142,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.9;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1125,7 +1173,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";
@@ -1154,7 +1202,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8;
+				CURRENT_PROJECT_VERSION = 1.9;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1185,7 +1233,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";
@@ -1248,6 +1296,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
+			};
+		};
+		94214DC42C364556003AC11D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
 			};
 		};
 		94BDC6592C073E5C00B06B4F /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */ = {
@@ -1326,6 +1382,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 940236012C075A9D00F03C04 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
 			productName = GoogleMaps;
+		};
+		94214DC52C364556003AC11D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94214DC42C364556003AC11D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		94BDC65A2C073E5C00B06B4F /* SkyFloatingLabelTextField */ = {
 			isa = XCSwiftPackageProductDependency;

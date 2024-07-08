@@ -8,7 +8,7 @@
 import Foundation
 class ChargingRepo{
     
-    func getChargingAmountBasedOnType(httpBody: HttpBody,type: StartChargingType,completion: @escaping ResultHandler<ChargingAmountModel>){
+    func getChargingAmountBasedOnType(httpBody: HttpRequestBody,type: StartChargingType,completion: @escaping ResultHandler<ChargingAmountModel>){
         
         let endpoint: ServerEndPointType = switch type {
         case .Power:
@@ -22,12 +22,20 @@ class ChargingRepo{
         NewNetworkManager.shared.request(endPointType: endpoint , modelType: ChargingAmountModel.self,completion: completion)
     }
     
-    func getUserChargingSessions(httpBody: HttpBody,completion: @escaping ResultHandler<UserChargingSessionResponse>){
+    func getUserChargingSessions(httpBody: HttpRequestBody,completion: @escaping ResultHandler<UserChargingSessionResponse>){
         NewNetworkManager.shared.request(endPointType: .getUserChargingSessions(httpBody), modelType: UserChargingSessionResponse.self,completion: completion)
     }
     
-    func startCharging(httpBody: HttpBody, completion: @escaping ResultHandler<StartChargingModel>){
+    func startCharging(httpBody: HttpRequestBody, completion: @escaping ResultHandler<StartChargingModel>){
         NewNetworkManager.shared.request(endPointType: .startCharging(httpBody), modelType: StartChargingModel.self, completion: completion)
+    }
+    
+    func getChargingMeterValue(requestBody: HttpRequestBody,completion: @escaping ResultHandler<ChargingMeterValuesModel>){
+        NewNetworkManager.shared.request(endPointType: .getChargingMeterValues(requestBody), modelType: ChargingMeterValuesModel.self, completion: completion)
+    }
+    
+    func stopCharging(requestBody: HttpRequestBody,completion: @escaping ResultHandler<EmptyModel>){
+        NewNetworkManager.shared.request(endPointType: .stopCharging(requestBody), modelType: EmptyModel.self, completion: completion)
     }
     
 }

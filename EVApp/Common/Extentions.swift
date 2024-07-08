@@ -23,6 +23,14 @@ extension UITextField {
 
 extension UIViewController{
     
+    func goBack(){
+        guard let navigationController else {
+            self.dismiss(animated: true)
+            return
+        }
+        navigationController.popViewController(animated: true)
+    }
+    
     func gotoHome(){
         let landingScreen = MenuNavigation.instantiateUsingStoryboard()
         UIApplication.shared.windows.first?.rootViewController = landingScreen

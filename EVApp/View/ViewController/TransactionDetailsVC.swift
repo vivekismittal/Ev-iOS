@@ -29,9 +29,16 @@ class TransactionDetailsVC: UIViewController {
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblSAdd: UILabel!
     @IBOutlet weak var lblSName: UILabel!
+    
     var userTransactionId = String()
-    var consUnit = String()
+    var consUnit = Float()
     var isCommingFromTransactionList = false
+    
+    static func instantiateUsingStoryboard() -> Self {
+        let vc = ViewControllerFactory<Self>.viewController(for: .ChargingInvoiceScreen)
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailView.layer.cornerRadius = 12
@@ -40,7 +47,7 @@ class TransactionDetailsVC: UIViewController {
         self.detailView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         self.detailView.layer.borderWidth = 1
         
-        self.lblUnitConsumed.text = consUnit
+        self.lblUnitConsumed.text = String(consUnit)
         getTransactionApi()
     }
     @IBAction func back(_ sender: Any) {
@@ -121,7 +128,7 @@ class TransactionDetailsVC: UIViewController {
                 self.lblGst1.text  = "Rs: " + String(cgst)
                 self.lblGst2.text  = "Rs: " + String(sgst)
                 self.lblTotalAmount.text  = "Rs: " + String(totalAmountPaid)
-                print(street)
+//                print(street)
                 break
             case .failure:
                 print(Error.self)
@@ -136,7 +143,7 @@ class TransactionDetailsVC: UIViewController {
             
         ]
         LoadingOverlay.shared.showOverlay(view: view)
-        AF.request(invoiceUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { [self]
+        AF.request(invoiceUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON {
             response in
             LoadingOverlay.shared.hideOverlayView()
             
@@ -146,7 +153,7 @@ class TransactionDetailsVC: UIViewController {
                 print(response)
                 
                 let statusCode = response.response?.statusCode
-                print(statusCode)
+//                print(statusCode)
                 
                 let jsonData = JSON(value)
                 print(jsonData)

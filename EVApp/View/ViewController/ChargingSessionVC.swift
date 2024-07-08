@@ -19,7 +19,6 @@ class ChargingSessionVC: UIViewController{
         }
     }
     
-    
     static func instantiateUsingStoryboard() -> Self {
         let chargingSessionVC = ViewControllerFactory<Self>.viewController(for: .UserChargingSessionsScreen)
         chargingSessionVC.chargingSessionViewModel = UserChargingSessionViewModel()
@@ -29,6 +28,7 @@ class ChargingSessionVC: UIViewController{
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        sessionTable.showsVerticalScrollIndicator = false
         sessionTable.delegate = self
         sessionTable.dataSource = self
         self.getAllUserChargingSessions()
@@ -78,17 +78,24 @@ extension ChargingSessionVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let session = chargingSessions[indexPath.row]
         if session.chargingCompleted == true {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TransactionDetailsVC") as! TransactionDetailsVC
-            nextViewController.userTransactionId = String(session.userTransactionId ?? 0)
+            let nextViewController = TransactionDetailsVC.instantiateUsingStoryboard()
+            nextViewController.userTransactionId = session.userTransactionId ?? ""
             nextViewController.isCommingFromTransactionList = true
             self.present(nextViewController, animated:true, completion:nil)
         } else {
             
-            let nextViewController = ChargingVC.instantiateUsingStoryboard(orderChargingUnitInWatt: session.energyInWatts ?? 0, orderChargingAmount: session.amount ?? 0)
-            nextViewController.userTransactionId = session.userTransactionId ?? 0
-            nextViewController.chargerBoxId = session.chargeboxId ?? ""
-            nextViewController.connName = session.connectorId ?? ""
+            let nextViewController = ChargingVC.instantiateUsingStoryboard(
+                ChargingVCModel(
+                    orderChargingUnitInWatt: session.energyInWatts ?? 0,
+                    orderChargingAmount: session.amount ?? 0,
+                    connectorName: session.connectorId ?? "",
+                    chargerBoxId: session.chargeboxId ?? "",
+                    userTransactionId: session.userTransactionId ?? "",
+                    timeBasedCharging: session.timerBasedCharging == true,
+                    chargingTimeInMinutes: session.chargingTimeInMinutes ?? 0
+                )
+            )
+            
             self.present(nextViewController, animated:true, completion:nil)
         }
     }

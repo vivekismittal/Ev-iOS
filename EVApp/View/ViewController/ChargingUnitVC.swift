@@ -34,7 +34,7 @@ class ChargingUnitVC: UIViewController {
     }
     
     private var startChargingType: StartChargingType!
-    private var chargingUnitViewModel: ChargingUnitViewModel!
+    private var chargingUnitViewModel: ChargingViewModel!
     
    private var walletAmount = Float() {
         didSet{
@@ -67,7 +67,7 @@ class ChargingUnitVC: UIViewController {
         let chargingUnitVC = ViewControllerFactory<Self>.viewController(for: .ChargingEstimationScreen)
         chargingUnitVC.startChargingType = chargingType
         chargingUnitVC.chargingQuantity = quantity
-        chargingUnitVC.chargingUnitViewModel = ChargingUnitViewModel()
+        chargingUnitVC.chargingUnitViewModel = ChargingViewModel()
         return chargingUnitVC
     }
     
@@ -106,15 +106,17 @@ class ChargingUnitVC: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         if walletAmount > orderAmount{
-            let nextViewController = StartChargingVC.instantiateUsingStoryboard(with: chargingUnitViewModel)
-            nextViewController.connName = connName
-            nextViewController.orderChargingAmount = orderAmount
-            nextViewController.orderChargingUnitInWatt = energyInWatts
-            nextViewController.chargerBoxId = chargerBoxId
-            if startChargingType == .Time{
-                nextViewController.timeBasedCharging = true
-                nextViewController.chargingTimeInMinutes = chargingQuantity
-            }
+            let nextViewController = StartChargingVC.instantiateUsingStoryboard(
+                with: chargingUnitViewModel,
+                chargingData: .init(
+                    orderChargingUnitInWatt: energyInWatts,
+                    orderChargingAmount: orderAmount,
+                    connectorName: connName,
+                    chargerBoxId: chargerBoxId,
+                    timeBasedCharging: startChargingType == .Time,
+                    chargingTimeInMinutes: chargingQuantity
+                )
+            )
             self.present(nextViewController, animated:true, completion:nil)
         } else{
             let nextViewController = AddMoneyVC.instantiateUsingStoryboard()

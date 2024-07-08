@@ -13,9 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-     
-        
-        
         if UserAppStorage.didUserLoggedIn {
             let landingScreen = MenuNavigation.instantiateUsingStoryboard()
             self.window?.rootViewController = landingScreen

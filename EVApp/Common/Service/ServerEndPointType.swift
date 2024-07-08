@@ -7,31 +7,19 @@
 
 import Foundation
 
-typealias HttpBody = [String : Any?]
+typealias HttpRequestBody = [String : Any?]
 
 enum ServerEndPointType {
     case getAvailableChargingStations
     case getAppVersion
-    case getWalletAmount(HttpBody)
-    case getChargingAmountBasedOnTime(HttpBody)
-    case getChargingAmountBasedOnPower(HttpBody)
-    case getChargingAmountBasedOnAmount(HttpBody)
-    case getUserChargingSessions(HttpBody)
-    case startCharging(HttpBody)
-    
-    func getUrlRequest() -> URLRequest? {
-        guard let url else { return nil }
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        
-        if let body {
-            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        }
-        
-        request.allHTTPHeaderFields = headers
-        return request
-    }
-    
+    case getWalletAmount(HttpRequestBody)
+    case getChargingAmountBasedOnTime(HttpRequestBody)
+    case getChargingAmountBasedOnPower(HttpRequestBody)
+    case getChargingAmountBasedOnAmount(HttpRequestBody)
+    case getUserChargingSessions(HttpRequestBody)
+    case startCharging(HttpRequestBody)
+    case getChargingMeterValues(HttpRequestBody)
+    case stopCharging(HttpRequestBody)
     
     private var path: String {
         return switch self {
@@ -51,18 +39,11 @@ enum ServerEndPointType {
             EndPoints.shared.paymentUsertrxsession
         case .startCharging:
             EndPoints.shared.trxStart
+        case .getChargingMeterValues:
+            EndPoints.shared.trxMeterValues
+        case .stopCharging:
+            EndPoints.shared.trxStop
         }
-    }
-    
-    private var baseURL: String {
-        return  switch self {
-        default:
-            EndPoints.shared.baseUrlDev
-        }
-    }
-    
-    var url: URL? {
-        return URL(string: "\(baseURL)\(path)")
     }
     
     var method: HTTPMethod {
@@ -83,10 +64,14 @@ enum ServerEndPointType {
                 .POST
         case .startCharging:
                 .POST
+        case .getChargingMeterValues:
+                .POST
+        case .stopCharging:
+                .POST
         }
     }
     
-    var body: HttpBody? {
+    var body: HttpRequestBody? {
         return switch(self){
         case .getWalletAmount(let body):
             body
@@ -100,9 +85,37 @@ enum ServerEndPointType {
             body
         case .startCharging(let body):
             body
+        case .getChargingMeterValues(let body):
+            body
+        case .stopCharging(let body):
+            body
         default:
             nil
         }
+    }
+    
+    func getUrlRequest() -> URLRequest? {
+        guard let url else { return nil }
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        
+        if let body {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        }
+        
+        request.allHTTPHeaderFields = headers
+        return request
+    }
+    
+    private var baseURL: String {
+        return  switch self {
+        default:
+            EndPoints.shared.baseUrlDev
+        }
+    }
+    
+    var url: URL? {
+        return URL(string: "\(baseURL)\(path)")
     }
     
     var headers: [String : String]? {

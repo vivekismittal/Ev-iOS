@@ -10,8 +10,6 @@ import GoogleMaps
 import GooglePlaces
 import IQKeyboardManagerSwift
 import UserNotifications
-import NotificationBannerSwift
-//import PayUMoneyCoreSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -43,9 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // 1. Convert device token to string
-        let tokenParts = deviceToken.map { data -> String in
-            return String(format: "%02.2hhx", data)
-        }
+//        let tokenParts = deviceToken.map { data -> String in
+//            return String(format: "%02.2hhx", data)
+//        }
 //        let token = tokenParts.joined()
         // 2. Print device token to use for PNs payloads
 //        print("Device Token: \(token)")
@@ -60,43 +58,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        print("local notification received")
 //    }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("local notification received")
-        let banner = NotificationBanner(title: "Yahhvi - EV Charging", subtitle: "Your charging is in progress, please stop", style: .success)
-        banner.backgroundColor = #colorLiteral(red: 0.4919497967, green: 0.7860459685, blue: 0, alpha: 1)
-        banner.applyStyling(titleTextAlign: .center, subtitleTextAlign: .center)
-        banner.show()
-        banner.onTap = {
-            guard ((UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController) != nil else {
-                return
-            }
-            
-            
-            if UserAppStorage.didUserLoggedIn {
-                let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
-                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
-            }
-        }
+        completionHandler(.ArrayLiteralElement(arrayLiteral: [.badge,.list,.sound]))
     }
+    
     // MARK: Hand notification in forground
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
-        
     }
+    
     // MARK: Handle notification in background
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         guard ((UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController) != nil else {
             return
         }
         
-        
        if UserAppStorage.didUserLoggedIn {
-           let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
+           if let identifier = UNNotificationIdentifier(rawValue: response.notification.request.identifier),
+              identifier == .chargingOnGoing{
+               if let vcData = response.notification.request.content.userInfo[identifier.rawValue] as? Data{
+                   do{
+                       let chargingVCData = try JSONDecoder().decode(ChargingVCModel.self, from: vcData)
+                       let chargingVC = ChargingVC.instantiateUsingStoryboard(chargingVCData)
+                       if let navigationController =  (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController as? UINavigationController {
+                           navigationController.popToRootViewController(animated: false)
+                           navigationController.pushViewController(chargingVC, animated: true)
+                       }
+                   } catch{}
+               }
+           } else {
+               let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
+           }
         }
-
-        print(response.notification.request.content.body);
-        
-        // tell the app that we have finished processing the user’s action / response
         completionHandler()
     }
     

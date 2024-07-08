@@ -25,6 +25,7 @@ enum ViewControllerType{
     case UserChargingSessionsScreen
     case AddMoneyScreen
     case MyWalletScreen
+    case ChargingInvoiceScreen
 }
 
 enum ViewControllerIdentifier: String{
@@ -46,6 +47,7 @@ enum ViewControllerIdentifier: String{
     case ChargingSessionVC
     case AddMoneyVC
     case WalletVC
+    case TransactionDetailsVC
 }
 
 extension ViewControllerType{
@@ -84,6 +86,8 @@ extension ViewControllerType{
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .ChargingVC)
         case .UserChargingSessionsScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .ChargingSessionVC)
+        case .ChargingInvoiceScreen:
+            StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .TransactionDetailsVC)
             
         case .AddMoneyScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .WalletStoryBoard, storyboardId: .AddMoneyVC)
