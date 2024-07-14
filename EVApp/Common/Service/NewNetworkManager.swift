@@ -1,8 +1,8 @@
 //
-//  ApiManageer.swift
+//  NewNetworkManager.swift
 //  EVApp
 //
-//  Created by Brijesh Bhardwaj on 01/07/23.
+//  Created by VM on 01/07/23.
 //
 
 import Foundation

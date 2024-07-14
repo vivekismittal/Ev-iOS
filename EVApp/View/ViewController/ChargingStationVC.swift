@@ -214,6 +214,7 @@ enum StartChargingType: String, CaseIterable{
     case Time
     
     func getDefaultValuesOptions()->[Int]{
+        
         return switch self {
         case .Power:
             [10,20,30,40]
@@ -224,3 +225,4 @@ enum StartChargingType: String, CaseIterable{
         }
     }
 }
+

@@ -155,18 +155,15 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             return
         }
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "BookApointmentVC") as! BookApointmentVC
-        nextViewController.connName = chargerStationConnectorInfosList[indexPathRow].connectorNo ?? "NA"
-        nextViewController.chargeBoxId = chargerStationConnectorInfosList[indexPathRow].connectorNo ?? "NA"
-        self.present(nextViewController, animated:true, completion:nil)
-        
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        if let connectorName = chargerStationConnectorInfosList[indexPathRow].connectorNo,
+            let chargeBoxId = chargerStationConnectorInfosList[indexPathRow].chargeBoxId {
+            
+            let nextViewController = BookApointmentVC.instantiateUsingStoryboard(connectorName: connectorName, chargeBoxId: chargeBoxId)
+            self.present(nextViewController, animated: true, completion:nil)
+        }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleted")
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }

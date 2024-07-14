@@ -20,9 +20,9 @@ class AvailableConnectorsVC: UIViewController{
     }
     
     static func instantiateUsingStoryboard() -> Self {
-        let availableChargerViewController =  ViewControllerFactory<AvailableConnectorsVC>.viewController(for: .AvailableCharger)
+        let availableChargerViewController =  ViewControllerFactory<Self>.viewController(for: .AvailableCharger)
         
-        return availableChargerViewController as! Self
+        return availableChargerViewController
     }
     
     

@@ -38,4 +38,12 @@ class ChargingRepo{
         NewNetworkManager.shared.request(endPointType: .stopCharging(requestBody), modelType: EmptyModel.self, completion: completion)
     }
     
+    
+    func getAvailableChargingSlots(requestBody: HttpRequestBody, completion: @escaping ResultHandler<AvailableChargerBookingSlots>){
+        NewNetworkManager.shared.request(endPointType: .getAvailableChargerBookingSlots(requestBody), modelType: AvailableChargerBookingSlots.self, completion: completion)
+    }
+    
+    func makeAdvanceCharging(requestBody: HttpRequestBody, completion: @escaping ResultHandler<AdvanceBookingResponse>){
+        NewNetworkManager.shared.request(endPointType: .makeAdvancedChargingBooking(requestBody), modelType: AdvanceBookingResponse.self, completion: completion)
+    }
 }

@@ -20,6 +20,8 @@ enum ServerEndPointType {
     case startCharging(HttpRequestBody)
     case getChargingMeterValues(HttpRequestBody)
     case stopCharging(HttpRequestBody)
+    case getAvailableChargerBookingSlots(HttpRequestBody)
+    case makeAdvancedChargingBooking(HttpRequestBody)
     
     private var path: String {
         return switch self {
@@ -43,6 +45,10 @@ enum ServerEndPointType {
             EndPoints.shared.trxMeterValues
         case .stopCharging:
             EndPoints.shared.trxStop
+        case .getAvailableChargerBookingSlots:
+            EndPoints.shared.advancebookingTimeslots
+        case .makeAdvancedChargingBooking:
+            EndPoints.shared.advBookslots
         }
     }
     
@@ -68,11 +74,20 @@ enum ServerEndPointType {
                 .POST
         case .stopCharging:
                 .POST
+        case .getAvailableChargerBookingSlots:
+                .POST
+        case .makeAdvancedChargingBooking:
+                .POST
         }
     }
     
     var body: HttpRequestBody? {
         return switch(self){
+        case .getAvailableChargingStations:
+            nil
+        case .getAppVersion:
+            nil
+            
         case .getWalletAmount(let body):
             body
         case .getChargingAmountBasedOnTime(let body):
@@ -89,8 +104,10 @@ enum ServerEndPointType {
             body
         case .stopCharging(let body):
             body
-        default:
-            nil
+        case .getAvailableChargerBookingSlots(let body):
+            body
+        case .makeAdvancedChargingBooking(let body):
+            body
         }
     }
     

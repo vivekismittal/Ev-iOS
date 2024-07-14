@@ -26,6 +26,7 @@ enum ViewControllerType{
     case AddMoneyScreen
     case MyWalletScreen
     case ChargingInvoiceScreen
+    case BookChargingSlotScreen
 }
 
 enum ViewControllerIdentifier: String{
@@ -48,6 +49,7 @@ enum ViewControllerIdentifier: String{
     case AddMoneyVC
     case WalletVC
     case TransactionDetailsVC
+    case BookApointmentVC
 }
 
 extension ViewControllerType{
@@ -58,8 +60,7 @@ extension ViewControllerType{
             StoryboardRepresentation(bundle: nil, storyboardName: .Main, storyboardId: .DashboardVC)
         case .MenuNavigation:
             StoryboardRepresentation(bundle: nil, storyboardName: .Main, storyboardId: .MenuNavigationPoint)
-        case .ChargerPanel:
-            StoryboardRepresentation(bundle: nil, storyboardName: .Main, storyboardId: .PanelViewVC)
+        
             
         case .WelcomeScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .AuthStoryBoard, storyboardId: .WelcomeVC)
@@ -68,6 +69,8 @@ extension ViewControllerType{
         case .UserRegistrationScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .AuthStoryBoard, storyboardId: .RegistrationVC)
             
+        case .ChargerPanel:
+            StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .PanelViewVC)
         case .AvailableCharger:
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .AvailableConnectorsVC)
         case .ChargingDetail:
@@ -88,6 +91,8 @@ extension ViewControllerType{
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .ChargingSessionVC)
         case .ChargingInvoiceScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .TransactionDetailsVC)
+        case .BookChargingSlotScreen:
+            StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .BookApointmentVC)
             
         case .AddMoneyScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .WalletStoryBoard, storyboardId: .AddMoneyVC)

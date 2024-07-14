@@ -104,7 +104,6 @@ class DashboardVC: UIViewController{
     func openBottomPanel(stationID: String? = nil){
         let panelVC = PanelViewVC.instantiateUsingStoryboard()
         panelVC.stationID = stationID
-        
         self.isSheetAppear = true
         if #available(iOS 15.0, *) {
             if let sheet = panelVC.sheetPresentationController{
