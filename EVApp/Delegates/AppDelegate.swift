@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                if let vcData = response.notification.request.content.userInfo[identifier.rawValue] as? Data{
                    do{
                        let chargingVCData = try JSONDecoder().decode(ChargingVCModel.self, from: vcData)
-                       let chargingVC = ChargingVC.instantiateUsingStoryboard(chargingVCData)
+                       let chargingVC = ChargingVC.instantiateFromStoryboard(chargingVCData)
                        if let navigationController =  (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController as? UINavigationController {
                            navigationController.popToRootViewController(animated: false)
                            navigationController.pushViewController(chargingVC, animated: true)
@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                    } catch{}
                }
            } else {
-               let landingScreen = ChargingSessionVC.instantiateUsingStoryboard()
+               let landingScreen = ChargingSessionVC.instantiateFromStoryboard()
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = landingScreen
            }
         }

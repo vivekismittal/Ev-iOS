@@ -15,7 +15,7 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var btnCorporate: UIButton!
     @IBOutlet weak var btnSelfuser: UIButton!
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let vc = ViewControllerFactory<RegistrationVC>.viewController(for: .UserRegistrationScreen)
         return vc as! Self
     }

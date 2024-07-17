@@ -20,7 +20,7 @@ class ViewControllerFactory<T: UIViewController> {
 //MARK: Don't remove the below protocol as this is used to easy the define the instantiate methods on each view controllers and also for applying consistency
 
 @objc protocol InstantiateViewController {
-    @objc optional static func instantiateUsingStoryboard() -> Self
+    @objc optional static func instantiateFromStoryboard() -> Self
 }
 
 extension UIViewController: InstantiateViewController{}

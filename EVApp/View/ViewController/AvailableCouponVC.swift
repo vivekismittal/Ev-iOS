@@ -27,7 +27,7 @@ class AvailableCouponVC: UIViewController,UITableViewDelegate,UITableViewDataSou
     @IBOutlet weak var couponDetailsView: UIView!
     @IBOutlet weak var couponTable: UITableView!
     
-     static func instantiateUsingStoryboard() -> Self {
+     static func instantiateFromStoryboard() -> Self {
          let availableCouponVc = ViewControllerFactory<AvailableCouponVC>.viewController(for: .AvailableCouponScreen)
          return availableCouponVc as! Self
     }

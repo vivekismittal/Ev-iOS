@@ -63,7 +63,7 @@ class ChargingUnitVC: UIViewController {
     var parkingPrice = 0
     private var chargingQuantity: Int!
     
-    static func instantiateUsingStoryboard(with chargingType: StartChargingType,_ quantity: Int) -> Self {
+    static func instantiateFromStoryboard(with chargingType: StartChargingType,_ quantity: Int) -> Self {
         let chargingUnitVC = ViewControllerFactory<Self>.viewController(for: .ChargingEstimationScreen)
         chargingUnitVC.startChargingType = chargingType
         chargingUnitVC.chargingQuantity = quantity
@@ -106,7 +106,7 @@ class ChargingUnitVC: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         if walletAmount > orderAmount{
-            let nextViewController = StartChargingVC.instantiateUsingStoryboard(
+            let nextViewController = StartChargingVC.instantiateFromStoryboard(
                 with: chargingUnitViewModel,
                 chargingData: .init(
                     orderChargingUnitInWatt: energyInWatts,
@@ -119,7 +119,7 @@ class ChargingUnitVC: UIViewController {
             )
             self.present(nextViewController, animated:true, completion:nil)
         } else{
-            let nextViewController = AddMoneyVC.instantiateUsingStoryboard()
+            let nextViewController = AddMoneyVC.instantiateFromStoryboard()
             self.present(nextViewController, animated:true, completion:nil)
         }
         
@@ -128,7 +128,7 @@ class ChargingUnitVC: UIViewController {
     @IBAction func applyCoupon(_ sender: Any) {}
     
     @IBAction func viewCoupon(_ sender: Any) {
-        let nextViewController = AvailableCouponVC.instantiateUsingStoryboard()
+        let nextViewController = AvailableCouponVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     

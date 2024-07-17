@@ -20,7 +20,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var txtMobile: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordView: UIView!
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
          let welcomeVC = ViewControllerFactory<WelcomeVC>.viewController(for: .WelcomeScreen)
          return welcomeVC as! Self
     }
@@ -59,7 +59,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
         //self.navigationController?.pushViewController(nextViewController, animated: false)
     }
     @IBAction func createAccount(_ sender: Any) {
-        let nextViewController = RegistrationVC.instantiateUsingStoryboard()
+        let nextViewController = RegistrationVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     

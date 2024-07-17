@@ -19,7 +19,7 @@ class ChargingSessionVC: UIViewController{
         }
     }
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let chargingSessionVC = ViewControllerFactory<Self>.viewController(for: .UserChargingSessionsScreen)
         chargingSessionVC.chargingSessionViewModel = UserChargingSessionViewModel()
         return chargingSessionVC
@@ -52,7 +52,7 @@ class ChargingSessionVC: UIViewController{
     
     // MARK: - Action Method
     @IBAction func back(_ sender: Any) {
-        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
+        let nextViewController = MenuNavigation.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
 }
@@ -78,13 +78,13 @@ extension ChargingSessionVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let session = chargingSessions[indexPath.row]
         if session.chargingCompleted == true {
-            let nextViewController = TransactionDetailsVC.instantiateUsingStoryboard()
+            let nextViewController = TransactionDetailsVC.instantiateFromStoryboard()
             nextViewController.userTransactionId = session.userTransactionId ?? ""
             nextViewController.isCommingFromTransactionList = true
             self.present(nextViewController, animated:true, completion:nil)
         } else {
             
-            let nextViewController = ChargingVC.instantiateUsingStoryboard(
+            let nextViewController = ChargingVC.instantiateFromStoryboard(
                 ChargingVCModel(
                     orderChargingUnitInWatt: session.energyInWatts ?? 0,
                     orderChargingAmount: session.amount ?? 0,

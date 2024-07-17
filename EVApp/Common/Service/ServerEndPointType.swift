@@ -22,6 +22,9 @@ enum ServerEndPointType {
     case stopCharging(HttpRequestBody)
     case getAvailableChargerBookingSlots(HttpRequestBody)
     case makeAdvancedChargingBooking(HttpRequestBody)
+    case getAdvancedChargingBookedSlotsForUpcoming(HttpRequestBody)
+    case getAdvancedChargingBookedSlotsForCancelled(HttpRequestBody)
+    case cancelChargingBookedSlot(HttpRequestBody)
     
     private var path: String {
         return switch self {
@@ -49,6 +52,12 @@ enum ServerEndPointType {
             EndPoints.shared.advancebookingTimeslots
         case .makeAdvancedChargingBooking:
             EndPoints.shared.advBookslots
+        case .getAdvancedChargingBookedSlotsForUpcoming:
+            EndPoints.shared.advbookingUserBookings
+        case .cancelChargingBookedSlot:
+            EndPoints.shared.adbookingCancelBooking
+        case .getAdvancedChargingBookedSlotsForCancelled:
+            EndPoints.shared.advbookingUserCancelled
         }
     }
     
@@ -77,6 +86,12 @@ enum ServerEndPointType {
         case .getAvailableChargerBookingSlots:
                 .POST
         case .makeAdvancedChargingBooking:
+                .POST
+        case .getAdvancedChargingBookedSlotsForUpcoming:
+                .POST
+        case .getAdvancedChargingBookedSlotsForCancelled:
+                .POST
+        case .cancelChargingBookedSlot:
                 .POST
         }
     }
@@ -107,6 +122,12 @@ enum ServerEndPointType {
         case .getAvailableChargerBookingSlots(let body):
             body
         case .makeAdvancedChargingBooking(let body):
+            body
+        case .getAdvancedChargingBookedSlotsForUpcoming(let body):
+            body
+        case .getAdvancedChargingBookedSlotsForCancelled(let body):
+            body
+        case .cancelChargingBookedSlot(let body):
             body
         }
     }

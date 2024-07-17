@@ -26,7 +26,7 @@ class WaitingVC: UIViewController {
     private var chargingData: ChargingVCModel!
 
     
-    static func instantiateUsingStoryboard(with chargingViewModel: ChargingViewModel,chargingData: ChargingVCModel) -> Self {
+    static func instantiateFromStoryboard(with chargingViewModel: ChargingViewModel,chargingData: ChargingVCModel) -> Self {
         let waitingVC = ViewControllerFactory<Self>.viewController(for: .ChargingWaitingScreen)
         waitingVC.chargingViewModel = chargingViewModel
         waitingVC.chargingData = chargingData
@@ -109,7 +109,7 @@ class WaitingVC: UIViewController {
                     MainAsyncThread {
                         
                         self.moveChargedVC = false
-                        let nextViewController = ChargingVC.instantiateUsingStoryboard(
+                        let nextViewController = ChargingVC.instantiateFromStoryboard(
                             with: self.chargingViewModel,
                             self.chargingData
                         )
@@ -234,7 +234,7 @@ class WaitingVC: UIViewController {
 //                        }
 //                        self.timer?.invalidate()
 //                        self.timer = nil
-//                        let nextViewController = ChargingVC.instantiateUsingStoryboard(orderChargingUnitInWatt: self.orderChargingUnitInWatt, orderChargingAmount: self.orderChargingAmount)
+//                        let nextViewController = ChargingVC.instantiateFromStoryboard(orderChargingUnitInWatt: self.orderChargingUnitInWatt, orderChargingAmount: self.orderChargingAmount)
 //                        nextViewController.connName = self.connName
 //                        self.moveChargedVC = false
 //                        nextViewController.chargerBoxId = self.chargerBoxId

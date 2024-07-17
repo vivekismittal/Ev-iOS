@@ -32,7 +32,7 @@ class ChargingVC: UIViewController {
     private var chargingVCData: ChargingVCModel!
     private var chargingViewModel: ChargingViewModel!
     
-    static func instantiateUsingStoryboard(with viewModel: ChargingViewModel = ChargingViewModel(),_ chargingVCData: ChargingVCModel) -> Self {
+    static func instantiateFromStoryboard(with viewModel: ChargingViewModel = ChargingViewModel(),_ chargingVCData: ChargingVCModel) -> Self {
         let chargingVC = ViewControllerFactory<Self>.viewController(for: .OnGoingChargingScreen)
         chargingVC.chargingViewModel = viewModel
         chargingVC.chargingVCData = chargingVCData
@@ -154,7 +154,7 @@ class ChargingVC: UIViewController {
     private func redirectToInvoicePage(){
         timer?.invalidate()
         guard chargingVCData.userTransactionId != nil else { return }
-        let nextVC = TransactionDetailsVC.instantiateUsingStoryboard()
+        let nextVC = TransactionDetailsVC.instantiateFromStoryboard()
         nextVC.consUnit = self.consumedUnit
         nextVC.userTransactionId = String(chargingVCData.userTransactionId!)
         self.present(nextVC, animated:true, completion:nil)

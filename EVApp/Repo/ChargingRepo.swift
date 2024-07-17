@@ -43,7 +43,18 @@ class ChargingRepo{
         NewNetworkManager.shared.request(endPointType: .getAvailableChargerBookingSlots(requestBody), modelType: AvailableChargerBookingSlots.self, completion: completion)
     }
     
-    func makeAdvanceCharging(requestBody: HttpRequestBody, completion: @escaping ResultHandler<AdvanceBookingResponse>){
-        NewNetworkManager.shared.request(endPointType: .makeAdvancedChargingBooking(requestBody), modelType: AdvanceBookingResponse.self, completion: completion)
+    func makeAdvanceCharging(requestBody: HttpRequestBody, completion: @escaping ResultHandler<StatusMessageResponse>){
+        NewNetworkManager.shared.request(endPointType: .makeAdvancedChargingBooking(requestBody), modelType: StatusMessageResponse.self, completion: completion)
+    }
+    
+    func getAdvancedChargingBookingSlotsForUser(requestBody: HttpRequestBody, forPage: BookedSlotPage, completion: @escaping ResultHandler<[AdvancedChargingBookedSlot]>){
+        
+        NewNetworkManager.shared.request(
+            endPointType: forPage == .Upcoming ? .getAdvancedChargingBookedSlotsForUpcoming(requestBody) : .getAdvancedChargingBookedSlotsForCancelled(requestBody),
+            modelType: [AdvancedChargingBookedSlot].self, completion: completion)
+    }
+    
+    func cancelChargingBookedSlot(requestBody: HttpRequestBody, completion: @escaping ResultHandler<StatusMessageResponse>){
+        NewNetworkManager.shared.request(endPointType: .cancelChargingBookedSlot(requestBody), modelType: StatusMessageResponse.self, completion: completion)
     }
 }

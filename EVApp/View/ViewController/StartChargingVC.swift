@@ -14,7 +14,7 @@ class StartChargingVC: UIViewController {
     var chargingData: ChargingVCModel!
     private var chargingViewModel: ChargingViewModel!
     
-    static func instantiateUsingStoryboard(with chargingViewModel: ChargingViewModel = ChargingViewModel(), chargingData: ChargingVCModel) -> Self {
+    static func instantiateFromStoryboard(with chargingViewModel: ChargingViewModel = ChargingViewModel(), chargingData: ChargingVCModel) -> Self {
         let startChargingVC = ViewControllerFactory<Self>.viewController(for: .StartChargingScreen)
         startChargingVC.chargingViewModel = chargingViewModel
         startChargingVC.chargingData = chargingData
@@ -51,7 +51,7 @@ class StartChargingVC: UIViewController {
                 
                 DispatchQueue.main.async{
                     self.chargingData.userTransactionId = transactionId
-                    let nextViewController = WaitingVC.instantiateUsingStoryboard(with: self.chargingViewModel,chargingData: self.chargingData)
+                    let nextViewController = WaitingVC.instantiateFromStoryboard(with: self.chargingViewModel,chargingData: self.chargingData)
                     self.present(nextViewController, animated:true, completion:nil)
                 }
             case .failure(let error):

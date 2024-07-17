@@ -80,7 +80,7 @@ class ChargingViewModel{
         chargingRepo.getAvailableChargingSlots(requestBody: requestBody, completion: completion)
     }
     
-    func makeAdvanceBookingForCharging(for date: String, startingTime: String, endingTime: String, connectorName: String, chargeBoxId: String, completion: @escaping ResultHandler<AdvanceBookingResponse>){
+    func makeAdvanceBookingForCharging(for date: String, startingTime: String, endingTime: String, connectorName: String, chargeBoxId: String, completion: @escaping ResultHandler<StatusMessageResponse>){
         let requestBody: HttpRequestBody = [
             "userId": UserAppStorage.userPk,
             "startTime": startingTime,
@@ -93,5 +93,18 @@ class ChargingViewModel{
         ]
         
         chargingRepo.makeAdvanceCharging(requestBody: requestBody, completion: completion)
+    }
+    
+    func getAdvancedChargingBookingSlotsForUser(forPage: BookedSlotPage, completion: @escaping ResultHandler<[AdvancedChargingBookedSlot]>){
+        let requestBody: HttpRequestBody = ["userId": UserAppStorage.userPk]
+        
+        chargingRepo.getAdvancedChargingBookingSlotsForUser(requestBody: requestBody, forPage: forPage, completion: completion)
+    }
+    
+    func cancelChargingBookedSlot(id: Int, completion: @escaping ResultHandler<StatusMessageResponse>){
+        let requestBody: HttpRequestBody = ["id": id]
+        
+        chargingRepo.cancelChargingBookedSlot(requestBody: requestBody, completion: completion)
+
     }
 }

@@ -3,7 +3,7 @@
 //  EVApp
 //
 //  Created by Brijesh Bhardwaj on 26/05/23.
-//
+//  Corrected by Vivek Mittal
 
 import UIKit
 import SkyFloatingLabelTextField
@@ -27,7 +27,7 @@ class ChargingStationVC: UIViewController {
     private var stationName = ""
     private var stationAddress = ""
     
-    static func instantiateUsingStoryboard(with chargerConnectorInfo: ChargerStationConnectorInfos, chargerInfoName: String, streetAddress: String) -> Self {
+    static func instantiateFromStoryboard(with chargerConnectorInfo: ChargerStationConnectorInfos, chargerInfoName: String, streetAddress: String) -> Self {
         let chargingStationVC = ViewControllerFactory<Self>.viewController(for: .ChargingStationScreen)
         chargingStationVC.chargerConnectorInfo = chargerConnectorInfo
         chargingStationVC.stationName = chargerInfoName
@@ -164,7 +164,7 @@ class ChargingStationVC: UIViewController {
     
     @IBAction func next(_ sender: Any) {
         guard let intVal = Int(textField.text ?? "0") else { return }
-        let nextViewController = ChargingUnitVC.instantiateUsingStoryboard(with: startChargingType,intVal)
+        let nextViewController = ChargingUnitVC.instantiateFromStoryboard(with: startChargingType,intVal)
         
         switch startChargingType {
         case .Power:

@@ -19,7 +19,7 @@ class AvailableConnectorsVC: UIViewController{
         getData()
     }
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let availableChargerViewController =  ViewControllerFactory<Self>.viewController(for: .AvailableCharger)
         
         return availableChargerViewController
@@ -78,7 +78,7 @@ extension AvailableConnectorsVC: OpenActionProtocol{
     
     func openChargingDetailVC(availableCharger: AvailableChargers) {
         DispatchQueue.main.async {[weak self] in
-            let nextVC = ChargingDetailVC.instantiateUsingStoryboard(with: availableCharger)
+            let nextVC = ChargingDetailVC.instantiateFromStoryboard(with: availableCharger)
             self?.navigationController?.pushViewController(nextVC, animated: true)
             
         }

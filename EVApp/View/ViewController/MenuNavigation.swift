@@ -9,7 +9,7 @@ import UIKit
 
 class MenuNavigation: UINavigationController {
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let menuNavigation = ViewControllerFactory<MenuNavigation>.viewController(for: .MenuNavigation)
         return menuNavigation as! Self
     }

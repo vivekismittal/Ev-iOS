@@ -33,7 +33,7 @@ class AddMoneyVC: UIViewController {
     var key = "XpvgUb"
     var currentTime = Int64()
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let vc = ViewControllerFactory<Self>.viewController(for: .AddMoneyScreen)
         return vc
     }

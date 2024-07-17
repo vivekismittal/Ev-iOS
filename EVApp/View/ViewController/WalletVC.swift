@@ -23,7 +23,7 @@ class WalletVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var  paymentMode = [""]
     var   walletAmount =  ""
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let vc = ViewControllerFactory<Self>.viewController(for: .MyWalletScreen)
         return vc
     }
@@ -50,13 +50,13 @@ class WalletVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBAction func back(_ sender: Any) {
       // self.dismiss(animated: true)
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = MenuNavigation.instantiateUsingStoryboard()
+        let nextViewController = MenuNavigation.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
 
     }
     
     @IBAction func addMoney(_ sender: Any) {
-        let nextViewController = AddMoneyVC.instantiateUsingStoryboard()
+        let nextViewController = AddMoneyVC.instantiateFromStoryboard()
         nextViewController.avaiBalance = self.walletAmount
         self.present(nextViewController, animated:true, completion:nil)
     }

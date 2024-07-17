@@ -31,7 +31,7 @@ class PanelViewVC: UIViewController {
     let lock = NSLock()
     var reason : String?
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let panelVC = ViewControllerFactory<Self>.viewController(for: .ChargerPanel)
         return panelVC
     }
@@ -151,7 +151,7 @@ extension PanelViewVC: OpenActionProtocol{
     
     func openChargingDetailVC(availableCharger: AvailableChargers) {
         DispatchQueue.main.async {[weak self] in
-            let nextVC = ChargingDetailVC.instantiateUsingStoryboard(with: availableCharger)
+            let nextVC = ChargingDetailVC.instantiateFromStoryboard(with: availableCharger)
             self?.openVC(nextVC)
         }
     }

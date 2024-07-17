@@ -36,7 +36,7 @@ class IntroViewController: UIViewController {
         pageControl.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
     }
     @IBAction func skip(_ sender: Any) {
-        let vc = WelcomeVC.instantiateUsingStoryboard()
+        let vc = WelcomeVC.instantiateFromStoryboard()
 
 //        self.present(vc, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)

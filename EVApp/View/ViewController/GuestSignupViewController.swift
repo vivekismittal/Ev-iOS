@@ -11,7 +11,7 @@ class GuestSignupViewController: UIViewController {
     
     @IBOutlet weak var blurredDissmisableView: UIView!
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
          let vc = ViewControllerFactory<GuestSignupViewController>.viewController(for: .SignupBottomSheetForGuest)
          return vc as! Self
     }
@@ -25,14 +25,15 @@ class GuestSignupViewController: UIViewController {
 
     @IBAction func onSignup(_ sender: Any) {
         UserAppStorage.reset()
-        let nextViewController = RegistrationVC.instantiateUsingStoryboard()
+        let nextViewController = RegistrationVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
 }
 
 extension UIViewController{
+    
     func startGuestUserSignupFlow(){
-        let guestSignup = GuestSignupViewController.instantiateUsingStoryboard()
+        let guestSignup = GuestSignupViewController.instantiateFromStoryboard()
         guestSignup.modalPresentationStyle = .overFullScreen
         self.present(guestSignup, animated: false)
     }

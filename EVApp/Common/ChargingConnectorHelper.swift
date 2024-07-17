@@ -18,7 +18,7 @@ extension UIViewController{
         
         switch chargerConnectorInfo.reason{
         case .Available:
-            let nextViewController = ChargingStationVC.instantiateUsingStoryboard(with: chargerConnectorInfo, chargerInfoName: chargerInfoName ?? "", streetAddress: streetAddress ?? "")
+            let nextViewController = ChargingStationVC.instantiateFromStoryboard(with: chargerConnectorInfo, chargerInfoName: chargerInfoName ?? "", streetAddress: streetAddress ?? "")
             self.present(nextViewController, animated: true)
 //            self.navigationController?.pushViewController(nextViewController, animated: true)
             

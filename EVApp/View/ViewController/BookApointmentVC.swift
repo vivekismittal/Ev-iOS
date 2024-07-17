@@ -6,8 +6,6 @@
 //  Corrected by Vivek Mittal
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class BookApointmentVC: UIViewController {
     @IBOutlet weak var viewGreen: UIView!
@@ -84,7 +82,7 @@ class BookApointmentVC: UIViewController {
     }
     
     
-    static func instantiateUsingStoryboard(with viewModel: ChargingViewModel = ChargingViewModel(),connectorName: String, chargeBoxId: String) -> Self {
+    static func instantiateFromStoryboard(with viewModel: ChargingViewModel = ChargingViewModel(),connectorName: String, chargeBoxId: String) -> Self {
         let vc = ViewControllerFactory<Self>.viewController(for: .BookChargingSlotScreen)
         
         vc.chargingViewModel = viewModel

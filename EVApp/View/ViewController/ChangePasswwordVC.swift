@@ -75,7 +75,7 @@ class ChangePasswwordVC: UIViewController {
                             DispatchQueue.main.asyncAfter(deadline: when){
                                 if verified == false{
                                    // self.sendotpApi()
-                                    let nextViewController = WelcomeVC.instantiateUsingStoryboard()
+                                    let nextViewController = WelcomeVC.instantiateFromStoryboard()
                                    // nextViewController.mobile =  self.txtMobile.text!
                                     self.present(nextViewController, animated:true, completion:nil)
                                 }

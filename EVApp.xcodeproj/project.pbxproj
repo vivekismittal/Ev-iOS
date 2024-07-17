@@ -60,7 +60,8 @@
 		94BDC6752C0747F500B06B4F /* PayUIndia-CheckoutPro in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6742C0747F500B06B4F /* PayUIndia-CheckoutPro */; };
 		94BDC6772C0747F500B06B4F /* PayUIndia-CheckoutProBase in Frameworks */ = {isa = PBXBuildFile; productRef = 94BDC6762C0747F500B06B4F /* PayUIndia-CheckoutProBase */; };
 		94F365782C42A3A10074B9AF /* AvailableChargerBookingSlots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F365772C42A3A10074B9AF /* AvailableChargerBookingSlots.swift */; };
-		94F3657A2C42AB240074B9AF /* AdvanceBookingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F365792C42AB240074B9AF /* AdvanceBookingResponse.swift */; };
+		94F3657C2C4606BD0074B9AF /* AdvancedChargingBookedSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3657B2C4606BD0074B9AF /* AdvancedChargingBookedSlot.swift */; };
+		94F3657E2C467CBB0074B9AF /* StatusMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3657D2C467CBB0074B9AF /* StatusMessageResponse.swift */; };
 		BC7ECC06388D7A722CD509EB /* Pods_EVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07178A7EFB80178E7EBDE335 /* Pods_EVApp.framework */; };
 		CB026F412A378DC000C648B6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB026F402A378DC000C648B6 /* Utils.swift */; };
 		CB1F9A152A13AE110050588B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A142A13AE110050588B /* AppDelegate.swift */; };
@@ -95,7 +96,6 @@
 		CB8C650C2A17641700EDC2D8 /* GuestUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C650B2A17641700EDC2D8 /* GuestUserVC.swift */; };
 		CB8C650E2A177F0300EDC2D8 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C650D2A177F0300EDC2D8 /* DashboardVC.swift */; };
 		CB8C65102A1785CC00EDC2D8 /* MyBookingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C650F2A1785CC00EDC2D8 /* MyBookingsVC.swift */; };
-		CB8C65122A1787C600EDC2D8 /* MyBookingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65112A1787C600EDC2D8 /* MyBookingListVC.swift */; };
 		CB8C65152A1787F200EDC2D8 /* MyBookingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C65142A1787F200EDC2D8 /* MyBookingListCell.swift */; };
 		CB8C653D2A18B45600EDC2D8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C653C2A18B45600EDC2D8 /* MenuViewController.swift */; };
 		CB8C653F2A18BAEC00EDC2D8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C653E2A18BAEC00EDC2D8 /* SideMenuTableViewCell.swift */; };
@@ -113,8 +113,6 @@
 		CB98B7E82A2446AA000F609A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98B7E72A2446AA000F609A /* Alert.swift */; };
 		CB9988232A5019BA00CA90EB /* NewNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */; };
 		CB9988252A501AE400CA90EB /* ServerEndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988242A501AE400CA90EB /* ServerEndPointType.swift */; };
-		CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */; };
-		CB9988292A51AAAE00CA90EB /* CancelBookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */; };
 		CB99882B2A51C5B600CA90EB /* BookApointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */; };
 		CBA5E4882A3719CC00FFF238 /* AvailableCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5E4872A3719CC00FFF238 /* AvailableCouponVC.swift */; };
 		CBA5E48A2A3719EB00FFF238 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5E4892A3719EB00FFF238 /* CouponTableViewCell.swift */; };
@@ -214,7 +212,8 @@
 		948EAC162C160ED00029C007 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
 		948EAC182C160F330029C007 /* UserAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppStorage.swift; sourceTree = "<group>"; };
 		94F365772C42A3A10074B9AF /* AvailableChargerBookingSlots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableChargerBookingSlots.swift; sourceTree = "<group>"; };
-		94F365792C42AB240074B9AF /* AdvanceBookingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceBookingResponse.swift; sourceTree = "<group>"; };
+		94F3657B2C4606BD0074B9AF /* AdvancedChargingBookedSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedChargingBookedSlot.swift; sourceTree = "<group>"; };
+		94F3657D2C467CBB0074B9AF /* StatusMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMessageResponse.swift; sourceTree = "<group>"; };
 		AC2F29DF745FA44CBF788FD0 /* Pods-EVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVApp.debug.xcconfig"; path = "Target Support Files/Pods-EVApp/Pods-EVApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB026F402A378DC000C648B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahhvi - EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +250,6 @@
 		CB8C650B2A17641700EDC2D8 /* GuestUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestUserVC.swift; sourceTree = "<group>"; };
 		CB8C650D2A177F0300EDC2D8 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		CB8C650F2A1785CC00EDC2D8 /* MyBookingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsVC.swift; sourceTree = "<group>"; };
-		CB8C65112A1787C600EDC2D8 /* MyBookingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingListVC.swift; sourceTree = "<group>"; };
 		CB8C65142A1787F200EDC2D8 /* MyBookingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingListCell.swift; sourceTree = "<group>"; };
 		CB8C653C2A18B45600EDC2D8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CB8C653E2A18BAEC00EDC2D8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,8 +267,6 @@
 		CB98B7E72A2446AA000F609A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CB9988222A5019BA00CA90EB /* NewNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNetworkManager.swift; sourceTree = "<group>"; };
 		CB9988242A501AE400CA90EB /* ServerEndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEndPointType.swift; sourceTree = "<group>"; };
-		CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBookingVC.swift; sourceTree = "<group>"; };
-		CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBookingCell.swift; sourceTree = "<group>"; };
 		CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookApointmentVC.swift; sourceTree = "<group>"; };
 		CBA5E4872A3719CC00FFF238 /* AvailableCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCouponVC.swift; sourceTree = "<group>"; };
 		CBA5E4892A3719EB00FFF238 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
@@ -481,7 +477,8 @@
 				94214DBB2C35ADAC003AC11D /* EmptyModel.swift */,
 				94214DDA2C3798EE003AC11D /* ChargingVCModel.swift */,
 				94F365772C42A3A10074B9AF /* AvailableChargerBookingSlots.swift */,
-				94F365792C42AB240074B9AF /* AdvanceBookingResponse.swift */,
+				94F3657B2C4606BD0074B9AF /* AdvancedChargingBookedSlot.swift */,
+				94F3657D2C467CBB0074B9AF /* StatusMessageResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -555,7 +552,6 @@
 				CB99882A2A51C5B600CA90EB /* BookApointmentVC.swift */,
 				CB2A64DE2A5994EE005EF112 /* BookedSlotCell.swift */,
 				CB2A64E02A599526005EF112 /* BookedSlotVC.swift */,
-				CB9988262A51AA6E00CA90EB /* CancelBookingVC.swift */,
 				CB61F5CA2A2880C8005174E6 /* ChangePasswwordVC.swift */,
 				CBC2D9DD2A4829BD00AAE562 /* ChangPassOtpVC.swift */,
 				CBDDE5602A1DAC67000A0460 /* ChargingDetailVC.swift */,
@@ -573,7 +569,6 @@
 				CB1F9A2A2A13B0FC0050588B /* IntroViewController.swift */,
 				CB98B7D82A1F9CA3000F609A /* MenuNavigation.swift */,
 				CB8C653C2A18B45600EDC2D8 /* MenuViewController.swift */,
-				CB8C65112A1787C600EDC2D8 /* MyBookingListVC.swift */,
 				CB8C650F2A1785CC00EDC2D8 /* MyBookingsVC.swift */,
 				CB1F9A3A2A13F0EE0050588B /* OTPVerifyVC.swift */,
 				CB8C65442A18D6EC00EDC2D8 /* PanelViewVC.swift */,
@@ -610,7 +605,6 @@
 				CBA5E4892A3719EB00FFF238 /* CouponTableViewCell.swift */,
 				CB3EC7022A3A0B1C0075A8C4 /* ChargingSessionCell.swift */,
 				CBE8B13D2A3D69AC0039F329 /* ConnectorCollectionViewCell.swift */,
-				CB9988282A51AAAE00CA90EB /* CancelBookingCell.swift */,
 				CB2F940E2A596265006A3A31 /* StationReviewCell.swift */,
 				82848FA32AB6535E006AC042 /* StationCell.swift */,
 			);
@@ -825,13 +819,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB9988292A51AAAE00CA90EB /* CancelBookingCell.swift in Sources */,
 				CB1F9A2B2A13B0FC0050588B /* IntroViewController.swift in Sources */,
 				CB8C654B2A18E95100EDC2D8 /* AvailableConnectorsVC.swift in Sources */,
-				CB8C65122A1787C600EDC2D8 /* MyBookingListVC.swift in Sources */,
 				948AE2242C26E41000D6C3F6 /* TruncatingFloat.swift in Sources */,
 				CB61F5CF2A28905E005174E6 /* PrivacyPolicyVC.swift in Sources */,
 				CB2F940D2A596235006A3A31 /* StationReviewVC.swift in Sources */,
+				94F3657E2C467CBB0074B9AF /* StatusMessageResponse.swift in Sources */,
 				CB61F5D12A2890DB005174E6 /* HelpCenterVC.swift in Sources */,
 				CBFA7FD22A2621390017CAEE /* ChargingWaletStatusVC.swift in Sources */,
 				948EABD72C10750E0029C007 /* VersionModel.swift in Sources */,
@@ -865,7 +858,6 @@
 				948AE2282C28912600D6C3F6 /* UserChargingSessionModel.swift in Sources */,
 				CB1F9A3B2A13F0EE0050588B /* OTPVerifyVC.swift in Sources */,
 				948AE21A2C245B1A00D6C3F6 /* ChargingViewModel.swift in Sources */,
-				CB9988272A51AA6E00CA90EB /* CancelBookingVC.swift in Sources */,
 				CB98B7E42A2441D4000F609A /* ValidationResult.swift in Sources */,
 				CBE1386F2A422098005B37F8 /* HelperComm.swift in Sources */,
 				948AE2262C270D6300D6C3F6 /* NumericHelper.swift in Sources */,
@@ -901,6 +893,7 @@
 				948EAC132C1482D40029C007 /* DashboardViewModel.swift in Sources */,
 				CBE1389F2A461768005B37F8 /* TransactionDetailsVC.swift in Sources */,
 				948AE21E2C245E4700D6C3F6 /* MyWallet.swift in Sources */,
+				94F3657C2C4606BD0074B9AF /* AdvancedChargingBookedSlot.swift in Sources */,
 				CB98B7E82A2446AA000F609A /* Alert.swift in Sources */,
 				8281179E2AB48FF8001D56CF /* AvailableChargers.swift in Sources */,
 				CBC2D9E02A487ABC00AAE562 /* PDFWebViewController.swift in Sources */,
@@ -922,7 +915,6 @@
 				CBDDE5692A1DF431000A0460 /* AddMoneyVC.swift in Sources */,
 				CB8C653D2A18B45600EDC2D8 /* MenuViewController.swift in Sources */,
 				CBA5E48E2A37393F00FFF238 /* StartChargingVC.swift in Sources */,
-				94F3657A2C42AB240074B9AF /* AdvanceBookingResponse.swift in Sources */,
 				CBB6A4E62A4DD1260002BD73 /* WaitingVC.swift in Sources */,
 				CB1F9A372A13F0920050588B /* SelfUserRegisterVC.swift in Sources */,
 				CB1F9A172A13AE110050588B /* SceneDelegate.swift in Sources */,

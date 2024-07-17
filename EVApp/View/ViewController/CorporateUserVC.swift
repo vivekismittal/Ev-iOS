@@ -84,7 +84,7 @@ class CorporateUserVC: UIViewController {
     }
     @IBAction func login(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
+        let nextViewController = WelcomeVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }
     @IBAction func tnc(_ sender: Any) {
@@ -270,7 +270,7 @@ extension CorporateUserVC{
                                     nextViewController.mobile =  self.txtMobile.text!
                                     self.present(nextViewController, animated:true, completion:nil)
                                 } else{
-                                    let nextViewController = DashboardVC.instantiateUsingStoryboard()
+                                    let nextViewController = DashboardVC.instantiateFromStoryboard()
                                     self.present(nextViewController, animated:true, completion:nil)
                                 }
                             }

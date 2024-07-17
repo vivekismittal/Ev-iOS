@@ -34,6 +34,7 @@ class MenuViewController: UIViewController {
 }
 
 extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MenuItems.allCases.count
     }
@@ -43,9 +44,11 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
         (menuCell as? SideMenuTableViewCell)?.lblMenu.text = MenuItems.allCases[indexPath.row].rawValue
         return menuCell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch MenuItems.allCases[indexPath.row]
         {
@@ -60,7 +63,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
             
             
         case .Available_Charger:
-            let nextViewController = AvailableConnectorsVC.instantiateUsingStoryboard()
+            let nextViewController = AvailableConnectorsVC.instantiateFromStoryboard()
             self.navigationController?.pushViewController(nextViewController, animated: true)
             
         case .Charging_Sessions:
@@ -68,7 +71,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
                 self.startGuestUserSignupFlow()
                 return
             }
-            let nextViewController = ChargingSessionVC.instantiateUsingStoryboard()
+            let nextViewController = ChargingSessionVC.instantiateFromStoryboard()
             self.present(nextViewController, animated: true, completion: nil)
             
         case .My_Bookings:
@@ -76,8 +79,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
                 self.startGuestUserSignupFlow()
                 return
             }
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MyBookingsVC") as! MyBookingsVC
+            let nextViewController = MyBookingsVC.instantiateFromStoryboard()
             self.present(nextViewController, animated:true, completion:nil)
             
         case .My_Wallet:
@@ -85,7 +87,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
                 self.startGuestUserSignupFlow()
                 return
             }
-            let nextViewController = WalletVC.instantiateUsingStoryboard()
+            let nextViewController = WalletVC.instantiateFromStoryboard()
             self.present(nextViewController, animated:true, completion:nil)
             
         case .Settings:
@@ -146,7 +148,7 @@ extension MenuViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func gotoWelcome(){
-        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
+        let nextViewController = WelcomeVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
     }}
 

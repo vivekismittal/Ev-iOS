@@ -121,7 +121,7 @@ class SelfUserRegisterVC: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
+        let nextViewController = WelcomeVC.instantiateFromStoryboard()
         self.present(nextViewController, animated:true, completion:nil)
         
         

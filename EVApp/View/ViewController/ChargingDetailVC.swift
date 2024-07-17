@@ -33,7 +33,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblDistance: UILabel!
     
-    static func instantiateUsingStoryboard(with availableCharger: AvailableChargers) -> Self {
+    static func instantiateFromStoryboard(with availableCharger: AvailableChargers) -> Self {
         let chargingDetailVC = ViewControllerFactory<ChargingDetailVC>.viewController(for: .ChargingDetail)
         chargingDetailVC.configure(with: availableCharger)
         return chargingDetailVC as! Self
@@ -158,7 +158,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         if let connectorName = chargerStationConnectorInfosList[indexPathRow].connectorNo,
             let chargeBoxId = chargerStationConnectorInfosList[indexPathRow].chargeBoxId {
             
-            let nextViewController = BookApointmentVC.instantiateUsingStoryboard(connectorName: connectorName, chargeBoxId: chargeBoxId)
+            let nextViewController = BookApointmentVC.instantiateFromStoryboard(connectorName: connectorName, chargeBoxId: chargeBoxId)
             self.present(nextViewController, animated: true, completion:nil)
         }
     }

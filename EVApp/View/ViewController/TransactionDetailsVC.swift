@@ -34,7 +34,7 @@ class TransactionDetailsVC: UIViewController {
     var consUnit = Float()
     var isCommingFromTransactionList = false
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let vc = ViewControllerFactory<Self>.viewController(for: .ChargingInvoiceScreen)
         return vc
     }
@@ -55,7 +55,7 @@ class TransactionDetailsVC: UIViewController {
             self.dismiss(animated: false)
         }else{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = MenuNavigation.instantiateUsingStoryboard()
+            let nextViewController = MenuNavigation.instantiateFromStoryboard()
             self.present(nextViewController, animated:true, completion:nil)
         }
     }

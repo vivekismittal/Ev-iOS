@@ -3,149 +3,200 @@
 //  EVApp
 //
 //  Created by Brijesh Bhardwaj on 19/05/23.
-//
+//  Corrected by Vivek Mittal
 
 import UIKit
 
 class MyBookingsVC: UIViewController {
+    
     var signUpResponse : CheckLoginSignUpModel?
     var userRoleResponse: UserRoleResponse?
     var userRoleResponseA : UserRoleResponse?
-    let threeButtonViewModel: ThreeButtonViewModel = ThreeButtonViewModel()
     
-    @IBOutlet weak var btnCancel: UIButton!
-    @IBOutlet weak var btnUpCom: UIButton!
+    @IBOutlet weak var cancelledBookingsLabel: UILabel!
+    @IBOutlet weak var upcomingBookingsLabel: UILabel!
     @IBOutlet weak var cancelView: UIView!
     @IBOutlet weak var upComView: UIView!
     @IBOutlet weak var segmentView: UIView!
-    @IBOutlet weak var cancelContainer: UIView!
-    @IBOutlet weak var upComContainer: UIView!
+    @IBOutlet weak var slotsTableView: UITableView!
+    
+    private let chargingViewModel: ChargingViewModel = .init()
+
+    private var currentPage: BookedSlotPage = .Upcoming
+    
+    private var upcomingAdvancedBookedSlots: [AdvancedChargingBookedSlot] = .init()
+    private var cancelledAdvancedBookedSlots: [AdvancedChargingBookedSlot] = .init()
+    
+    private var bookedSlots: [AdvancedChargingBookedSlot] {
+        switch currentPage {
+        case .Upcoming:
+            upcomingAdvancedBookedSlots
+        case .Cancelled:
+            cancelledAdvancedBookedSlots
+        }
+    }
+    
+    private let dispatchGroup: DispatchGroup = .init()
+    
+    static func instantiateFromStoryboard() -> Self {
+        let vc = ViewControllerFactory<Self>.viewController(for: .MyBookingsScreen)
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.upComContainer.isHidden = false
-        self.cancelContainer.isHidden = true
         
-        self.btnUpCom.layer.cornerRadius = 12
-        self.btnCancel.layer.cornerRadius = 12
+        slotsTableView.delegate = self
+        slotsTableView.dataSource = self
+        
+        fetchBothUpcomingAndCancelledBookedSlots()
+        
+        upComView.layer.cornerRadius = 12
+        cancelView.layer.cornerRadius = 12
+        
         segmentView.layer.cornerRadius = 12
         segmentView.layer.borderColor = #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
         segmentView.layer.borderWidth = 2
         
-        btnUpCom.titleLabel?.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        btnCancel.titleLabel?.textColor = .black
-        self.btnUpCom.backgroundColor = #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
-        self.btnCancel.backgroundColor = .white
-       
+        upcomingBookingsLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cancelledBookingsLabel.textColor = .black
+        upComView.backgroundColor = #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
+        cancelView.backgroundColor = .white
+        
+        upComView.setOnClickListener { [weak self] in
+            self?.currentPage = .Upcoming
+            self?.switchUpcomingOrCancelledBookingList()
+        }
+        
+        cancelView.setOnClickListener { [weak self] in
+            self?.currentPage = .Cancelled
+            self?.switchUpcomingOrCancelledBookingList()
+        }
+        
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @IBAction func back(_ sender: Any) {
-       self.dismiss(animated: true)
-
+        goBack()
     }
-    @IBAction func upcomingBooking(_ sender: Any) {
-        self.upComContainer.isHidden = false
-        self.cancelContainer.isHidden = true
-        
-        self.btnUpCom.backgroundColor = #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
-        self.btnCancel.backgroundColor = .white
-        
-        btnUpCom.titleLabel?.textColor = .white
-        btnCancel.titleLabel?.textColor = .black
-    }
-    @IBAction func canceledBooking(_ sender: Any) {
-        self.upComContainer.isHidden = true
-        self.cancelContainer.isHidden = false
-        
-        self.btnUpCom.backgroundColor = .white
-        self.btnCancel.backgroundColor = #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
-        
-        btnUpCom.titleLabel?.textColor = .black
-        btnCancel.titleLabel?.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    }
-
-//    func checkIfLoginOrSignUp(_ mobileNumber: String) {
-//        showSpinner(onView: view)
-//        NetworkManager.inst.getApi("fetchbymobile/\(mobileNumber)") { data, error in
-//            do {
-//                guard let data = data else {return}
-//                self.signUpResponse = try JSONDecoder().decode(CheckLoginSignUpModel.self, from: data)
-//              let realId = self.signUpResponse?.rolefetch?.first?.realID ?? 0
-//                let realId2 = self.signUpResponse?.rolefetch?.first?.createdBy
-//                
-//                print(self.signUpResponse?.rolefetch?.first?.realID ?? 0)
-//               //print(self.signUpResponse?.mobilefetch?.first?.realID ?? 0)
-//
-//                
-//                let brokerRollid = self.signUpResponse?.rolefetch?.first?.realID ?? 0
-//             //  let mobilefetchReaiId = self.signUpResponse?.rolefetch?[1].realID ?? 0
-//
-//        
-//                        
-//                self.removeSpinner()
-//                print(self.signUpResponse ?? 0)
-//            } catch(let error) {
-//                print(error.localizedDescription)
-//                DispatchQueue.main.async { [weak self] in
-//                    self?.removeSpinner()
-//                    self?.showAlert(title: "", message: error.localizedDescription)
-//                    
-//                }
-//            }
-//        }
-//    }
     
-//    func callCreateRoleApi(roleId: UserType) {
-//
-//        showSpinner(onView: view)
-//        NetworkManager.inst.postApi(params: threeButtonViewModel.createParamsForUserRole(roleId: roleId.rawValue), endPoint: "userrole") { data, error in
-//            do {
-//                guard let data = data else {return}
-//                let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, AnyObject>
-//                print(json)
-//                let userRoleResponse : UserRoleResponse = try JSONDecoder().decode(UserRoleResponse.self, from: data)
-//               // UserDefaults.existRoleRealId = userRoleResponse.USERROLE.real_id
-//              //  print(UserDefaults.existRoleRealId ?? 0)
-//                   // UserDefaults.userRole = userRoleResponse.USERROLE.user_code_pre
-//                if let userRoleId = self.userRoleResponseA?.USERROLE {
-//                    UserDefaults.standard.set(userRoleId.real_id, forKey: UserDefaultConstants.newUserRoleRealId.rawValue)
-//                }
-////                DispatchQueue.main.async { [weak self] in
-////                    guard let `self` = self else {return}
-////                    self.removeSpinner()
-////                    switch roleId {
-////                    case .tenant:
-////
-////                    case .broker:
-////                        self.moveToDashBoardForBroker()
-////                    case .landloard:
-////                        self.moveToDashBoardForLandLord()
-////                    }
-////                 }
-//
-//            } catch {
-//                print("error")
-//            }
-//        }
-//    }
+    func switchUpcomingOrCancelledBookingList() {
+        
+        upComView.backgroundColor = currentPage == .Upcoming ? #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1) : .white
+        cancelView.backgroundColor = currentPage == .Upcoming ? .white : #colorLiteral(red: 0.4855932593, green: 0.7739699483, blue: 0.08541054279, alpha: 1)
+        
+        upcomingBookingsLabel.textColor = currentPage == .Upcoming ? .white : .black
+        cancelledBookingsLabel.textColor = currentPage == .Upcoming ? .black : .white
+        
+        slotsTableView.reloadData()
+    }
+    
+    private func fetchBothUpcomingAndCancelledBookedSlots(){
+        MainAsyncThread {[weak self] in
+            guard let self else { return }
+            showSpinner(onView: view)
+        }
+        fetchAdvancedChargingBookedSlots(forPage: .Upcoming)
+        fetchAdvancedChargingBookedSlots(forPage: .Cancelled)
+        
+        dispatchGroup.notify(queue: .main){[weak self] in
+            MainAsyncThread {
+                self?.removeSpinner()
+            }
+            self?.slotsTableView.reloadData()
+        }
+    }
+    
+    private func fetchAdvancedChargingBookedSlots(forPage: BookedSlotPage){
+        dispatchGroup.enter()
+        
+        chargingViewModel.getAdvancedChargingBookingSlotsForUser(forPage: forPage){ [weak self] res in
+            defer{
+                self?.dispatchGroup.leave()
+            }
+            
+            switch res{
+            case .success(let bookedSlots):
+                switch forPage {
+                case .Upcoming:
+                    self?.upcomingAdvancedBookedSlots = bookedSlots
+                case .Cancelled:
+                    self?.cancelledAdvancedBookedSlots = bookedSlots
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func cancelChargingBookedSlot(id: Int){
+        self.showSpinner(onView: view)
+        
+        chargingViewModel.cancelChargingBookedSlot(id: id){ [weak self] res in
+            
+            MainAsyncThread {
+                self?.removeSpinner()
+            }
+            
+            switch res{
+            case .success(let statusMessage):
+                MainAsyncThread {
+                    if let message = statusMessage.message{
+                        self?.showAlert(title: "", message: message)
+                    }
+                }
+                if statusMessage.status == "True"{
+                    self?.fetchBothUpcomingAndCancelledBookedSlots()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 
 }
-class ThreeButtonViewModel {
+
+extension MyBookingsVC: UITableViewDelegate, UITableViewDataSource{
     
-    func createParamsForUserRole(roleId: String) -> [String: Any] {
-        var params: [String: Any] = [String: Any]()
-        if let realId = UserAppStorage.realId {
-            params = ["user_id" : realId,
-                      "role_id" : Int(roleId) ?? 0,
-                      "creator_id" : realId]
-        }
-        return params
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bookedSlots.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyBookingListCell.identifier, for: indexPath)
+        
+        if let bookingCell = cell as? MyBookingListCell{
+            bookingCell.bookedSlot = bookedSlots[indexPath.row]
+            bookingCell.forPage = currentPage
+            
+            bookingCell.onCancelAppointment = {[weak self] bookingId in
+                self?.cancelChargingBookedSlot(id: bookingId)
+            }
+        }
+       
+        return cell
+    }
+    
+    func  tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return currentPage == .Upcoming ? 245 : 245 - 34
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return bookedSlots.isEmpty ?
+        "No Data Found!"
+        : nil
+    }
+    
+}
+
+enum BookedSlotPage: String{
+    case Upcoming
+    case Cancelled
 }

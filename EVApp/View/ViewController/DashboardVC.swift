@@ -23,11 +23,11 @@ class DashboardVC: UIViewController{
     private var isLocationUpdatingFirstTime = true
     
     @objc func methodOfReceivedNotification(notification: Notification){
-        let nextViewController = WelcomeVC.instantiateUsingStoryboard()
+        let nextViewController = WelcomeVC.instantiateFromStoryboard()
         self.navigationController?.present(nextViewController, animated: true, completion: nil)
     }
     
-    static func instantiateUsingStoryboard() -> Self {
+    static func instantiateFromStoryboard() -> Self {
         let dashboardVC = ViewControllerFactory<DashboardVC>.viewController(for: .HomeDashboard)
         return dashboardVC as! Self
     }
@@ -102,7 +102,7 @@ class DashboardVC: UIViewController{
     }
     
     func openBottomPanel(stationID: String? = nil){
-        let panelVC = PanelViewVC.instantiateUsingStoryboard()
+        let panelVC = PanelViewVC.instantiateFromStoryboard()
         panelVC.stationID = stationID
         self.isSheetAppear = true
         if #available(iOS 15.0, *) {

@@ -32,7 +32,7 @@ extension UIViewController{
     }
     
     func gotoHome(){
-        let landingScreen = MenuNavigation.instantiateUsingStoryboard()
+        let landingScreen = MenuNavigation.instantiateFromStoryboard()
         UIApplication.shared.windows.first?.rootViewController = landingScreen
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
