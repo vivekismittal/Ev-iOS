@@ -354,11 +354,8 @@
 		94214DC32C363F27003AC11D /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
+				94F365972C4A1D070074B9AF /* ReviewAndRatingsView */,
 				94214DBF2C35C660003AC11D /* ProgressRingView.swift */,
-				94F3657F2C4806740074B9AF /* CommentRatingView.swift */,
-				94F365832C48BF5E0074B9AF /* StarRatingsView.swift */,
-				94F365852C48BFDC0074B9AF /* ReviewRatingScreenView.swift */,
-				94F365892C495A8B0074B9AF /* CommentWritingSheetView.swift */,
 				94F3658F2C4983690074B9AF /* ViewExtension.swift */,
 			);
 			path = SwiftUIViews;
@@ -438,6 +435,17 @@
 				948AE22B2C2936B300D6C3F6 /* WalletStoryBoard.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		94F365972C4A1D070074B9AF /* ReviewAndRatingsView */ = {
+			isa = PBXGroup;
+			children = (
+				94F365892C495A8B0074B9AF /* CommentWritingSheetView.swift */,
+				94F365832C48BF5E0074B9AF /* StarRatingsView.swift */,
+				94F3657F2C4806740074B9AF /* CommentRatingView.swift */,
+				94F365852C48BFDC0074B9AF /* ReviewRatingScreenView.swift */,
+			);
+			path = ReviewAndRatingsView;
 			sourceTree = "<group>";
 		};
 		CB1F9A082A13AE110050588B = {
