@@ -50,6 +50,10 @@ class WaitingVC: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
     @IBAction func start(_ sender: Any) {
         self.secondsRemaining = 120
         self.proView.isHidden = true

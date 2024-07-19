@@ -60,6 +60,8 @@ class ChargingVC: UIViewController {
         addLocalNotification()
     }
     
+    
+    
     private func setupCarChargingAnimationView(){
 
         carChargingLottieAnimationView.contentMode = .scaleAspectFit
@@ -74,6 +76,7 @@ class ChargingVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         carChargingLottieAnimationView.stop()
+        timer?.invalidate()
     }
     
     func updateTimeBasedUI(){

@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class CorporateUserVC: UIViewController {
 
-    @IBOutlet weak var btnTerms: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var txtConfirmPassword: SkyFloatingLabelTextField!
     @IBOutlet weak var txtPassword: SkyFloatingLabelTextField!
@@ -23,6 +22,9 @@ class CorporateUserVC: UIViewController {
     @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
     @IBOutlet weak var txtState: SkyFloatingLabelTextField!
     @IBOutlet weak var txtCountry: SkyFloatingLabelTextField!
+    @IBOutlet weak var toogleButtonImage: UIImageView!
+       
+    private var terms: Bool = false
     
     let countryDrop = DropDown()
     let stateDrop = DropDown()
@@ -32,29 +34,37 @@ class CorporateUserVC: UIViewController {
     var countryCode = [""]
     var sCode = ""
     var cCode = ""
-    var terms = false
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view.
+        setToggleImage()
+        toogleButtonImage.isUserInteractionEnabled = true
+        toogleButtonImage.setOnClickListener {[weak self] in
+            self?.toggleButton()
+        }
         callStateApi()
         callCountryApi()
         self.btnNext.layer.cornerRadius = 12
     }
     
-    @IBAction func termsAction(_ sender: Any) {
-        if btnTerms.isSelected {
-            btnTerms.isSelected = false
-            self.terms = false
-            btnTerms.setImage(#imageLiteral(resourceName: "square radio button black copy"), for: .normal)
-               }else {
-                   self.terms = true
-                   btnTerms.isSelected = true
-                   btnTerms.setImage(#imageLiteral(resourceName: "square radio button green copy"), for: .normal)
-                }
-    }
+   
+    func toggleButton() {
+          terms.toggle()
+          setToggleImage()
+     }
+     
+     private func setToggleImage(){
+         if !terms {
+             toogleButtonImage.image = #imageLiteral(resourceName: "square radio button black copy")
+            
+         } else {
+             toogleButtonImage.image = UIImage(named: "square radio button green copy")
+         }
+     }
+    
     @IBAction func next(_ sender: Any) {
         let mobileValid = txtMobile.text!.isPhoneNumber
         let emailValid = txtEmail.text!.isValidEmail()
@@ -264,7 +274,7 @@ extension CorporateUserVC{
                             let when = DispatchTime.now() + 2.0
                             DispatchQueue.main.asyncAfter(deadline: when){
                                 if verified == false{
-                                    self.sendotpApi()
+//                                    self.sendotpApi()
                                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                     nextViewController.mobile =  self.txtMobile.text!
@@ -282,39 +292,39 @@ extension CorporateUserVC{
                     }
     }
     
-    func sendotpApi(){
-        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
-        LoadingOverlay.shared.showOverlay(view: view)
-            let parameters = [
-                "mobileNumber": txtMobile.text!
-                    ] as? [String:AnyObject]
-
-        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-                    response in
-                LoadingOverlay.shared.hideOverlayView()
-
-                        switch (response.result) {
-
-                        case .success(let value):
-                            print(response)
-                            
-                    let statusCode = response.response?.statusCode
-                            print(statusCode!)
-                            
-                    let jsonData = JSON(value)
-                            print(jsonData)
-                           
-                            let status = jsonData["status"].string
-                            let message = jsonData["message"].string
-                            let verified = jsonData["verified"].bool
-              print(message)
-                          
-                            break
-                        case .failure:
-                            print(Error.self)
-                           
-                        }
-                    }
-    }
+//    func sendotpApi(){
+//        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
+//        LoadingOverlay.shared.showOverlay(view: view)
+//            let parameters = [
+//                "mobileNumber": txtMobile.text!
+//                    ] as? [String:AnyObject]
+//
+//        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
+//                    response in
+//                LoadingOverlay.shared.hideOverlayView()
+//
+//                        switch (response.result) {
+//
+//                        case .success(let value):
+//                            print(response)
+//                            
+//                    let statusCode = response.response?.statusCode
+//                            print(statusCode!)
+//                            
+//                    let jsonData = JSON(value)
+//                            print(jsonData)
+//                           
+//                            let status = jsonData["status"].string
+//                            let message = jsonData["message"].string
+//                            let verified = jsonData["verified"].bool
+//              print(message)
+//                          
+//                            break
+//                        case .failure:
+//                            print(Error.self)
+//                           
+//                        }
+//                    }
+//    }
 
 }

@@ -15,7 +15,6 @@ class SelfUserRegisterVC: UIViewController {
     let countryDrop = DropDown()
     let stateDrop = DropDown()
     
-    @IBOutlet weak var btnTerms: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var txtCountry: SkyFloatingLabelTextField!
     @IBOutlet weak var txtState: SkyFloatingLabelTextField!
@@ -25,6 +24,10 @@ class SelfUserRegisterVC: UIViewController {
     @IBOutlet weak var txtPassword: SkyFloatingLabelTextField!
     @IBOutlet weak var txtReferalCode: SkyFloatingLabelTextField!
     @IBOutlet weak var txtEmail: SkyFloatingLabelTextField!
+    @IBOutlet weak var toogleButtonImage: UIImageView!
+    
+    private var terms: Bool = false
+
     
     var stateNameList = [""]
     var countryNameList = [""]
@@ -32,17 +35,34 @@ class SelfUserRegisterVC: UIViewController {
     var countryCode = [""]
     var sCode = ""
     var cCode = ""
-    var terms = false
    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-    
+        setToggleImage()
+        toogleButtonImage.isUserInteractionEnabled = true
+        toogleButtonImage.setOnClickListener {[weak self] in
+            self?.toggleButton()
+        }
         callStateApi()
         callCountryApi()
         self.btnNext.layer.cornerRadius = 12
         
     }
+    
+    func toggleButton() {
+          terms.toggle()
+          setToggleImage()
+     }
+     
+     private func setToggleImage(){
+         if !terms {
+             toogleButtonImage.image = #imageLiteral(resourceName: "square radio button black copy")
+            
+         } else {
+             toogleButtonImage.image = UIImage(named: "square radio button green copy")
+         }
+     }
     
     override func viewWillAppear(_ animated: Bool) {
        
@@ -64,17 +84,6 @@ class SelfUserRegisterVC: UIViewController {
                }else {
                    txtCountry.isSelected = false
                    countryDrop.show()
-                }
-    }
-    @IBAction func termsAction(_ sender: Any) {
-        if btnTerms.isSelected {
-            self.terms = false
-            btnTerms.isSelected = false
-            btnTerms.setImage(#imageLiteral(resourceName: "square radio button black copy"), for: .normal)
-               }else {
-                   btnTerms.isSelected = true
-                   self.terms = true
-                   btnTerms.setImage(#imageLiteral(resourceName: "square radio button green copy"), for: .normal)
                 }
     }
     
@@ -287,39 +296,39 @@ class SelfUserRegisterVC: UIViewController {
                     }
     }
     
-    func sendotpApi(){
-        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
-        LoadingOverlay.shared.showOverlay(view: view)
-            let parameters = [
-                "mobileNumber": txtMobile.text!
-                    ] as? [String:AnyObject]
-
-        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-                    response in
-                LoadingOverlay.shared.hideOverlayView()
-
-                        switch (response.result) {
-
-                        case .success(let value):
-                            print(response)
-                            
-                    let statusCode = response.response?.statusCode
-                            print(statusCode!)
-                            
-                    let jsonData = JSON(value)
-                            print(jsonData)
-                           
-                            let status = jsonData["status"].string
-                            let message = jsonData["message"].string
-                            let verified = jsonData["verified"].bool
-              print(message)
-                          
-                            break
-                        case .failure:
-                            print(Error.self)
-                           
-                        }
-                    }
-    }
+//    func sendotpApi(){
+//        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
+//        LoadingOverlay.shared.showOverlay(view: view)
+//            let parameters = [
+//                "mobileNumber": txtMobile.text!
+//                    ] as? [String:AnyObject]
+//
+//        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
+//                    response in
+//                LoadingOverlay.shared.hideOverlayView()
+//
+//                        switch (response.result) {
+//
+//                        case .success(let value):
+//                            print(response)
+//                            
+//                    let statusCode = response.response?.statusCode
+//                            print(statusCode!)
+//                            
+//                    let jsonData = JSON(value)
+//                            print(jsonData)
+//                           
+//                            let status = jsonData["status"].string
+//                            let message = jsonData["message"].string
+//                            let verified = jsonData["verified"].bool
+//              print(message)
+//                          
+//                            break
+//                        case .failure:
+//                            print(Error.self)
+//                           
+//                        }
+//                    }
+//    }
 
 }

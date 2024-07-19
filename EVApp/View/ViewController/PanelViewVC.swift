@@ -63,16 +63,22 @@ class PanelViewVC: UIViewController {
             self.particularChargerName = partiularStation.chargerInfos?.first?.name
             self.particularChargerAddress = partiularStation.chargerInfos?.first?.chargerAddress
             self.chargerStationConnectorInfos.removeAll()
+            var availableConnectorCount = 0
+            var totalConnectors = 0
             
             partiularStation.chargerInfos?.forEach({ chargerInfo in
                 chargerInfo.chargerStationConnectorInfos?.forEach({ chargerConnector in
                     self.chargerStationConnectorInfos.append(chargerConnector)
+                    if chargerConnector.reason == .Available{
+                        availableConnectorCount += 1
+                    }
+                    totalConnectors += 1
                 })
             })
             
             DispatchQueue.main.async {
                 self.lbStationName.text = partiularStation.chargerInfos?.first?.name ?? ""
-                self.lblCount.text = "\(partiularStation.availableConnectors ?? 0)/\(partiularStation.totalConnectors ?? 0)"
+                self.lblCount.text = "\(availableConnectorCount) / \(totalConnectors)"
             }
         }
         
@@ -123,6 +129,7 @@ extension PanelViewVC: UITableViewDelegate, UITableViewDataSource{
                 panelTableViewCell.chargerInfoName = particularChargerName
                 panelTableViewCell.chargerAddress = particularChargerAddress
                 panelTableViewCell.chargerConnectorInfo = chargerStationConnectorInfos[indexPath.row]
+                panelTableViewCell.chargerName = chargerStationConnectorInfos[indexPath.row].chargeBoxId ?? "" + "-" + (chargerStationConnectorInfos[indexPath.row].connectorId ?? "")
             }
             return cell
         }

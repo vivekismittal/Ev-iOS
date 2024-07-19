@@ -83,7 +83,7 @@ struct ChargerStationConnectorInfos: Decodable {
     var available: Bool?
 }
 
-enum ChargingConnectoreReason:  Decodable {
+enum ChargingConnectoreReason: Equatable,  Decodable {
     case Available, Charger_in_use, Under_Maintenance
     case unknown(value: String)
     

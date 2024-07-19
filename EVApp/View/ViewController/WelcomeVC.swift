@@ -119,7 +119,7 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                                 let when = DispatchTime.now() + 2
                                 DispatchQueue.main.asyncAfter(deadline: when){
                                     if verified == false{
-                                        self.sendotpApi()
+//                                        self.sendotpApi()
                                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OTPVerifyVC") as! OTPVerifyVC
                                         nextViewController.mobile =  self.txtMobile.text!
@@ -139,42 +139,42 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                     }
     }
     
-    func sendotpApi(){
-        let guestURL  = EndPoints.shared.sendOtp
-       // LoadingOverlay.shared.showOverlay(view: view)
-        self.showSpinner(onView: view)
-       
-            let parameters = [
-                "mobileNumber": txtMobile.text!
-                    ] as? [String:AnyObject]
-        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-                    response in
-              //  LoadingOverlay.shared.hideOverlayView()
-          
-            self.removeSpinner()
-                        switch (response.result) {
-
-                        case .success(let value):
-                            print(response)
-                            
-                    let statusCode = response.response?.statusCode
-                            print(statusCode!)
-                            
-                    let jsonData = JSON(value)
-                            print(jsonData)
-                           
-                            let status = jsonData["status"].string
-                            let message = jsonData["message"].string
-                            let verified = jsonData["verified"].bool
-              print(message)
-                          
-                            break
-                        case .failure:
-                            print(Error.self)
-                           
-                        }
-                    }
-    }
+//    func sendotpApi(){
+//        let guestURL  = EndPoints.shared.sendOtp
+//       // LoadingOverlay.shared.showOverlay(view: view)
+//        self.showSpinner(onView: view)
+//       
+//            let parameters = [
+//                "mobileNumber": txtMobile.text!
+//                    ] as? [String:AnyObject]
+//        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
+//                    response in
+//              //  LoadingOverlay.shared.hideOverlayView()
+//          
+//            self.removeSpinner()
+//                        switch (response.result) {
+//
+//                        case .success(let value):
+//                            print(response)
+//                            
+//                    let statusCode = response.response?.statusCode
+//                            print(statusCode!)
+//                            
+//                    let jsonData = JSON(value)
+//                            print(jsonData)
+//                           
+//                            let status = jsonData["status"].string
+//                            let message = jsonData["message"].string
+//                            let verified = jsonData["verified"].bool
+//              print(message)
+//                          
+//                            break
+//                        case .failure:
+//                            print(Error.self)
+//                           
+//                        }
+//                    }
+//    }
 }
 extension String {
     func isValidEmail() -> Bool {

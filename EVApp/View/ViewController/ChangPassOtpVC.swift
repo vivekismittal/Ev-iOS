@@ -20,6 +20,7 @@ class ChangPassOtpVC: UIViewController {
     var mobileNo = ""
     var count = 60
     var resendTimer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -92,6 +93,11 @@ class ChangPassOtpVC: UIViewController {
                         }
                     }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        resendTimer.invalidate()
+    }
+    
     func verifyotpApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.verifyOtp
         LoadingOverlay.shared.showOverlay(view: view)

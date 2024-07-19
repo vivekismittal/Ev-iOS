@@ -43,7 +43,7 @@ class ConnectorCollectionViewCell: UICollectionViewCell {
         
         lblPrice.text = (chargerConnectorInfo?.chargerPrice ?? 0).rupeeString() + " / Unit"
         
-        lblConnector.text = chargerConnectorInfo.chargeBoxId ?? "" + ":" + (chargerConnectorInfo.connectorNo ?? "")
+        lblConnector.text = (chargerConnectorInfo.connectorNo ?? "")
         lblType.text = chargerConnectorInfo?.connectorType
         
         switch chargerConnectorInfo?.reason{

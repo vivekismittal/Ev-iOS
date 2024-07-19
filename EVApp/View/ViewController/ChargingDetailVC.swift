@@ -41,9 +41,16 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     }
     
     private func configure(with availableCharger: AvailableChargers){
+        var availableConnectorCount = 0
+        var totalConnectors = 0
+
         availableCharger.chargerInfos?.forEach({ chargerInfo in
             chargerInfo.chargerStationConnectorInfos?.forEach({ chargerConnector in
                 chargerStationConnectorInfosList.append(chargerConnector)
+                if chargerConnector.reason == .Available{
+                    availableConnectorCount += 1
+                }
+                totalConnectors += 1
             })
         })
         stationId = availableCharger.stationId
@@ -51,7 +58,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         name = availableCharger.chargerInfos?.first?.name ?? ""
         maitinance = availableCharger.maintenance
         stationTimings = availableCharger.stationTimings ?? ""
-        totalAvailableCharger = "\(availableCharger.availableConnectors ?? 0)/ \(availableCharger.totalConnectors ?? 0)"
+        totalAvailableCharger = "\(availableConnectorCount) / \(totalConnectors)"
         distance = LocationManager.shared.getDistance(from: (availableCharger.stationChargerAddress)!)
         
     }
@@ -139,7 +146,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             cell?.imgCharger.image = UIImage(named: "ac")
         }
         
-        cell?.lblName.text! =  "\(chargerStationConnectorInfosList[indexPath.row].chargeBoxId ?? "NA")-\( chargerStationConnectorInfosList[indexPath.row].connectorNo ?? "NA")"
+        cell?.lblName.text! =  chargerStationConnectorInfosList[indexPath.row].connectorNo ?? "NA"
         cell?.lblDc.text! =  chargerStationConnectorInfosList[indexPath.row].connectorType ?? ""
         
         

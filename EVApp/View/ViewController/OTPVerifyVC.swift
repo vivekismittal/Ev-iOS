@@ -13,13 +13,13 @@ import SwiftyJSON
 class OTPVerifyVC: UIViewController {
 
     @IBOutlet weak var btnResend: UIButton!
-    @IBOutlet weak var lblOtpTimer: UILabel!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var txtMobile: SkyFloatingLabelTextField!
     
     var mobile = ""
     var resendTimer = Timer()
     var count = 60
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,14 +27,20 @@ class OTPVerifyVC: UIViewController {
         self.btnNext.layer.cornerRadius = 12
         sendotpApi()
     }
+    
     @IBAction func resendOtp(_ sender: Any) {
         sendotpApi()
        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        resendTimer.invalidate()
+    }
+    
     @IBAction func next(_ sender: Any) {
         verifyotpApi()
     }
+    
     @objc func update() {
         if(count > 0) {
             count = count - 1
@@ -48,6 +54,11 @@ class OTPVerifyVC: UIViewController {
             self.count = 60
         }
     }
+    
+    @IBAction func onBack(_ sender: Any) {
+        goBack()
+    }
+    
     func verifyotpApi(){
         let verifyOtp  = EndPoints.shared.baseUrl + EndPoints.shared.verifyOtp
         LoadingOverlay.shared.showOverlay(view: view)
@@ -96,6 +107,7 @@ class OTPVerifyVC: UIViewController {
                         }
                     }
     }
+    
     func sendotpApi(){
         let sendOtpURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
         LoadingOverlay.shared.showOverlay(view: view)

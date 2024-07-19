@@ -52,7 +52,7 @@ class PanelTableViewCell: UITableViewCell {
             imgType.image = UIImage(named: "ac")
         }
         
-        lblName.text = chargerName // chargersDetails?.chargeBoxId ?? "" + "-" + (stationDetails?.connectorId ?? "")
+        lblName.text = chargerName
         lblDdetail.text = (chargerConnectorInfo.connectorType ?? "") + "kWh"
         btnStart.addTarget(self, action: #selector(connected(sender:)), for: .touchUpInside)
     }

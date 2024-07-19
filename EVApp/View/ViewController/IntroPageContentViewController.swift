@@ -15,7 +15,7 @@ class IntroPageContentViewController: UIViewController {
     @IBOutlet weak var lbltext2: UILabel!
     var index: Int = -1
     var currentIndex = 0
-     private var tTime: Timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
