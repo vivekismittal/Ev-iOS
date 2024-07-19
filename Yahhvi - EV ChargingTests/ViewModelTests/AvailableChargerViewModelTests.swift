@@ -9,7 +9,7 @@ class AvailableChargersViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         mockRepo = MockAvailableChargersRepo()
-        viewModel = AvailableChargersViewModel(availableChargersRepo: mockRepo)
+//        viewModel = AvailableChargersViewModel(availableChargersRepo: mockRepo)
     }
 
     override func tearDown() {

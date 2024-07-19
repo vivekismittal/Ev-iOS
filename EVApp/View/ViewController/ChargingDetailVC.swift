@@ -9,12 +9,12 @@ import UIKit
 
 class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var lblAmeneties: UILabel!
-    @IBOutlet weak var lblRating: UILabel!
-    @IBOutlet weak var lblBooking: NSLayoutConstraint!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblTotalAvailableCharger: UILabel!
     @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var openReviewRatingScreen: UIView!
     
     private var name = ""
     private var address = ""
@@ -22,7 +22,8 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     private var chargerPointAmeneties = ""
     private var fromPanel = false
     private var distance = Float()
-    private var rating = String()
+    private var rating = Double()
+    private var stationId: String?
     
     private var maitinance = Bool()
     
@@ -39,13 +40,14 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         return chargingDetailVC as! Self
     }
     
-   private func configure(with availableCharger: AvailableChargers){
+    private func configure(with availableCharger: AvailableChargers){
         availableCharger.chargerInfos?.forEach({ chargerInfo in
             chargerInfo.chargerStationConnectorInfos?.forEach({ chargerConnector in
                 chargerStationConnectorInfosList.append(chargerConnector)
             })
         })
-        
+        stationId = availableCharger.stationId
+        rating = availableCharger.avgRating ?? 0
         name = availableCharger.chargerInfos?.first?.name ?? ""
         maitinance = availableCharger.maintenance
         stationTimings = availableCharger.stationTimings ?? ""
@@ -56,6 +58,14 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        openReviewRatingScreen.setOnClickListener {
+            if let stationId = self.stationId{
+                let reviewRatingVC = ReviewsRatingViewController.instantiateFromStoryboard(for: stationId)
+                reviewRatingVC.modalPresentationStyle = .fullScreen
+                self.present(reviewRatingVC, animated: true, completion:nil)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +75,7 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         _ = amenities.joined(separator: ",")
         print(chargerPointAmeneties)
         self.lblAmeneties.text = chargerPointAmeneties
+        ratingLabel.text = String(rating)
         self.lblDistance.text = distance.precisedString(upTo: 2) + " Km"
         //        self.lblRating.text = rating
         lblTotalAvailableCharger.text = totalAvailableCharger
@@ -80,13 +91,6 @@ class ChargingDetailVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         } else{
             self.dismiss(animated: true)
         }
-    }
-    
-    @IBAction func reviewAction(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StationReviewVC") as! StationReviewVC
-        nextViewController.stationid = chargerStationConnectorInfosList.first?.stationId ?? "NA"
-        self.present(nextViewController, animated: true, completion:nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -64,9 +64,8 @@ struct ProgressRingView: View {
             }
         }
     }
-    
-    func getUIKitView()->UIView{
-        let hostingController = UIHostingController(rootView: self)
-        return hostingController.view
-    }
 }
+
+
+
+

@@ -28,6 +28,7 @@ enum ViewControllerType{
     case ChargingInvoiceScreen
     case BookChargingSlotScreen
     case MyBookingsScreen
+    case ChargingStationReviewsScreen
 }
 
 enum ViewControllerIdentifier: String{
@@ -52,6 +53,7 @@ enum ViewControllerIdentifier: String{
     case TransactionDetailsVC
     case BookApointmentVC
     case MyBookingsVC
+    case ReviewsRatingViewController
 }
 
 extension ViewControllerType{
@@ -97,6 +99,8 @@ extension ViewControllerType{
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .BookApointmentVC)
         case .MyBookingsScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .MyBookingsVC)
+        case .ChargingStationReviewsScreen:
+            StoryboardRepresentation(bundle: nil, storyboardName: .ChargingStoryBoard, storyboardId: .ReviewsRatingViewController)
             
         case .AddMoneyScreen:
             StoryboardRepresentation(bundle: nil, storyboardName: .WalletStoryBoard, storyboardId: .AddMoneyVC)

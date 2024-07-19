@@ -119,18 +119,7 @@ class ChargingVC: UIViewController {
             image = "currentShock"
         }
         
-        let ringUIView = ProgressRingView(trackColor: .gray, progressColor: progressColor, iconImage: image, progressRingData: progressRingData).getUIKitView()
-        ringUIView.backgroundColor = .clear
-        ringUIView.translatesAutoresizingMaskIntoConstraints = false
-        
-        progressRingView.addSubview(ringUIView)
-        
-        NSLayoutConstraint.activate([
-            ringUIView.topAnchor.constraint(equalTo: progressRingView.topAnchor),
-            ringUIView.leftAnchor.constraint(equalTo: progressRingView.leftAnchor),
-            ringUIView.rightAnchor.constraint(equalTo: progressRingView.rightAnchor),
-            ringUIView.bottomAnchor.constraint(equalTo: progressRingView.bottomAnchor),
-        ])
+        ProgressRingView(trackColor: .gray, progressColor: progressColor, iconImage: image, progressRingData: progressRingData).addViewTo(superView: progressRingView)
     }
     
     
