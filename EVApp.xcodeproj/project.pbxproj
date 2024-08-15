@@ -1174,7 +1174,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.9;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1205,7 +1205,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";
@@ -1234,7 +1234,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.9;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1265,7 +1265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";

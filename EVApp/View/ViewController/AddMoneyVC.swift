@@ -69,8 +69,8 @@ class AddMoneyVC: UIViewController {
     }
     
     @IBAction func addMoneyPressed(_ sender: Any) {
-        let amt = Int(self.txtAmount.text ?? "0")!
-        guard amt > 299 else {
+        let amt = Int(self.txtAmount.text ?? "0")
+        guard let amt, amt > 299 else {
             showAlert(title: "Alert", message: "Minimum amount should be  ₹300")
             return
         }

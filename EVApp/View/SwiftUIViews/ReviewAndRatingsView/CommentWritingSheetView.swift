@@ -20,7 +20,7 @@ struct CommentWritingSheetView: View {
     
     var body: some View {
         return VStack{
-            Text("Give ratings to charging stations").fontWeight(.semibold)
+            Text("Give ratings to charging station").fontWeight(.semibold)
             VStack(alignment: .leading){
                 Color(.systemBackground).frame(height: 0)
                 StarRatingsView(rating: comment.rating, outOf: 5){rating in

@@ -13,6 +13,11 @@ class HelpCenterVC: UIViewController {
     @IBOutlet weak var writeView: UIView!
     @IBOutlet weak var callView: UIView!
     @IBOutlet weak var chatView: UIView!
+    
+    var helpTextBody: String{
+        "Hey! My name is \(UserAppStorage.userFullName ?? "NA")\nand I need your help......"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,20 +29,29 @@ class HelpCenterVC: UIViewController {
     }
     
     @IBAction func back(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = MenuNavigation.instantiateFromStoryboard()
-        self.present(nextViewController, animated:true, completion:nil)
+        goBack()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onChatWithUs(_ sender: Any) {
+        let whatsAppUrl = URL(string: "https://api.whatsapp.com/send?phone=\(UserAppStorage.helplineNumber)&text=\(helpTextBody)")!
+        openUrlIfPossible(whatsAppUrl)
     }
-    */
+    
+    @IBAction func onCallUs(_ sender: Any) {
+        let numberUrl = URL(string: "tel://\(UserAppStorage.helplineNumber)")!
+        openUrlIfPossible(numberUrl)
+    }
+    
+    @IBAction func onWriteToUs(_ sender: Any) {
+        let smsUrl = URL(string: "sms:\(UserAppStorage.helplineNumber)&body=\(helpTextBody)")!
+        openUrlIfPossible(smsUrl)
+    }
+    
+    private func openUrlIfPossible(_ url: URL){
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 
 }
 extension UIView {

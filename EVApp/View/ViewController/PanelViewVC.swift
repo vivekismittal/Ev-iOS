@@ -129,7 +129,7 @@ extension PanelViewVC: UITableViewDelegate, UITableViewDataSource{
                 panelTableViewCell.chargerInfoName = particularChargerName
                 panelTableViewCell.chargerAddress = particularChargerAddress
                 panelTableViewCell.chargerConnectorInfo = chargerStationConnectorInfos[indexPath.row]
-                panelTableViewCell.chargerName = chargerStationConnectorInfos[indexPath.row].chargeBoxId ?? "" + "-" + (chargerStationConnectorInfos[indexPath.row].connectorId ?? "")
+                panelTableViewCell.chargerName = (chargerStationConnectorInfos[indexPath.row].chargeBoxId ?? "") + " - " + (chargerStationConnectorInfos[indexPath.row].connectorNo ?? "")
             }
             return cell
         }

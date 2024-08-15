@@ -71,6 +71,14 @@ class BookApointmentVC: UIViewController {
         }
     }
     
+    func updateDurationAfterStartOrEndTimeChange(){
+        guard let selectedChargingDurationButton else { return }
+        
+        unSelectButton(selectedChargingDurationButton)
+        
+        lblSelectedSession.text = endTimePicker.date.timeIntervalSince(startTimePicker.date).formattedInHrMin
+    }
+    
     func updateStartEndTime(){
         guard let selectedTimeDuration else { return }
         endTimePicker.setDate(startTimePicker.date.addingTimeInterval(selectedTimeDuration.timeDuration), animated: true)
@@ -81,6 +89,19 @@ class BookApointmentVC: UIViewController {
         startingTime = lblTime.text ?? ""
     }
     
+    @objc func handleStartTimeChange(sender: UIDatePicker) {
+        lblTime.text = sender.date.getTimeInAMPM()
+        startingTime = lblTime.text ?? ""
+
+        updateDurationAfterStartOrEndTimeChange()
+    }
+    
+    @objc func handleEndTimeChange(sender: UIDatePicker) {
+        lblEndTime.text = sender.date.getTimeInAMPM()
+        endingTime = sender.date.getTimeInAMPM()
+        
+        updateDurationAfterStartOrEndTimeChange()
+    }
     
     static func instantiateFromStoryboard(with viewModel: ChargingViewModel = ChargingViewModel(),connectorName: String, chargeBoxId: String) -> Self {
         let vc = ViewControllerFactory<Self>.viewController(for: .BookChargingSlotScreen)
@@ -91,14 +112,11 @@ class BookApointmentVC: UIViewController {
         return vc
     }
     
-    @objc func handleTimeChange(sender: UIDatePicker) {
-        lblTime.text = sender.date.getTimeInAMPM()
-        updateStartEndTime()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTimePicker.addTarget(self, action: #selector(handleTimeChange(sender: )), for: .valueChanged)
+        startTimePicker.addTarget(self, action: #selector(handleStartTimeChange(sender: )), for: .valueChanged)
+        
+        endTimePicker.addTarget(self, action: #selector(handleEndTimeChange(sender: )), for: .valueChanged)
         
         setViews()
         
@@ -132,6 +150,11 @@ class BookApointmentVC: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
+        if endTimePicker.date < startTimePicker.date{
+            self.showAlert(title: "", message: "Please select end time greater than start time")
+            return
+        }
+        
         if !selectedDate.isEmpty, !startingTime.isEmpty, !endingTime.isEmpty{
             makeAdvanceChargingBooking()
         }
@@ -176,12 +199,14 @@ class BookApointmentVC: UIViewController {
                 }
                 
                 horizontalStack = UIStackView()
-                horizontalStack.frame = .init(x: horizontalStack.frame.origin.x, y: horizontalStack.frame.origin.y, width: horizontalStack.frame.width, height: 45)
                 horizontalStack.axis = .horizontal
                 horizontalStack.spacing = 4
                 horizontalStack.distribution = .fillEqually
                 horizontalStack.alignment = .fill
-                
+                horizontalStack.translatesAutoresizingMaskIntoConstraints = false
+                horizontalStack.heightAnchor.constraint(equalToConstant: 33).isActive = true
+                horizontalStack.setContentHuggingPriority(.defaultLow, for: .vertical)
+                horizontalStack.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
                 horizontalStack.addArrangedSubview(dateButton)
             } else{
                 
@@ -285,4 +310,23 @@ extension Date{
 
 typealias ChargingBookingTimeDuration = (timeDuration: TimeInterval, durationTitle: String)
 
+extension TimeInterval{
+    
+    var formattedInHrMin: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits
+     = 1
 
+        if self < 3600 { // Less than 1 hour
+            let minutes = self / 60
+            let formattedMinutes = formatter.string(from: NSNumber(value: minutes)) ?? "0"
+            return "\(formattedMinutes) Min"
+        } else {
+            let hours = self / 3600
+            let formattedHours = formatter.string(from: NSNumber(value: hours)) ?? "0"
+            return "\(formattedHours) hr"
+        }
+    }
+}

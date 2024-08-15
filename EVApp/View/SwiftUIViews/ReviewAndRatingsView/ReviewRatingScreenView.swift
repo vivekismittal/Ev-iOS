@@ -58,20 +58,20 @@ struct ReviewRatingScreenView: View {
     }
 }
 
-#Preview {
-    ReviewRatingScreenView(
-        reviewsList: ReviewRatingViewModel.ReviewsRatingsData(
-            data: .init(
-                repeating: .init(
-                    firstName: "Vivek Mittal",
-                    rating: 3,
-                    comment: "Very Nice Charger"
-                ),
-                count: 20
-            )
-        )) { comment in
-            print("comment Submitted")
-
-        }
-}
+//#Preview {
+//    ReviewRatingScreenView(
+//        reviewsList: ReviewRatingViewModel.ReviewsRatingsData(
+//            data: .init(
+//                repeating: .init(
+//                    firstName: "Vivek Mittal",
+//                    rating: 3,
+//                    comment: "Very Nice Charger"
+//                ),
+//                count: 20
+//            )
+//        )) { comment in
+//            print("comment Submitted")
+//
+//        }
+//}
 

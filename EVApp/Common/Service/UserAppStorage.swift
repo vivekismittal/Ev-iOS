@@ -9,6 +9,8 @@ import Foundation
 
 
 struct UserAppStorage{
+    static let helplineNumber =  "+918383070677"
+
     @Storage<Bool>(key: .didUserLoggedIn, defaultValue: false)
     static var didUserLoggedIn: Bool
     
