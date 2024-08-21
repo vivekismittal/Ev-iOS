@@ -1,0 +1,213 @@
+{
+  "originHash" : "fd8239207687511e7d82ac07d26acdcdeb4da009575f126c7d9d79f359a0e0a7",
+  "pins" : [
+    {
+      "identity" : "cosmos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
+      "state" : {
+        "revision" : "cce521e734d0090494bd4afab5fd2e2f2465c1af",
+        "version" : "23.0.0"
+      }
+    },
+    {
+      "identity" : "floatingpanel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SCENEE/FloatingPanel.git",
+      "state" : {
+        "revision" : "29185a47bd9f062c060e097641b863ef07f60ba7",
+        "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "ios-custom-browser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/iOS-Custom-Browser.git",
+      "state" : {
+        "revision" : "3c93df3c944a2db611021745d30edda47e853d87",
+        "version" : "11.0.0"
+      }
+    },
+    {
+      "identity" : "ios-maps-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googlemaps/ios-maps-sdk",
+      "state" : {
+        "revision" : "0cd72dd45109b0225dd920ff17e0362a96489ec0",
+        "version" : "9.0.0"
+      }
+    },
+    {
+      "identity" : "ios-places-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googlemaps/ios-places-sdk",
+      "state" : {
+        "revision" : "5eaf8e9a64f6a2ea27fdc845f4653fdc26231cc3",
+        "version" : "9.0.0"
+      }
+    },
+    {
+      "identity" : "ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/iOS-SDK.git",
+      "state" : {
+        "revision" : "1df7db7ae36b4ab5e3da651aad44d25844b44ecc",
+        "version" : "11.1.1"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "fa9b2bac94b3fabe2d6ca7c74b269d4e8c355111",
+        "version" : "7.1.1"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "2ef543ee21d63734e1c004ad6c870255e8716c50",
+        "version" : "7.12.0"
+      }
+    },
+    {
+      "identity" : "marqueelabel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cbpowell/MarqueeLabel",
+      "state" : {
+        "revision" : "877e810534cda9afabb8143ae319b7c3341b121b",
+        "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "notificationbanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Daltron/NotificationBanner",
+      "state" : {
+        "revision" : "1406ac60bcab58074fc969e9b4cb804679832c8e",
+        "version" : "3.2.1"
+      }
+    },
+    {
+      "identity" : "payu-params-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/payu-params-iOS.git",
+      "state" : {
+        "revision" : "22f3512ff4bef4e7eba23c2c2fdb24927b49bd04",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "payu-upi-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/payu-upi-ios-sdk.git",
+      "state" : {
+        "revision" : "68f8aef20487e79efc15c91c8ed08a11ead23fe1",
+        "version" : "10.1.0"
+      }
+    },
+    {
+      "identity" : "payuanalytics-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUAnalytics-iOS.git",
+      "state" : {
+        "revision" : "1480d0e705bef0e2490967978f802690b4c80b54",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "payuassetlibrary-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUAssetLibrary-iOS.git",
+      "state" : {
+        "revision" : "799eabe32b68d4ffde27dc0451278267c16c63a5",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "payucheckoutpro-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUCheckoutPro-iOS",
+      "state" : {
+        "revision" : "24de6c97a29635df286f17bb2e582c2928a48a8c",
+        "version" : "8.1.1"
+      }
+    },
+    {
+      "identity" : "payucommonui-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUCommonUI-iOS",
+      "state" : {
+        "revision" : "87d1b97450cb92f74b23e3047784518e8ae82b1f",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "payucrashreporter-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUCrashReporter-iOS.git",
+      "state" : {
+        "revision" : "fa2cd7eac330e08a810ba404b3e1893259d580af",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "payuindia-cardscanner-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUIndia-CardScanner-iOS.git",
+      "state" : {
+        "revision" : "316581468b5291843e06c98dd2f24f46ca37ca73",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "payunativeotpassist-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUNativeOtpAssist-iOS.git",
+      "state" : {
+        "revision" : "19c2f44e4d293c8e3bee515ea807dcc0acf8e2a8",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "payunetworkreachability-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/payu-intrepos/PayUNetworkReachability-iOS.git",
+      "state" : {
+        "revision" : "59b54bbf0329389f418af2ead07f424d131d1a20",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "skyfloatinglabeltextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Skyscanner/SkyFloatingLabelTextField",
+      "state" : {
+        "revision" : "a0750ebbc7311f3b3debf99c5e59338e854afa59",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
+      "state" : {
+        "revision" : "af76cf3ef710b6ca5f8c05f3a31307d44a3c5828",
+        "version" : "5.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
