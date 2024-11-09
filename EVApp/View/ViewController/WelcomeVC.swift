@@ -139,48 +139,15 @@ class WelcomeVC: UIViewController ,UITextFieldDelegate{
                     }
     }
     
-//    func sendotpApi(){
-//        let guestURL  = EndPoints.shared.sendOtp
-//       // LoadingOverlay.shared.showOverlay(view: view)
-//        self.showSpinner(onView: view)
-//       
-//            let parameters = [
-//                "mobileNumber": txtMobile.text!
-//                    ] as? [String:AnyObject]
-//        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-//                    response in
-//              //  LoadingOverlay.shared.hideOverlayView()
-//          
-//            self.removeSpinner()
-//                        switch (response.result) {
-//
-//                        case .success(let value):
-//                            print(response)
-//                            
-//                    let statusCode = response.response?.statusCode
-//                            print(statusCode!)
-//                            
-//                    let jsonData = JSON(value)
-//                            print(jsonData)
-//                           
-//                            let status = jsonData["status"].string
-//                            let message = jsonData["message"].string
-//                            let verified = jsonData["verified"].bool
-//              print(message)
-//                          
-//                            break
-//                        case .failure:
-//                            print(Error.self)
-//                           
-//                        }
-//                    }
-//    }
 }
 extension String {
     func isValidEmail() -> Bool {
-        // here, `try!` will always succeed because the pattern is valid
-        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
-        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+        do {
+            let regex = try NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+        } catch {
+            return false
+        }
     }
     var isPhoneNumber: Bool {
         do {

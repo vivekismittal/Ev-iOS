@@ -291,40 +291,5 @@ extension CorporateUserVC{
                         }
                     }
     }
-    
-//    func sendotpApi(){
-//        let guestURL  = EndPoints.shared.baseUrl + EndPoints.shared.sendOtp
-//        LoadingOverlay.shared.showOverlay(view: view)
-//            let parameters = [
-//                "mobileNumber": txtMobile.text!
-//                    ] as? [String:AnyObject]
-//
-//        AF.request(guestURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
-//                    response in
-//                LoadingOverlay.shared.hideOverlayView()
-//
-//                        switch (response.result) {
-//
-//                        case .success(let value):
-//                            print(response)
-//                            
-//                    let statusCode = response.response?.statusCode
-//                            print(statusCode!)
-//                            
-//                    let jsonData = JSON(value)
-//                            print(jsonData)
-//                           
-//                            let status = jsonData["status"].string
-//                            let message = jsonData["message"].string
-//                            let verified = jsonData["verified"].bool
-//              print(message)
-//                          
-//                            break
-//                        case .failure:
-//                            print(Error.self)
-//                           
-//                        }
-//                    }
-//    }
 
 }

@@ -72,6 +72,7 @@
 		94F365902C4983690074B9AF /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3658F2C4983690074B9AF /* ViewExtension.swift */; };
 		94F365922C4A04110074B9AF /* ReviewRatingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F365912C4A04110074B9AF /* ReviewRatingRepo.swift */; };
 		94F365942C4A045F0074B9AF /* ReviewRatingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F365932C4A045F0074B9AF /* ReviewRatingsModel.swift */; };
+		94FB33672CC8A2D6007C9276 /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB33662CC8A2D6007C9276 /* empty.swift */; };
 		BC7ECC06388D7A722CD509EB /* Pods_EVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07178A7EFB80178E7EBDE335 /* Pods_EVApp.framework */; };
 		CB026F412A378DC000C648B6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB026F402A378DC000C648B6 /* Utils.swift */; };
 		CB1F9A152A13AE110050588B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F9A142A13AE110050588B /* AppDelegate.swift */; };
@@ -231,6 +232,7 @@
 		94F3658F2C4983690074B9AF /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		94F365912C4A04110074B9AF /* ReviewRatingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRatingRepo.swift; sourceTree = "<group>"; };
 		94F365932C4A045F0074B9AF /* ReviewRatingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRatingsModel.swift; sourceTree = "<group>"; };
+		94FB33662CC8A2D6007C9276 /* empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.swift; sourceTree = "<group>"; };
 		AC2F29DF745FA44CBF788FD0 /* Pods-EVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVApp.debug.xcconfig"; path = "Target Support Files/Pods-EVApp/Pods-EVApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB026F402A378DC000C648B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CB1F9A112A13AE110050588B /* Yahhvi - EV Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahhvi - EV Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -620,6 +622,7 @@
 				CB1F9A322A13D2BE0050588B /* WelcomeVC.swift */,
 				948EAC142C15BF020029C007 /* GuestSignupViewController.swift */,
 				94F3658D2C4981600074B9AF /* ReviewsRatingViewController.swift */,
+				94FB33662CC8A2D6007C9276 /* empty.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				CB98B7E62A244234000F609A /* LoginRequest.swift in Sources */,
 				CB3EC7032A3A0B1C0075A8C4 /* ChargingSessionCell.swift in Sources */,
 				CB1F9A352A13EFA40050588B /* RegistrationVC.swift in Sources */,
+				94FB33672CC8A2D6007C9276 /* empty.swift in Sources */,
 				945915092C0CB89400584627 /* ViewControllerFactory.swift in Sources */,
 				CBA5E4882A3719CC00FFF238 /* AvailableCouponVC.swift in Sources */,
 				CBE138672A408386005B37F8 /* SessionModel.swift in Sources */,
@@ -1174,7 +1178,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0;
+				CURRENT_PROJECT_VERSION = 2.2;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1205,7 +1209,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";
@@ -1234,7 +1238,7 @@
 				CODE_SIGN_ENTITLEMENTS = EVApp/EVApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0;
+				CURRENT_PROJECT_VERSION = 2.2;
 				DEVELOPMENT_TEAM = 3AGV4JQQ24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1265,7 +1269,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahhvi.EVCharging;
 				PRODUCT_NAME = "Yahhvi - EV Charging";

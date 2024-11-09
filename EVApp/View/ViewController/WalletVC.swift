@@ -80,7 +80,6 @@ class WalletVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 extension WalletVC{
     func waletTransactionApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.waletTransaction
-      //  LoadingOverlay.shared.showOverlay(view: view)
         self.showSpinner(onView: view)
       
         let userPk = UserAppStorage.userPk
@@ -91,7 +90,6 @@ extension WalletVC{
         print(parameters)
         AF.request(verifyOtp, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
                     response in
-             //   LoadingOverlay.shared.hideOverlayView()
           
             self.removeSpinner()
                         switch (response.result) {
@@ -132,8 +130,6 @@ extension WalletVC{
     func getWaletAmtApi(){
         let verifyOtp  = EndPoints.shared.baseUrlDev + EndPoints.shared.getWalletAmount
         let userPk = UserAppStorage.userPk
-      //  LoadingOverlay.shared.showOverlay(view: view)
-     //   self.showSpinner(onView: view)
       
             let parameters = [
                     "userPk": userPk
@@ -160,23 +156,6 @@ extension WalletVC{
                             let status = jsonData["status"].bool
                             let amount = jsonData["amount"].float
                             let userWalletAccountId = jsonData["userWalletAccountId"].double
-//                            let userWalletTransactionId = jsonData["list"].arrayValue.map {$0["userWalletTransactionId"].stringValue}
-//                            let createdDate = jsonData["list"].arrayValue.map {$0["createdDate"].stringValue}
-//                            let amount = jsonData["list"].arrayValue.map {$0["amount"].stringValue}
-//                            let walletAmount = jsonData["data"].dictionary.map {$0["amount"]!.stringValue}
-//                            let transactionType = jsonData["list"].arrayValue.map {$0["transactionType"].stringValue}
-//                            let paymentMode = jsonData["list"].arrayValue.map {$0["paymentMode"].stringValue}
-//
-                           // print(userWalletTransactionId)
-                            
-//                            self.waletTransId = userWalletTransactionId
-//                            self.createdDate = createdDate
-//                            self.amount = amount
-//                            self.transactionType = transactionType
-//                            self.paymentMode = paymentMode
-//                            self.walletAmount  = walletAmount ?? "00"
-//                            self.lblWalletAmount.text = "Rs. " + (walletAmount ?? "00")
-//                            self.tableView.reloadData()
                             self.lblWalletAmount.text! = String(amount ?? 0.00)
                             break
                         case .failure:

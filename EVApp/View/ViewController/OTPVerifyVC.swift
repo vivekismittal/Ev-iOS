@@ -43,11 +43,11 @@ class OTPVerifyVC: UIViewController {
     
     @objc func update() {
         if(count > 0) {
-            count = count - 1
+            self.btnResend.isUserInteractionEnabled = false
+            count -= 1
             print(count)
             self.btnResend.setTitle(" Resend OTP in: \(count)", for: .normal)
-        }
-        else {
+        } else {
             self.resendTimer.invalidate()
             self.btnResend.isUserInteractionEnabled = true
             self.btnResend.setTitle("Resend OTP", for: .normal)
@@ -114,7 +114,7 @@ class OTPVerifyVC: UIViewController {
         let parameters = [
             "mobileNumber": mobile
                 ] as? [String:AnyObject]
-        print(parameters)
+        print(parameters ?? "")
         AF.request(sendOtpURL, method: .post, parameters: parameters! as Parameters, encoding: JSONEncoding.default, headers: nil).responseJSON {
                     response in
                 LoadingOverlay.shared.hideOverlayView()
